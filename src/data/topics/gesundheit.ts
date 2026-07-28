@@ -18,10 +18,10 @@ const topic: Topic = {
         meaning: "thói quen xấu",
         children: [
           { id: "junkfood", label: "zu viel Fast Food essen", meaning: "ăn quá nhiều đồ ăn nhanh", synonyms: ["ungesundes Essen"] },
-          { id: "bewegungsmangel", label: "der ___", meaning: "thiếu vận động", answer: "Bewegungsmangel" },
+          { id: "bewegungsmangel", label: "der ___", meaning: "thiếu vận động", answer: "Bewegungsmangel", note: "Bewegung (vận động) + Mangel (sự thiếu hụt)." },
           { id: "rauchen", label: "das Rauchen", meaning: "hút thuốc" },
-          { id: "stress", label: "der Stress", meaning: "căng thẳng" },
-          { id: "schlafmangel", label: "der Schlafmangel", meaning: "thiếu ngủ" },
+          { id: "stress", label: "der Stress", meaning: "căng thẳng", synonyms: ["die Anspannung"] },
+          { id: "schlafmangel", label: "der Schlafmangel", meaning: "thiếu ngủ", synonyms: ["zu wenig schlafen"] },
         ],
       },
       {
@@ -40,8 +40,8 @@ const topic: Topic = {
         meaning: "vấn đề sức khỏe",
         children: [
           { id: "uebergewicht", label: "das Übergewicht", meaning: "béo phì", synonyms: ["die Fettleibigkeit"] },
-          { id: "diabetes", label: "der ___", meaning: "tiểu đường", answer: "Diabetes" },
-          { id: "herzkrankheit", label: "die Herzkrankheit", meaning: "bệnh tim mạch" },
+          { id: "diabetes", label: "der ___", meaning: "tiểu đường", answer: "Diabetes", synonyms: ["die Zuckerkrankheit"] },
+          { id: "herzkrankheit", label: "die Herzkrankheit", meaning: "bệnh tim mạch", synonyms: ["die Herzerkrankung"] },
           { id: "schlafstoerung", label: "die Schlafstörung", meaning: "rối loạn giấc ngủ" },
           { id: "bluthochdruck", label: "der Bluthochdruck", meaning: "cao huyết áp" },
         ],

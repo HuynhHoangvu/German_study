@@ -18,8 +18,8 @@ const topic: Topic = {
         meaning: "học ngoại ngữ",
         children: [
           { id: "onlinekurs", label: "der Online-Sprachkurs", meaning: "khóa học ngôn ngữ trực tuyến" },
-          { id: "sprachaufenthalt", label: "der ___", meaning: "chuyến du học ngôn ngữ", answer: "Sprachaufenthalt" },
-          { id: "wortschatz", label: "der Wortschatz erweitern", meaning: "mở rộng vốn từ" },
+          { id: "sprachaufenthalt", label: "der ___", meaning: "chuyến du học ngôn ngữ", answer: "Sprachaufenthalt", note: "Sprache (ngôn ngữ) + Aufenthalt (thời gian lưu trú)." },
+          { id: "wortschatz", label: "der Wortschatz erweitern", meaning: "mở rộng vốn từ", synonyms: ["Vokabeln lernen"] },
         ],
       },
       {
@@ -28,8 +28,8 @@ const topic: Topic = {
         meaning: "giao tiếp",
         children: [
           { id: "koerpersprache", label: "die Körpersprache", meaning: "ngôn ngữ cơ thể" },
-          { id: "missverstaendnis", label: "das ___", meaning: "sự hiểu lầm", answer: "Missverständnis" },
-          { id: "mimik", label: "die Mimik und Gestik", meaning: "biểu cảm và cử chỉ" },
+          { id: "missverstaendnis", label: "das ___", meaning: "sự hiểu lầm", answer: "Missverständnis", note: "miss- (sai/nhầm) + Verständnis (sự hiểu)." },
+          { id: "mimik", label: "die Mimik und Gestik", meaning: "biểu cảm và cử chỉ", synonyms: ["Gesichtsausdruck und Handbewegungen"] },
         ],
       },
       {
@@ -37,9 +37,9 @@ const topic: Topic = {
         label: "Mehrsprachigkeit",
         meaning: "đa ngôn ngữ",
         children: [
-          { id: "muttersprache", label: "die Muttersprache", meaning: "tiếng mẹ đẻ" },
+          { id: "muttersprache", label: "die Muttersprache", meaning: "tiếng mẹ đẻ", synonyms: ["die Erstsprache"] },
           { id: "dialekt", label: "der ___", meaning: "phương ngữ", answer: "Dialekt" },
-          { id: "vorteile2", label: "kognitive Vorteile", meaning: "lợi ích nhận thức" },
+          { id: "vorteile2", label: "kognitive Vorteile", meaning: "lợi ích nhận thức", note: "kognitiv = liên quan đến tư duy, trí não." },
         ],
       },
       {

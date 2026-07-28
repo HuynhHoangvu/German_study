@@ -32,8 +32,8 @@ const topic: Topic = {
           { id: "stau", label: "der Stau", meaning: "kẹt xe", synonyms: ["der Verkehrsstau"] },
           { id: "unfall", label: "der Verkehrsunfall", meaning: "tai nạn giao thông" },
           { id: "laerm", label: "der ___", meaning: "tiếng ồn", answer: "Lärm" },
-          { id: "abgase", label: "die Abgase", meaning: "khí thải" },
-          { id: "parkplatzmangel", label: "der Parkplatzmangel", meaning: "thiếu chỗ đỗ xe" },
+          { id: "abgase", label: "die Abgase", meaning: "khí thải", synonyms: ["die Emissionen"] },
+          { id: "parkplatzmangel", label: "der Parkplatzmangel", meaning: "thiếu chỗ đỗ xe", note: "Parkplatz (chỗ đỗ xe) + Mangel (sự thiếu hụt)." },
         ],
       },
       {
@@ -63,7 +63,7 @@ const topic: Topic = {
         label: "Zukunft",
         meaning: "tương lai",
         children: [
-          { id: "autonom", label: "autonomes Fahren", meaning: "xe tự lái" },
+          { id: "autonom", label: "autonomes Fahren", meaning: "xe tự lái", synonyms: ["selbstfahrende Autos"] },
           { id: "smartcity", label: "vernetzte Verkehrssysteme", meaning: "hệ thống giao thông thông minh" },
         ],
       },

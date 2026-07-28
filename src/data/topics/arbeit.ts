@@ -18,8 +18,8 @@ const topic: Topic = {
         meaning: "hồ sơ xin việc",
         children: [
           { id: "lebenslauf", label: "der Lebenslauf", meaning: "sơ yếu lý lịch", synonyms: ["der CV"] },
-          { id: "anschreiben", label: "das ___", meaning: "thư xin việc", answer: "Anschreiben" },
-          { id: "vorstellungsgespraech", label: "das Vorstellungsgespräch", meaning: "buổi phỏng vấn" },
+          { id: "anschreiben", label: "das ___", meaning: "thư xin việc", answer: "Anschreiben", synonyms: ["das Motivationsschreiben"] },
+          { id: "vorstellungsgespraech", label: "das Vorstellungsgespräch", meaning: "buổi phỏng vấn", synonyms: ["das Bewerbungsgespräch"] },
           { id: "qualifikation", label: "die Qualifikation", meaning: "trình độ chuyên môn" },
         ],
       },
@@ -31,7 +31,7 @@ const topic: Topic = {
           { id: "vollzeit", label: "die Vollzeitstelle", meaning: "công việc toàn thời gian" },
           { id: "teilzeit", label: "die Teilzeitstelle", meaning: "công việc bán thời gian" },
           { id: "homeoffice", label: "das ___", meaning: "làm việc tại nhà", answer: "Homeoffice" },
-          { id: "selbststaendig", label: "selbstständig arbeiten", meaning: "làm việc tự do" },
+          { id: "selbststaendig", label: "selbstständig arbeiten", meaning: "làm việc tự do", synonyms: ["freiberuflich arbeiten"] },
         ],
       },
       {
@@ -40,8 +40,8 @@ const topic: Topic = {
         meaning: "vấn đề trong công việc",
         children: [
           { id: "arbeitsdruck", label: "der Arbeitsdruck", meaning: "áp lực công việc", synonyms: ["der Leistungsdruck"] },
-          { id: "burnout", label: "das Burnout", meaning: "kiệt sức" },
-          { id: "unsicherheit2", label: "die Arbeitsplatzunsicherheit", meaning: "sự bất ổn công việc" },
+          { id: "burnout", label: "das Burnout", meaning: "kiệt sức", note: "trạng thái kiệt sức toàn diện do làm việc quá tải kéo dài." },
+          { id: "unsicherheit2", label: "die Arbeitsplatzunsicherheit", meaning: "sự bất ổn công việc", note: "Arbeitsplatz (nơi làm việc) + Unsicherheit (sự bất an)." },
         ],
       },
       {

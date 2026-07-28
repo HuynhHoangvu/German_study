@@ -71,7 +71,7 @@ export default function MindMap({ topic }: { topic: Topic }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="w-full h-[70vh] sm:h-[70vh] lg:h-[75vh] rounded-2xl border border-[var(--border)] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+      <div className="relative w-full h-[70vh] sm:h-[70vh] lg:h-[75vh] rounded-2xl border border-[var(--border)] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -82,6 +82,11 @@ export default function MindMap({ topic }: { topic: Topic }) {
           fitViewOptions={{ padding: 0.15, minZoom: 0.3, maxZoom: 1 }}
           minZoom={0.15}
           maxZoom={2}
+          nodesDraggable={false}
+          nodesConnectable={false}
+          panOnDrag
+          zoomOnPinch
+          panOnScroll={false}
           proOptions={{ hideAttribution: true }}
         >
           <Background variant={BackgroundVariant.Dots} gap={20} size={1} color="#d4d4d8" />
@@ -90,15 +95,32 @@ export default function MindMap({ topic }: { topic: Topic }) {
             <MiniMap nodeColor={() => topic.color} maskColor="rgba(0,0,0,0.05)" pannable zoomable />
           )}
         </ReactFlow>
+
+        {selectedVocab && (
+          <>
+            <div
+              className="absolute inset-0 bg-black/25 backdrop-blur-[1px] z-10"
+              onClick={() => setSelectedId(null)}
+            />
+            <div className="absolute inset-x-2 bottom-2 sm:inset-x-auto sm:right-4 sm:bottom-4 sm:w-[380px] z-20">
+              <NodeDetailPanel
+                vocab={selectedVocab}
+                color={topic.color}
+                topicSlug={topic.slug}
+                solved={selectedId ? solvedIds.has(selectedId) : false}
+                onSolved={handleSolved}
+                onClose={() => setSelectedId(null)}
+              />
+            </div>
+          </>
+        )}
       </div>
 
-      <NodeDetailPanel
-        vocab={selectedVocab}
-        color={topic.color}
-        topicSlug={topic.slug}
-        solved={selectedId ? solvedIds.has(selectedId) : false}
-        onSolved={handleSolved}
-      />
+      {!selectedVocab && (
+        <div className="rounded-2xl border border-dashed border-[var(--border)] px-5 py-8 text-center text-sm text-neutral-400">
+          Chạm hoặc bấm vào một nhánh trong sơ đồ để xem nghĩa, từ đồng nghĩa và ghi chú tại đây.
+        </div>
+      )}
     </div>
   );
 }

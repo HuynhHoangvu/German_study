@@ -20,8 +20,8 @@ const topic: Topic = {
           { id: "klimawandel", label: "der Klimawandel", meaning: "biến đổi khí hậu", synonyms: ["die globale Erwärmung"] },
           { id: "luftverschmutzung", label: "die ___", meaning: "ô nhiễm không khí", answer: "Luftverschmutzung" },
           { id: "plastikmuell", label: "der Plastikmüll", meaning: "rác thải nhựa" },
-          { id: "abholzung", label: "die Abholzung", meaning: "phá rừng" },
-          { id: "artensterben", label: "das Artensterben", meaning: "tuyệt chủng loài" },
+          { id: "abholzung", label: "die Abholzung", meaning: "phá rừng", synonyms: ["die Rodung"] },
+          { id: "artensterben", label: "das Artensterben", meaning: "tuyệt chủng loài", note: "Art (loài) + Sterben (sự chết đi)." },
         ],
       },
       {

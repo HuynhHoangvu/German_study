@@ -17,10 +17,10 @@ const topic: Topic = {
         label: "Sportarten",
         meaning: "các môn thể thao",
         children: [
-          { id: "breitensport", label: "der Breitensport", meaning: "thể thao đại chúng" },
-          { id: "leistungssport", label: "der ___", meaning: "thể thao thành tích cao", answer: "Leistungssport" },
+          { id: "breitensport", label: "der Breitensport", meaning: "thể thao đại chúng", note: "breit (rộng rãi) + Sport: thể thao cho mọi người, không thi đấu." },
+          { id: "leistungssport", label: "der ___", meaning: "thể thao thành tích cao", answer: "Leistungssport", synonyms: ["der Profisport"] },
           { id: "extremsport", label: "der Extremsport", meaning: "thể thao mạo hiểm" },
-          { id: "mannschaftssport", label: "der Mannschaftssport", meaning: "thể thao đồng đội" },
+          { id: "mannschaftssport", label: "der Mannschaftssport", meaning: "thể thao đồng đội", synonyms: ["der Teamsport"] },
         ],
       },
       {
@@ -28,9 +28,9 @@ const topic: Topic = {
         label: "Fitness",
         meaning: "thể hình",
         children: [
-          { id: "fitnessstudio", label: "das Fitnessstudio", meaning: "phòng tập gym" },
+          { id: "fitnessstudio", label: "das Fitnessstudio", meaning: "phòng tập gym", synonyms: ["das Fitnesscenter"] },
           { id: "training", label: "das ___ absolvieren", meaning: "tập luyện", answer: "Training" },
-          { id: "ausdauer", label: "die Ausdauer", meaning: "sức bền" },
+          { id: "ausdauer", label: "die Ausdauer", meaning: "sức bền", synonyms: ["die Kondition"] },
         ],
       },
       {
@@ -48,7 +48,7 @@ const topic: Topic = {
         label: "Rolle in der Gesellschaft",
         meaning: "vai trò trong xã hội",
         children: [
-          { id: "vereinsleben", label: "das Vereinsleben", meaning: "đời sống câu lạc bộ" },
+          { id: "vereinsleben", label: "das Vereinsleben", meaning: "đời sống câu lạc bộ", note: "Verein (câu lạc bộ/hội) + Leben (đời sống)." },
           { id: "doping", label: "das Doping", meaning: "sử dụng chất kích thích" },
         ],
       },

@@ -17,7 +17,7 @@ const topic: Topic = {
         label: "Stadt: Vorteile",
         meaning: "thành thị: ưu điểm",
         children: [
-          { id: "arbeitsmoeglichkeiten", label: "viele Arbeitsmöglichkeiten", meaning: "nhiều cơ hội việc làm" },
+          { id: "arbeitsmoeglichkeiten", label: "viele Arbeitsmöglichkeiten", meaning: "nhiều cơ hội việc làm", synonyms: ["gute Jobchancen"] },
           { id: "unterhaltung", label: "vielfältige ___", meaning: "giải trí đa dạng", answer: "Unterhaltung" },
           { id: "infrastruktur", label: "gute Infrastruktur", meaning: "cơ sở hạ tầng tốt" },
         ],
@@ -27,7 +27,7 @@ const topic: Topic = {
         label: "Stadt: Nachteile",
         meaning: "thành thị: nhược điểm",
         children: [
-          { id: "lebenshaltungskosten", label: "hohe Lebenshaltungskosten", meaning: "chi phí sinh hoạt cao" },
+          { id: "lebenshaltungskosten", label: "hohe Lebenshaltungskosten", meaning: "chi phí sinh hoạt cao", note: "Leben (cuộc sống) + Haltung (duy trì) + Kosten (chi phí)." },
           { id: "luft-laerm", label: "Lärm und ___", meaning: "tiếng ồn và ô nhiễm", answer: "Luftverschmutzung" },
           { id: "stress2", label: "stressiger Alltag", meaning: "cuộc sống thường ngày căng thẳng" },
         ],
@@ -37,9 +37,9 @@ const topic: Topic = {
         label: "Land: Vorteile",
         meaning: "nông thôn: ưu điểm",
         children: [
-          { id: "ruhig", label: "ruhig und idyllisch", meaning: "yên tĩnh và thanh bình" },
+          { id: "ruhig", label: "ruhig und idyllisch", meaning: "yên tĩnh và thanh bình", synonyms: ["friedlich"] },
           { id: "frischeluft", label: "frische ___", meaning: "không khí trong lành", answer: "Luft" },
-          { id: "gemeinschaft", label: "engere Gemeinschaft", meaning: "cộng đồng gắn kết hơn" },
+          { id: "gemeinschaft", label: "engere Gemeinschaft", meaning: "cộng đồng gắn kết hơn", synonyms: ["ein starker Zusammenhalt"] },
         ],
       },
       {
@@ -48,8 +48,8 @@ const topic: Topic = {
         meaning: "nông thôn: nhược điểm",
         children: [
           { id: "wenigerjobs", label: "weniger Jobangebote", meaning: "ít cơ hội việc làm hơn" },
-          { id: "anbindung", label: "schlechte ___ an den ÖPNV", meaning: "kết nối giao thông công cộng kém", answer: "Anbindung" },
-          { id: "langeweile", label: "wenig Abwechslung", meaning: "ít sự đổi mới/nhàm chán" },
+          { id: "anbindung", label: "schlechte ___ an den ÖPNV", meaning: "kết nối giao thông công cộng kém", answer: "Anbindung", note: "an + binden (kết nối): mức độ dễ tiếp cận phương tiện công cộng." },
+          { id: "langeweile", label: "wenig Abwechslung", meaning: "ít sự đổi mới/nhàm chán", synonyms: ["die Langeweile"] },
         ],
       },
     ],

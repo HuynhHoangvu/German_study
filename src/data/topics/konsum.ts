@@ -18,8 +18,8 @@ const topic: Topic = {
         meaning: "thói quen mua sắm",
         children: [
           { id: "onlineshopping", label: "das Online-Shopping", meaning: "mua sắm trực tuyến" },
-          { id: "werbung", label: "die ___", meaning: "quảng cáo", answer: "Werbung" },
-          { id: "impulskauf", label: "der Impulskauf", meaning: "mua sắm bốc đồng" },
+          { id: "werbung", label: "die ___", meaning: "quảng cáo", answer: "Werbung", synonyms: ["die Reklame"] },
+          { id: "impulskauf", label: "der Impulskauf", meaning: "mua sắm bốc đồng", note: "Impuls (bốc đồng) + Kauf (việc mua): mua không suy nghĩ trước." },
         ],
       },
       {
@@ -29,7 +29,7 @@ const topic: Topic = {
         children: [
           { id: "sparen", label: "das Sparen", meaning: "tiết kiệm", synonyms: ["das Rücklagen bilden"] },
           { id: "schulden", label: "die ___", meaning: "nợ nần", answer: "Schulden" },
-          { id: "kredit", label: "der Kredit", meaning: "khoản vay" },
+          { id: "kredit", label: "der Kredit", meaning: "khoản vay", synonyms: ["das Darlehen"] },
           { id: "budget", label: "das Budget planen", meaning: "lập ngân sách" },
         ],
       },

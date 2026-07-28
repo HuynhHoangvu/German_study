@@ -38,9 +38,9 @@ const topic: Topic = {
         label: "Interkulturelle Unterschiede",
         meaning: "khác biệt liên văn hóa",
         children: [
-          { id: "wertvorstellungen", label: "die Wertvorstellungen", meaning: "quan niệm giá trị" },
+          { id: "wertvorstellungen", label: "die Wertvorstellungen", meaning: "quan niệm giá trị", note: "Wert (giá trị) + Vorstellung (quan niệm)." },
           { id: "toleranz", label: "die ___", meaning: "sự khoan dung", answer: "Toleranz" },
-          { id: "integration", label: "die Integration", meaning: "sự hòa nhập" },
+          { id: "integration", label: "die Integration", meaning: "sự hòa nhập", synonyms: ["die Eingliederung"] },
         ],
       },
       {
@@ -48,7 +48,7 @@ const topic: Topic = {
         label: "Bedeutung von Kultur",
         meaning: "ý nghĩa của văn hóa",
         children: [
-          { id: "identitaet", label: "die kulturelle Identität", meaning: "bản sắc văn hóa" },
+          { id: "identitaet", label: "die kulturelle Identität", meaning: "bản sắc văn hóa", synonyms: ["die kulturelle Zugehörigkeit"] },
           { id: "austausch", label: "der kulturelle Austausch", meaning: "trao đổi văn hóa" },
         ],
       },

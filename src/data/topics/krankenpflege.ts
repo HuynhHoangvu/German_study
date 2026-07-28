@@ -19,8 +19,8 @@ const topic: Topic = {
         children: [
           { id: "station", label: "die Station", meaning: "khoa/phòng bệnh" },
           { id: "intensivstation", label: "die ___", meaning: "khoa hồi sức tích cực", answer: "Intensivstation", note: "kurz: ICU" },
-          { id: "notaufnahme", label: "die Notaufnahme", meaning: "khoa cấp cứu" },
-          { id: "pflegeheim", label: "das Pflegeheim", meaning: "viện dưỡng lão" },
+          { id: "notaufnahme", label: "die Notaufnahme", meaning: "khoa cấp cứu", note: "Not (khẩn cấp) + Aufnahme (tiếp nhận)." },
+          { id: "pflegeheim", label: "das Pflegeheim", meaning: "viện dưỡng lão", synonyms: ["das Altersheim"] },
         ],
       },
       {
@@ -31,7 +31,7 @@ const topic: Topic = {
           { id: "fruehschicht", label: "die Frühschicht", meaning: "ca sáng" },
           { id: "spaetschicht", label: "die ___", meaning: "ca chiều", answer: "Spätschicht" },
           { id: "nachtschicht", label: "die Nachtschicht", meaning: "ca đêm" },
-          { id: "uebergabe", label: "die Übergabe", meaning: "buổi bàn giao ca trực" },
+          { id: "uebergabe", label: "die Übergabe", meaning: "buổi bàn giao ca trực", note: "über + geben: chuyển giao thông tin bệnh nhân cho ca sau." },
         ],
       },
       {
@@ -53,7 +53,7 @@ const topic: Topic = {
         children: [
           { id: "pflegedokumentation", label: "die Pflegedokumentation", meaning: "hồ sơ theo dõi chăm sóc" },
           { id: "zustand", label: "der ___ hat sich verschlechtert", meaning: "tình trạng xấu đi", answer: "Zustand" },
-          { id: "pflegebeduerftig", label: "pflegebedürftig sein", meaning: "cần được chăm sóc" },
+          { id: "pflegebeduerftig", label: "pflegebedürftig sein", meaning: "cần được chăm sóc", note: "Pflege (chăm sóc) + bedürftig (cần đến)." },
           { id: "visite", label: "die Visite", meaning: "buổi thăm khám cùng bác sĩ" },
         ],
       },

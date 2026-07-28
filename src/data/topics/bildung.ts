@@ -28,8 +28,8 @@ const topic: Topic = {
         label: "Vorteile guter Bildung",
         meaning: "lợi ích giáo dục tốt",
         children: [
-          { id: "chancen", label: "bessere Berufschancen", meaning: "cơ hội nghề nghiệp tốt hơn" },
-          { id: "selbststaendig2", label: "selbstständiges Denken", meaning: "tư duy độc lập" },
+          { id: "chancen", label: "bessere Berufschancen", meaning: "cơ hội nghề nghiệp tốt hơn", synonyms: ["bessere Jobaussichten"] },
+          { id: "selbststaendig2", label: "selbstständiges Denken", meaning: "tư duy độc lập", synonyms: ["kritisches Denken"] },
         ],
       },
       {
@@ -37,9 +37,9 @@ const topic: Topic = {
         label: "Probleme",
         meaning: "vấn đề",
         children: [
-          { id: "chancenungleichheit", label: "die ___", meaning: "bất bình đẳng cơ hội", answer: "Chancenungleichheit" },
+          { id: "chancenungleichheit", label: "die ___", meaning: "bất bình đẳng cơ hội", answer: "Chancenungleichheit", note: "Chance (cơ hội) + Ungleichheit (sự bất bình đẳng)." },
           { id: "lehrermangel", label: "der Lehrermangel", meaning: "thiếu giáo viên" },
-          { id: "leistungsdruck", label: "der Leistungsdruck", meaning: "áp lực thành tích" },
+          { id: "leistungsdruck", label: "der Leistungsdruck", meaning: "áp lực thành tích", synonyms: ["der Notendruck"] },
         ],
       },
       {

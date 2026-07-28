@@ -20,7 +20,7 @@ const topic: Topic = {
           { id: "unfall", label: "der Unfall", meaning: "tai nạn" },
           { id: "herzinfarkt", label: "der ___", meaning: "nhồi máu cơ tim", answer: "Herzinfarkt" },
           { id: "verbrennung", label: "die Verbrennung", meaning: "vết bỏng" },
-          { id: "bewusstlosigkeit", label: "die Bewusstlosigkeit", meaning: "sự bất tỉnh" },
+          { id: "bewusstlosigkeit", label: "die Bewusstlosigkeit", meaning: "sự bất tỉnh", note: "bewusst (có ý thức) + los (mất đi) + Bewusstlosigkeit." },
         ],
       },
       {
@@ -38,7 +38,7 @@ const topic: Topic = {
         label: "Hilfe rufen",
         meaning: "gọi trợ giúp",
         children: [
-          { id: "rettungswagen", label: "der Rettungswagen", meaning: "xe cấp cứu" },
+          { id: "rettungswagen", label: "der Rettungswagen", meaning: "xe cấp cứu", synonyms: ["der Krankenwagen"] },
           { id: "notruf", label: "den ___ wählen", meaning: "gọi số cấp cứu (112)", answer: "Notruf" },
           { id: "notaufnahme2", label: "die Notaufnahme", meaning: "khoa cấp cứu" },
         ],

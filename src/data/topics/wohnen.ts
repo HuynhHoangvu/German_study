@@ -39,8 +39,8 @@ const topic: Topic = {
         meaning: "vấn đề",
         children: [
           { id: "mietpreise", label: "steigende Mietpreise", meaning: "giá thuê nhà tăng", synonyms: ["die Mietexplosion"] },
-          { id: "wohnungsmangel", label: "der Wohnungsmangel", meaning: "thiếu nhà ở" },
-          { id: "gentrifizierung", label: "die Gentrifizierung", meaning: "quá trình đô thị hóa/nâng cấp khu dân cư" },
+          { id: "wohnungsmangel", label: "der Wohnungsmangel", meaning: "thiếu nhà ở", synonyms: ["die Wohnungsnot"] },
+          { id: "gentrifizierung", label: "die Gentrifizierung", meaning: "quá trình đô thị hóa/nâng cấp khu dân cư", note: "khu dân cư cũ được nâng cấp, khiến giá thuê tăng và cư dân cũ phải chuyển đi." },
         ],
       },
       {

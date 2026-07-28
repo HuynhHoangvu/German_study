@@ -17,9 +17,9 @@ const topic: Topic = {
         label: "Ernährungstrends",
         meaning: "xu hướng ăn uống",
         children: [
-          { id: "vegetarisch", label: "vegetarisch leben", meaning: "ăn chay" },
+          { id: "vegetarisch", label: "vegetarisch leben", meaning: "ăn chay", synonyms: ["fleischlos essen"] },
           { id: "vegan", label: "___ leben", meaning: "ăn thuần chay", answer: "vegan" },
-          { id: "bio", label: "Bio-Lebensmittel", meaning: "thực phẩm hữu cơ" },
+          { id: "bio", label: "Bio-Lebensmittel", meaning: "thực phẩm hữu cơ", synonyms: ["ökologische Lebensmittel"], note: "Bio = kurz für biologisch angebaut, ohne künstliche Zusätze." },
         ],
       },
       {
@@ -27,9 +27,9 @@ const topic: Topic = {
         label: "Essgewohnheiten",
         meaning: "thói quen ăn uống",
         children: [
-          { id: "fastfood2", label: "das Fast Food", meaning: "đồ ăn nhanh" },
-          { id: "fertiggerichte", label: "die ___", meaning: "đồ ăn chế biến sẵn", answer: "Fertiggerichte" },
-          { id: "hausgemacht", label: "hausgemachtes Essen", meaning: "đồ ăn tự nấu" },
+          { id: "fastfood2", label: "das Fast Food", meaning: "đồ ăn nhanh", synonyms: ["das Junkfood"] },
+          { id: "fertiggerichte", label: "die ___", meaning: "đồ ăn chế biến sẵn", answer: "Fertiggerichte", note: "Fertiggerichte = Essen, das man nur noch aufwärmen muss." },
+          { id: "hausgemacht", label: "hausgemachtes Essen", meaning: "đồ ăn tự nấu", synonyms: ["selbstgekochtes Essen"] },
         ],
       },
       {
@@ -37,9 +37,9 @@ const topic: Topic = {
         label: "Probleme",
         meaning: "vấn đề",
         children: [
-          { id: "mangelernaehrung", label: "die Mangelernährung", meaning: "suy dinh dưỡng" },
+          { id: "mangelernaehrung", label: "die Mangelernährung", meaning: "suy dinh dưỡng", synonyms: ["die Unterernährung"] },
           { id: "zuckerkonsum", label: "hoher ___", meaning: "tiêu thụ đường cao", answer: "Zuckerkonsum" },
-          { id: "lebensmittelverschwendung", label: "die Lebensmittelverschwendung", meaning: "lãng phí thực phẩm" },
+          { id: "lebensmittelverschwendung", label: "die Lebensmittelverschwendung", meaning: "lãng phí thực phẩm", note: "zusammengesetzt aus: Lebensmittel + Verschwendung." },
         ],
       },
       {
@@ -47,7 +47,7 @@ const topic: Topic = {
         label: "Empfehlungen",
         meaning: "khuyến nghị",
         children: [
-          { id: "ausgewogen2", label: "ausgewogen essen", meaning: "ăn cân bằng" },
+          { id: "ausgewogen2", label: "ausgewogen essen", meaning: "ăn cân bằng", synonyms: ["sich gesund ernähren"] },
           { id: "portionen", label: "kleinere Portionen", meaning: "khẩu phần nhỏ hơn" },
         ],
       },

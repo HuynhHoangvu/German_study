@@ -10,12 +10,14 @@ export default function NodeDetailPanel({
   topicSlug,
   solved,
   onSolved,
+  onClose,
 }: {
   vocab: VocabNode | null;
   color: string;
   topicSlug: string;
   solved: boolean;
   onSolved: (id: string) => void;
+  onClose?: () => void;
 }) {
   const [input, setInput] = useState("");
   const [wrong, setWrong] = useState(false);
@@ -49,10 +51,19 @@ export default function NodeDetailPanel({
 
   return (
     <div
-      className="rounded-2xl border px-5 py-4 bg-[var(--surface)] transition-all"
+      className="relative rounded-2xl border px-5 py-4 bg-[var(--surface)] transition-all"
       style={{ borderColor: color }}
     >
-      <div className="flex items-center gap-2 flex-wrap">
+      {onClose && (
+        <button
+          onClick={onClose}
+          aria-label="Đóng"
+          className="absolute top-3 right-3 h-7 w-7 flex items-center justify-center rounded-full text-neutral-400 hover:bg-black/[0.05] dark:hover:bg-white/[0.08] hover:text-neutral-600"
+        >
+          ✕
+        </button>
+      )}
+      <div className="flex items-center gap-2 flex-wrap pr-8">
         <h3 className="text-lg font-bold" style={{ color }}>
           {isBlank && !solved ? vocab.label.replace("___", "____") : vocab.label.replace("___", vocab.answer ?? "")}
         </h3>

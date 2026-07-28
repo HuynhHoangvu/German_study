@@ -27,9 +27,9 @@ const topic: Topic = {
         label: "Soziale Medien",
         meaning: "mạng xã hội",
         children: [
-          { id: "vernetzung", label: "die Vernetzung", meaning: "kết nối" },
+          { id: "vernetzung", label: "die Vernetzung", meaning: "kết nối", synonyms: ["die Verbindung"] },
           { id: "informationsaustausch", label: "der ___", meaning: "trao đổi thông tin", answer: "Informationsaustausch" },
-          { id: "sucht", label: "die Social-Media-Sucht", meaning: "nghiện mạng xã hội" },
+          { id: "sucht", label: "die Social-Media-Sucht", meaning: "nghiện mạng xã hội", note: "Sucht = chứng nghiện, dùng cho nhiều loại (Handysucht, Spielsucht...)." },
         ],
       },
       {
@@ -38,7 +38,7 @@ const topic: Topic = {
         meaning: "rủi ro",
         children: [
           { id: "datenschutz", label: "der Datenschutz", meaning: "bảo mật dữ liệu", synonyms: ["der Datenmissbrauch (Gegenteil)"] },
-          { id: "fakenews", label: "die Fake News", meaning: "tin giả" },
+          { id: "fakenews", label: "die Fake News", meaning: "tin giả", synonyms: ["die Falschmeldung"] },
           { id: "cybermobbing", label: "das ___", meaning: "bắt nạt trên mạng", answer: "Cybermobbing" },
         ],
       },

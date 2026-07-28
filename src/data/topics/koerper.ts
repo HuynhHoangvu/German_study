@@ -30,9 +30,9 @@ const topic: Topic = {
         meaning: "xương & khớp",
         children: [
           { id: "knochen", label: "der Knochen", meaning: "xương" },
-          { id: "wirbelsaeule", label: "die ___", meaning: "cột sống", answer: "Wirbelsäule" },
+          { id: "wirbelsaeule", label: "die ___", meaning: "cột sống", answer: "Wirbelsäule", note: "Wirbel (đốt sống) + Säule (cột)." },
           { id: "gelenk", label: "das Gelenk", meaning: "khớp" },
-          { id: "muskel", label: "der Muskel", meaning: "cơ bắp" },
+          { id: "muskel", label: "der Muskel", meaning: "cơ bắp", synonyms: ["die Muskulatur"] },
         ],
       },
       {
@@ -41,8 +41,8 @@ const topic: Topic = {
         meaning: "bộ phận cơ thể bên ngoài",
         children: [
           { id: "kopf", label: "der Kopf", meaning: "đầu" },
-          { id: "brustkorb", label: "der ___", meaning: "lồng ngực", answer: "Brustkorb" },
-          { id: "gliedmassen", label: "die Gliedmaßen", meaning: "tứ chi" },
+          { id: "brustkorb", label: "der ___", meaning: "lồng ngực", answer: "Brustkorb", note: "Brust (ngực) + Korb (cái giỏ/lồng)." },
+          { id: "gliedmassen", label: "die Gliedmaßen", meaning: "tứ chi", synonyms: ["die Extremitäten"] },
         ],
       },
       {
@@ -51,7 +51,7 @@ const topic: Topic = {
         meaning: "giác quan & hệ thần kinh",
         children: [
           { id: "nervensystem", label: "das Nervensystem", meaning: "hệ thần kinh" },
-          { id: "gehirn", label: "das Gehirn", meaning: "não bộ" },
+          { id: "gehirn", label: "das Gehirn", meaning: "não bộ", synonyms: ["das Hirn"] },
         ],
       },
     ],

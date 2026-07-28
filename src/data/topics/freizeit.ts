@@ -17,10 +17,10 @@ const topic: Topic = {
         label: "Aktivitäten",
         meaning: "hoạt động",
         children: [
-          { id: "sport2", label: "Sport treiben", meaning: "tập thể thao" },
+          { id: "sport2", label: "Sport treiben", meaning: "tập thể thao", synonyms: ["sich sportlich betätigen"] },
           { id: "lesen", label: "___", meaning: "đọc sách", answer: "lesen" },
           { id: "reisen2", label: "reisen", meaning: "du lịch" },
-          { id: "ehrenamt", label: "sich ehrenamtlich engagieren", meaning: "hoạt động tình nguyện" },
+          { id: "ehrenamt", label: "sich ehrenamtlich engagieren", meaning: "hoạt động tình nguyện", synonyms: ["freiwillig arbeiten"], note: "ehrenamtlich = không lương, tự nguyện vì cộng đồng." },
         ],
       },
       {
@@ -28,9 +28,9 @@ const topic: Topic = {
         label: "Bedeutung",
         meaning: "ý nghĩa",
         children: [
-          { id: "erholung3", label: "die Erholung", meaning: "sự nghỉ ngơi" },
+          { id: "erholung3", label: "die Erholung", meaning: "sự nghỉ ngơi", synonyms: ["die Entspannung"] },
           { id: "ausgleich", label: "der ___ zum Alltag", meaning: "sự cân bằng với đời thường", answer: "Ausgleich" },
-          { id: "selbstverwirklichung", label: "die Selbstverwirklichung", meaning: "tự hiện thực hóa bản thân" },
+          { id: "selbstverwirklichung", label: "die Selbstverwirklichung", meaning: "tự hiện thực hóa bản thân", note: "selbst (tự) + Verwirklichung (hiện thực hóa)." },
         ],
       },
       {
@@ -38,7 +38,7 @@ const topic: Topic = {
         label: "Probleme",
         meaning: "vấn đề",
         children: [
-          { id: "zeitmangel2", label: "der Zeitmangel", meaning: "thiếu thời gian" },
+          { id: "zeitmangel2", label: "der Zeitmangel", meaning: "thiếu thời gian", synonyms: ["wenig Zeit haben"] },
           { id: "bildschirmzeit", label: "zu viel ___", meaning: "quá nhiều thời gian dùng màn hình", answer: "Bildschirmzeit" },
         ],
       },
