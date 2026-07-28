@@ -1,0 +1,85 @@
+import {
+  Stethoscope,
+  ShieldAlert,
+  Car,
+  Leaf,
+  Briefcase,
+  GraduationCap,
+  Users,
+  Home,
+  Plane,
+  Cpu,
+  Apple,
+  Gamepad2,
+  Palette,
+  ShoppingCart,
+  Dumbbell,
+  Languages,
+  Scale,
+  Hospital,
+  Bone,
+  Siren,
+  UserRound,
+  Building2,
+  Sparkles,
+  ThumbsUp,
+  ThumbsDown,
+  AlertTriangle,
+  Lightbulb,
+  TrendingUp,
+  MessageCircle,
+  BookOpen,
+  Target,
+  ShieldCheck,
+  Clock,
+  Compass,
+  type LucideIcon,
+} from "lucide-react";
+
+export const topicIcons: Record<string, LucideIcon> = {
+  gesundheit: Stethoscope,
+  kriminalitaet: ShieldAlert,
+  verkehr: Car,
+  umwelt: Leaf,
+  arbeit: Briefcase,
+  bildung: GraduationCap,
+  familie: Users,
+  wohnen: Home,
+  reisen: Plane,
+  technologie: Cpu,
+  ernaehrung: Apple,
+  freizeit: Gamepad2,
+  kultur: Palette,
+  konsum: ShoppingCart,
+  sport: Dumbbell,
+  sprache: Languages,
+  politik: Scale,
+  krankenpflege: Hospital,
+  koerper: Bone,
+  notfall: Siren,
+  person: UserRound,
+  stadtland: Building2,
+};
+
+export function getTopicIcon(slug: string): LucideIcon {
+  return topicIcons[slug] ?? Leaf;
+}
+
+export const branchIconPool: LucideIcon[] = [
+  Sparkles,
+  ThumbsUp,
+  AlertTriangle,
+  Lightbulb,
+  TrendingUp,
+  MessageCircle,
+  BookOpen,
+  Target,
+  ShieldCheck,
+  Clock,
+  Compass,
+  ThumbsDown,
+];
+
+export function getBranchIcon(index: number): LucideIcon {
+  return branchIconPool[index % branchIconPool.length];
+}

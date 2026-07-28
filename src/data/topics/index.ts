@@ -12,6 +12,16 @@ import reisen from "./reisen";
 import technologie from "./technologie";
 import ernaehrung from "./ernaehrung";
 import freizeit from "./freizeit";
+import kultur from "./kultur";
+import konsum from "./konsum";
+import sport from "./sport";
+import sprache from "./sprache";
+import politik from "./politik";
+import krankenpflege from "./krankenpflege";
+import koerper from "./koerper";
+import notfall from "./notfall";
+import person from "./person";
+import stadtland from "./stadtland";
 
 export const topics: Topic[] = [
   gesundheit,
@@ -26,6 +36,16 @@ export const topics: Topic[] = [
   technologie,
   ernaehrung,
   freizeit,
+  kultur,
+  konsum,
+  sport,
+  sprache,
+  politik,
+  krankenpflege,
+  koerper,
+  notfall,
+  person,
+  stadtland,
 ];
 
 export function getTopic(slug: string): Topic | undefined {

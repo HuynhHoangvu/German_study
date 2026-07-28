@@ -31,16 +31,16 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <header className="sticky top-0 z-30 border-b border-[var(--border)] bg-[var(--surface)]/85 backdrop-blur">
-          <div className="mx-auto max-w-6xl px-5 py-3 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand)] text-white text-sm">
+          <div className="mx-auto max-w-6xl px-4 sm:px-5 py-3 flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-2 font-bold text-base sm:text-lg tracking-tight">
+              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--brand)] text-white text-sm">
                 DE
               </span>
-              <span>
+              <span className="truncate">
                 Deutsch <span className="text-[var(--brand)]">Mindmap</span>
               </span>
             </Link>
-            <nav className="flex items-center gap-5 text-sm font-medium text-neutral-500">
+            <nav className="flex items-center gap-3 sm:gap-5 text-sm font-medium text-neutral-500">
               <Link href="/" className="hover:text-[var(--brand)] transition-colors">
                 Chủ đề
               </Link>

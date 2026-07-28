@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Topic } from "@/types/topic";
 import { getTopicProgress } from "@/lib/progress";
+import { getTopicIcon } from "@/lib/icons";
 
 export default function TopicCard({ topic, totalBlanks }: { topic: Topic; totalBlanks: number }) {
   const [progress, setProgress] = useState(0);
+  const Icon = getTopicIcon(topic.slug);
 
   useEffect(() => {
     setProgress(getTopicProgress(topic.slug, totalBlanks));
@@ -15,13 +17,13 @@ export default function TopicCard({ topic, totalBlanks }: { topic: Topic; totalB
   return (
     <Link
       href={`/topics/${topic.slug}`}
-      className="group relative flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+      className="group relative flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 sm:p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
     >
       <div
-        className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl text-white font-bold text-sm"
+        className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl text-white"
         style={{ background: topic.color }}
       >
-        {topic.title.slice(0, 2).toUpperCase()}
+        <Icon size={20} strokeWidth={2.25} />
       </div>
       <div className="flex items-center gap-2">
         <h3 className="font-semibold text-base">{topic.title}</h3>
