@@ -3,7 +3,7 @@ import TopicCard from "@/components/TopicCard";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-6xl px-5 py-12">
+    <div className="mx-auto max-w-7xl px-5 py-12">
       <section className="mb-10">
         <span className="inline-block text-xs font-semibold tracking-wide uppercase text-[var(--brand)] bg-[var(--brand-soft)] px-3 py-1 rounded-full mb-4">
           Ôn luyện tiếng Đức B1 · B2
@@ -18,7 +18,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {topics.map((topic) => (
           <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
         ))}

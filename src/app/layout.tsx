@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import RandomTopicButton from "@/components/RandomTopicButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,17 +42,18 @@ export default function RootLayout({
               </span>
             </Link>
             <nav className="flex items-center gap-3 sm:gap-5 text-sm font-medium text-neutral-500">
-              <Link href="/" className="hover:text-[var(--brand)] transition-colors">
+              <Link href="/" className="hidden sm:inline hover:text-[var(--brand)] transition-colors">
                 Chủ đề
               </Link>
               <a
                 href="https://github.com/HuynhHoangvu/German_study"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-[var(--brand)] transition-colors"
+                className="hidden sm:inline hover:text-[var(--brand)] transition-colors"
               >
                 GitHub
               </a>
+              <RandomTopicButton />
             </nav>
           </div>
         </header>
