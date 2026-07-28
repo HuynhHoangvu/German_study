@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { VocabNode } from "@/types/topic";
 import { markBlankSolved } from "@/lib/progress";
+import { speakGerman } from "@/lib/speech";
 
 export default function NodeDetailPanel({
   vocab,
@@ -36,6 +37,7 @@ export default function NodeDetailPanel({
   }
 
   const isBlank = Boolean(vocab.answer);
+  const spokenText = vocab.label.replace("___", vocab.answer ?? "");
 
   function check() {
     if (!vocab || !vocab.answer) return;
@@ -65,8 +67,19 @@ export default function NodeDetailPanel({
       )}
       <div className="flex items-center gap-2 flex-wrap pr-8">
         <h3 className="text-lg font-bold" style={{ color }}>
-          {isBlank && !solved ? vocab.label.replace("___", "____") : vocab.label.replace("___", vocab.answer ?? "")}
+          {isBlank && !solved ? vocab.label.replace("___", "____") : spokenText}
         </h3>
+        {(!isBlank || solved) && (
+          <button
+            onClick={() => speakGerman(spokenText)}
+            aria-label="Nghe phát âm"
+            title="Nghe phát âm"
+            className="h-7 w-7 flex items-center justify-center rounded-full shrink-0 text-white text-sm"
+            style={{ background: color }}
+          >
+            🔊
+          </button>
+        )}
         {isBlank && solved && <span className="text-green-600 text-sm font-semibold">✓ Đã hoàn thành</span>}
       </div>
 
