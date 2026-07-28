@@ -14,6 +14,7 @@ import { buildFlow, FlowNodeData } from "@/lib/layout";
 import VocabNodeComponent from "@/components/VocabNode";
 import NodeDetailPanel from "@/components/NodeDetailPanel";
 import { getSolvedBlanks } from "@/lib/progress";
+import { speakGerman } from "@/lib/speech";
 
 const nodeTypes = { vocab: VocabNodeComponent };
 
@@ -76,7 +77,16 @@ export default function MindMap({ topic }: { topic: Topic }) {
           nodes={nodes}
           edges={edges}
           nodeTypes={nodeTypes}
-          onNodeClick={(_, node) => setSelectedId(node.id)}
+          onNodeClick={(_, node) => {
+            setSelectedId(node.id);
+            const data = node.data as FlowNodeData;
+            const vocab = data.vocab;
+            const isBlank = Boolean(vocab.answer);
+            const alreadySolved = solvedIds.has(node.id);
+            if (!isBlank || alreadySolved) {
+              speakGerman(vocab.label.replace("___", vocab.answer ?? ""));
+            }
+          }}
           onPaneClick={() => setSelectedId(null)}
           fitView
           fitViewOptions={{ padding: 0.15, minZoom: 0.3, maxZoom: 1 }}
