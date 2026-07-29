@@ -15,7 +15,7 @@ export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNod
   const { vocab, depth, color, branchColor, branchIndex, solved } = data;
   const isRoot = depth === 0;
   const isBranch = depth === 1;
-  const isLeaf = depth >= 2;
+  const isLeaf = !vocab.children || vocab.children.length === 0;
   const isBlank = Boolean(vocab.answer);
   const nodeColor = isRoot ? color : branchColor;
   const branchIcon = getBranchIcon(branchIndex);
@@ -73,8 +73,8 @@ export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNod
         ...(selected ? ({ ["--tw-ring-color" as string]: nodeColor }) : {}),
       }}
     >
-      <Handle type="target" position={Position.Top} style={{ background: nodeColor, opacity: 0 }} />
-      <Handle type="source" position={Position.Bottom} style={{ background: nodeColor, opacity: 0 }} />
+      <Handle type="target" position={Position.Left} style={{ background: nodeColor, opacity: 0 }} />
+      <Handle type="source" position={Position.Right} style={{ background: nodeColor, opacity: 0 }} />
 
       {isBranch &&
         createElement(branchIcon, { size: 16, strokeWidth: 2.25, className: "shrink-0 opacity-90" })}

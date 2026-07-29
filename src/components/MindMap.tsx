@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import ReactFlow, {
   Background,
   Controls,
   MiniMap,
   BackgroundVariant,
   Node,
+  ReactFlowInstance,
 } from "reactflow";
+import { BookMarked } from "lucide-react";
 import "reactflow/dist/style.css";
 import { Topic, VocabNode } from "@/types/topic";
 import { buildFlow, FlowNodeData } from "@/lib/layout";
@@ -46,6 +48,12 @@ export default function MindMap({ topic }: { topic: Topic }) {
     [topic]
   );
 
+  const reactFlowInstance = useRef<ReactFlowInstance | null>(null);
+  const hasWortarten = useMemo(
+    () => (topic.root.children ?? []).some((c) => c.id === "wortarten"),
+    [topic]
+  );
+
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [solvedIds, setSolvedIds] = useState<Set<string>>(new Set());
 
@@ -72,11 +80,30 @@ export default function MindMap({ topic }: { topic: Topic }) {
 
   return (
     <div className="flex flex-col gap-4">
+      {hasWortarten && (
+        <button
+          onClick={() =>
+            reactFlowInstance.current?.fitView({
+              nodes: [{ id: "wortarten" }],
+              padding: 0.3,
+              duration: 400,
+            })
+          }
+          className="self-start inline-flex items-center gap-1.5 rounded-full text-white text-xs sm:text-sm font-medium px-3.5 py-1.5 hover:opacity-90 transition-opacity"
+          style={{ background: topic.color }}
+        >
+          <BookMarked size={15} strokeWidth={2.25} />
+          Wortschatz nach Wortart
+        </button>
+      )}
       <div className="relative w-full h-[70vh] sm:h-[70vh] lg:h-[75vh] rounded-2xl border border-[var(--border)] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
         <ReactFlow
           nodes={nodes}
           edges={edges}
           nodeTypes={nodeTypes}
+          onInit={(instance) => {
+            reactFlowInstance.current = instance;
+          }}
           onNodeClick={(_, node) => {
             setSelectedId(node.id);
             const data = node.data as FlowNodeData;
