@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "fremdsprachen", label: "___ lernen", meaning: "học ngoại ngữ", answer: "Fremdsprachen" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-lehrer", label: "der Lehrer / die Lehrerin", meaning: "giáo viên" },
+              { id: "wa-schueler", label: "der Schüler / die Schülerin", meaning: "học sinh" },
+              { id: "wa-note", label: "die Note", meaning: "điểm số" },
+              { id: "wa-pruefung", label: "die Prüfung", meaning: "kỳ thi" },
+              { id: "wa-stipendium", label: "das Stipendium", meaning: "học bổng" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-eine-pruefung-ablegen", label: "eine Prüfung ablegen", meaning: "làm/tham gia một kỳ thi" },
+              { id: "wa-abschluss-machen", label: "einen Abschluss machen", meaning: "hoàn thành một bằng cấp" },
+              { id: "wa-wissen-erwerben", label: "Wissen erwerben", meaning: "thu nhận kiến thức" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-unterrichten", label: "unterrichten", meaning: "giảng dạy" },
+              { id: "wa-bestehen", label: "bestehen", meaning: "vượt qua (kỳ thi)", note: "unregelmäßig: besteht, bestand, hat bestanden" },
+              { id: "wa-durchfallen", label: "durchfallen", meaning: "trượt (kỳ thi)", note: "trennbar, unregelmäßig: fällt durch, fiel durch, ist durchgefallen" },
+              { id: "wa-sich-vorbereiten", label: "sich vorbereiten auf + Akk.", meaning: "chuẩn bị cho" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-interessiert", label: "interessiert an + Dat.", meaning: "quan tâm đến" },
+              { id: "wa-begabt", label: "begabt für + Akk.", meaning: "có năng khiếu về" },
+              { id: "wa-erfolgreich", label: "erfolgreich in + Dat.", meaning: "thành công trong" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

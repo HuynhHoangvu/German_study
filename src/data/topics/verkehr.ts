@@ -67,6 +67,56 @@ const topic: Topic = {
           { id: "smartcity", label: "vernetzte Verkehrssysteme", meaning: "hệ thống giao thông thông minh" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-fahrer", label: "der Fahrer", meaning: "người lái xe" },
+              { id: "wa-fahrplan", label: "der Fahrplan", meaning: "lịch trình chạy xe" },
+              { id: "wa-verkehrsschild", label: "das Verkehrsschild", meaning: "biển báo giao thông" },
+              { id: "wa-fahrkarte", label: "die Fahrkarte", meaning: "vé xe" },
+              { id: "wa-geschwindigkeit", label: "die Geschwindigkeit", meaning: "tốc độ" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-eine-fahrkarte-kaufen", label: "eine Fahrkarte kaufen", meaning: "mua vé xe" },
+              { id: "wa-im-stau-stehen", label: "im Stau stehen", meaning: "kẹt xe (đứng trong dòng kẹt xe)" },
+              { id: "wa-oepnv-nutzen", label: "den ÖPNV nutzen", meaning: "sử dụng phương tiện công cộng" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-fahren", label: "fahren", meaning: "lái xe/đi (bằng phương tiện)", note: "unregelmäßig: fährt, fuhr, ist gefahren" },
+              { id: "wa-umsteigen", label: "umsteigen", meaning: "đổi chuyến/đổi xe", note: "trennbar, unregelmäßig: steigt um, stieg um, ist umgestiegen" },
+              { id: "wa-parken", label: "parken", meaning: "đỗ xe" },
+              { id: "wa-sich-verspaeten", label: "sich verspäten", meaning: "bị trễ giờ" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-zustaendig-verkehr", label: "zuständig für + Akk.", meaning: "phụ trách về" },
+              { id: "wa-abhaengig-verkehr", label: "abhängig von + Dat.", meaning: "phụ thuộc vào" },
+              { id: "wa-verantwortlich-verkehr", label: "verantwortlich für + Akk.", meaning: "chịu trách nhiệm về" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

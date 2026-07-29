@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "mietpreisbremse", label: "die Mietpreisbremse", meaning: "trần giá thuê nhà" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-vermieter", label: "der Vermieter", meaning: "chủ nhà cho thuê" },
+              { id: "wa-mietvertrag", label: "der Mietvertrag", meaning: "hợp đồng thuê nhà" },
+              { id: "wa-nebenkosten", label: "die Nebenkosten", meaning: "chi phí phụ (điện nước...)" },
+              { id: "wa-umzug", label: "der Umzug", meaning: "sự chuyển nhà" },
+              { id: "wa-vermietung", label: "die Vermietung", meaning: "việc cho thuê" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-eine-wohnung-mieten", label: "eine Wohnung mieten", meaning: "thuê một căn hộ" },
+              { id: "wa-den-mietvertrag-unterschreiben", label: "den Mietvertrag unterschreiben", meaning: "ký hợp đồng thuê nhà" },
+              { id: "wa-in-eine-neue-wohnung-ziehen", label: "in eine neue Wohnung ziehen", meaning: "chuyển đến căn hộ mới" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-mieten", label: "mieten", meaning: "thuê (nhà)" },
+              { id: "wa-vermieten", label: "vermieten", meaning: "cho thuê" },
+              { id: "wa-einrichten", label: "einrichten", meaning: "trang trí/bài trí nội thất", note: "trennbar: richtet ein, richtete ein, hat eingerichtet" },
+              { id: "wa-renovieren", label: "renovieren", meaning: "cải tạo/tân trang" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-zufrieden-wohnen", label: "zufrieden mit + Dat.", meaning: "hài lòng với (chỗ ở)" },
+              { id: "wa-verantwortlich-wohnen", label: "verantwortlich für + Akk.", meaning: "chịu trách nhiệm về" },
+              { id: "wa-abhaengig-wohnen", label: "abhängig von + Dat.", meaning: "phụ thuộc vào" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

@@ -57,6 +57,56 @@ const topic: Topic = {
           { id: "visite", label: "die Visite", meaning: "buổi thăm khám cùng bác sĩ" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-pflegekraft", label: "die Pflegekraft", meaning: "nhân viên điều dưỡng" },
+              { id: "wa-diagnose", label: "die Diagnose", meaning: "chẩn đoán" },
+              { id: "wa-hygiene", label: "die Hygiene", meaning: "vệ sinh" },
+              { id: "wa-medikament", label: "das Medikament", meaning: "thuốc" },
+              { id: "wa-bettlaegerig", label: "der/die Bettlägerige", meaning: "người nằm liệt giường" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-den-blutdruck-messen", label: "den Blutdruck messen", meaning: "đo huyết áp" },
+              { id: "wa-medikamente-verabreichen", label: "Medikamente verabreichen", meaning: "cho uống/dùng thuốc" },
+              { id: "wa-den-patienten-versorgen", label: "den Patienten versorgen", meaning: "chăm sóc bệnh nhân" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-pflegen", label: "pflegen", meaning: "chăm sóc" },
+              { id: "wa-verabreichen", label: "verabreichen", meaning: "cho dùng (thuốc)" },
+              { id: "wa-sich-verschlechtern", label: "sich verschlechtern", meaning: "trở nên tệ hơn" },
+              { id: "wa-desinfizieren", label: "desinfizieren", meaning: "khử trùng" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-zustaendig", label: "zuständig für + Akk.", meaning: "phụ trách về" },
+              { id: "wa-infiziert", label: "infiziert mit + Dat.", meaning: "nhiễm (bệnh gì)" },
+              { id: "wa-abhaengig-pflege", label: "abhängig von + Dat.", meaning: "phụ thuộc vào (sự chăm sóc)" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

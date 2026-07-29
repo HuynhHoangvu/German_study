@@ -51,6 +51,56 @@ const topic: Topic = {
           { id: "geburtenrate", label: "die niedrige Geburtenrate", meaning: "tỷ lệ sinh thấp", synonyms: ["der Geburtenrückgang"] },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-regierung", label: "die Regierung", meaning: "chính phủ" },
+              { id: "wa-gesetz", label: "das Gesetz", meaning: "luật/đạo luật" },
+              { id: "wa-buerger", label: "der Bürger", meaning: "công dân" },
+              { id: "wa-wahl", label: "die Wahl", meaning: "cuộc bầu cử" },
+              { id: "wa-gerechtigkeit", label: "die Gerechtigkeit", meaning: "sự công bằng" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-ein-gesetz-verabschieden", label: "ein Gesetz verabschieden", meaning: "thông qua một đạo luật" },
+              { id: "wa-an-der-wahl-teilnehmen", label: "an der Wahl teilnehmen", meaning: "tham gia bầu cử" },
+              { id: "wa-fuer-gleichheit-kaempfen", label: "für Gleichheit kämpfen", meaning: "đấu tranh vì sự bình đẳng" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-sich-engagieren", label: "sich engagieren für + Akk.", meaning: "tích cực tham gia/đấu tranh cho" },
+              { id: "wa-diskriminieren", label: "diskriminieren", meaning: "phân biệt đối xử" },
+              { id: "wa-integrieren", label: "integrieren", meaning: "hòa nhập" },
+              { id: "wa-abstimmen", label: "abstimmen über + Akk.", meaning: "bỏ phiếu về", note: "trennbar: stimmt ab, stimmte ab, hat abgestimmt" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-gleichberechtigt", label: "gleichberechtigt mit + Dat.", meaning: "bình đẳng với" },
+              { id: "wa-verantwortlich-politik", label: "verantwortlich für + Akk.", meaning: "chịu trách nhiệm về" },
+              { id: "wa-engagiert", label: "engagiert für + Akk.", meaning: "tích cực dấn thân vì" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

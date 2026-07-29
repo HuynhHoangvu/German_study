@@ -56,6 +56,56 @@ const topic: Topic = {
           { id: "vorsorge", label: "die ___", meaning: "khám sức khỏe định kỳ", answer: "Vorsorgeuntersuchung" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-krankheit", label: "die Krankheit", meaning: "bệnh tật" },
+              { id: "wa-symptom", label: "das Symptom", meaning: "triệu chứng" },
+              { id: "wa-behandlung", label: "die Behandlung", meaning: "sự điều trị" },
+              { id: "wa-immunsystem", label: "das Immunsystem", meaning: "hệ miễn dịch" },
+              { id: "wa-lebensweise", label: "die Lebensweise", meaning: "lối sống" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-auf-die-gesundheit-achten", label: "auf die Gesundheit achten", meaning: "chú ý đến sức khỏe" },
+              { id: "wa-einen-arzt-aufsuchen", label: "einen Arzt aufsuchen", meaning: "đi khám bác sĩ" },
+              { id: "wa-ein-gesundes-leben-fuehren", label: "ein gesundes Leben führen", meaning: "sống một cuộc sống lành mạnh" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-sich-erholen", label: "sich erholen von + Dat.", meaning: "hồi phục sau (bệnh gì)" },
+              { id: "wa-leiden", label: "leiden an + Dat.", meaning: "mắc phải (bệnh gì)", note: "unregelmäßig: leidet, litt, hat gelitten" },
+              { id: "wa-vorbeugen", label: "vorbeugen + Dat.", meaning: "phòng ngừa", note: "trennbar: beugt vor, beugte vor, hat vorgebeugt" },
+              { id: "wa-sich-fit-halten", label: "sich fit halten", meaning: "giữ gìn sức khỏe/thể lực" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-anfaellig", label: "anfällig für + Akk.", meaning: "dễ mắc phải" },
+              { id: "wa-gesund-fuer", label: "gesund für + Akk.", meaning: "tốt cho sức khỏe của" },
+              { id: "wa-abhaengig-gesundheit", label: "abhängig von + Dat.", meaning: "phụ thuộc vào (thuốc, chất...)" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

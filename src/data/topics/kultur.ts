@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "austausch", label: "der kulturelle Austausch", meaning: "trao đổi văn hóa" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-auffuehrung", label: "die Aufführung", meaning: "buổi biểu diễn" },
+              { id: "wa-kuenstler", label: "der Künstler", meaning: "nghệ sĩ" },
+              { id: "wa-ausstellung", label: "die Ausstellung", meaning: "triển lãm" },
+              { id: "wa-brauch", label: "der Brauch", meaning: "tập tục" },
+              { id: "wa-vielfalt", label: "die Vielfalt", meaning: "sự đa dạng" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-eine-ausstellung-besuchen", label: "eine Ausstellung besuchen", meaning: "đi xem triển lãm" },
+              { id: "wa-ein-fest-feiern", label: "ein Fest feiern", meaning: "tổ chức lễ hội" },
+              { id: "wa-tradition-bewahren", label: "eine Tradition bewahren", meaning: "gìn giữ một truyền thống" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-auffuehren", label: "aufführen", meaning: "biểu diễn", note: "trennbar: führt auf, führte auf, hat aufgeführt" },
+              { id: "wa-feiern", label: "feiern", meaning: "tổ chức lễ/ăn mừng" },
+              { id: "wa-sich-interessieren", label: "sich interessieren für + Akk.", meaning: "quan tâm đến" },
+              { id: "wa-bewahren", label: "bewahren", meaning: "gìn giữ" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-bekannt-kultur", label: "bekannt für + Akk.", meaning: "nổi tiếng vì" },
+              { id: "wa-typisch", label: "typisch für + Akk.", meaning: "đặc trưng cho" },
+              { id: "wa-stolz-kultur", label: "stolz auf + Akk.", meaning: "tự hào về" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "erlebnisse-teilen", label: "Erlebnisse miteinander teilen", meaning: "chia sẻ trải nghiệm cùng nhau" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-eigenschaft", label: "die Eigenschaft", meaning: "đặc điểm/tính cách" },
+              { id: "wa-persoenlichkeit", label: "die Persönlichkeit", meaning: "nhân cách" },
+              { id: "wa-erscheinung", label: "die Erscheinung", meaning: "diện mạo" },
+              { id: "wa-freundschaft", label: "die Freundschaft", meaning: "tình bạn" },
+              { id: "wa-verhalten", label: "das Verhalten", meaning: "hành vi/cách cư xử" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-einen-guten-eindruck-machen", label: "einen guten Eindruck machen", meaning: "gây ấn tượng tốt" },
+              { id: "wa-ein-gutes-verhaeltnis-haben", label: "ein gutes Verhältnis zu jemandem haben", meaning: "có mối quan hệ tốt với ai đó" },
+              { id: "wa-sinn-fuer-humor", label: "Sinn für Humor haben", meaning: "có khiếu hài hước" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-beschreiben", label: "beschreiben", meaning: "miêu tả", note: "unregelmäßig: beschreibt, beschrieb, hat beschrieben" },
+              { id: "wa-wirken", label: "wirken auf + Akk.", meaning: "gây ấn tượng/tạo cảm giác với" },
+              { id: "wa-sich-verstehen", label: "sich gut verstehen mit + Dat.", meaning: "hòa hợp tốt với" },
+              { id: "wa-vertrauen-verb", label: "vertrauen + Dat.", meaning: "tin tưởng vào" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-bekannt-person", label: "bekannt mit + Dat.", meaning: "quen biết với" },
+              { id: "wa-befreundet", label: "befreundet mit + Dat.", meaning: "là bạn của" },
+              { id: "wa-stolz-person", label: "stolz auf + Akk.", meaning: "tự hào về" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

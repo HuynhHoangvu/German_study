@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "verbandskasten", label: "der Verbandskasten", meaning: "hộp sơ cứu" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-verletzte", label: "der/die Verletzte", meaning: "người bị thương" },
+              { id: "wa-ersthelfer", label: "der Ersthelfer", meaning: "người sơ cứu" },
+              { id: "wa-gefahr", label: "die Gefahr", meaning: "nguy hiểm" },
+              { id: "wa-atemstillstand", label: "der Atemstillstand", meaning: "ngừng thở" },
+              { id: "wa-blutung", label: "die Blutung", meaning: "sự chảy máu" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-erste-hilfe-leisten", label: "erste Hilfe leisten", meaning: "sơ cứu" },
+              { id: "wa-den-notruf-waehlen", label: "den Notruf wählen", meaning: "gọi số cấp cứu" },
+              { id: "wa-in-sicherheit-bringen", label: "jemanden in Sicherheit bringen", meaning: "đưa ai đó đến nơi an toàn" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-retten", label: "retten", meaning: "cứu" },
+              { id: "wa-verletzen", label: "sich verletzen", meaning: "bị thương" },
+              { id: "wa-bluten", label: "bluten", meaning: "chảy máu" },
+              { id: "wa-reagieren", label: "reagieren auf + Akk.", meaning: "phản ứng với" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-bewusstlos", label: "bewusstlos sein", meaning: "bất tỉnh" },
+              { id: "wa-verantwortlich-notfall", label: "verantwortlich für + Akk.", meaning: "chịu trách nhiệm về" },
+              { id: "wa-bereit", label: "bereit für + Akk.", meaning: "sẵn sàng cho" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "doping", label: "das Doping", meaning: "sử dụng chất kích thích" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-mannschaft", label: "die Mannschaft", meaning: "đội (thể thao)" },
+              { id: "wa-wettkampf", label: "der Wettkampf", meaning: "cuộc thi đấu" },
+              { id: "wa-verletzung-sport", label: "die Verletzung", meaning: "chấn thương" },
+              { id: "wa-sieg", label: "der Sieg", meaning: "chiến thắng" },
+              { id: "wa-niederlage", label: "die Niederlage", meaning: "thất bại/thua cuộc" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-ein-spiel-gewinnen", label: "ein Spiel gewinnen", meaning: "thắng một trận đấu" },
+              { id: "wa-sich-fit-halten-sport", label: "sich fit halten", meaning: "giữ gìn thể lực" },
+              { id: "wa-an-einem-wettkampf-teilnehmen", label: "an einem Wettkampf teilnehmen", meaning: "tham gia một cuộc thi đấu" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-trainieren", label: "trainieren", meaning: "luyện tập" },
+              { id: "wa-gewinnen", label: "gewinnen", meaning: "thắng", note: "unregelmäßig: gewinnt, gewann, hat gewonnen" },
+              { id: "wa-verlieren", label: "verlieren", meaning: "thua", note: "unregelmäßig: verliert, verlor, hat verloren" },
+              { id: "wa-sich-anstrengen", label: "sich anstrengen", meaning: "gắng sức" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-erfolgreich-sport", label: "erfolgreich in + Dat.", meaning: "thành công trong (môn gì)" },
+              { id: "wa-begeistert-sport", label: "begeistert von + Dat.", meaning: "hào hứng với" },
+              { id: "wa-stolz-sport", label: "stolz auf + Akk.", meaning: "tự hào về" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

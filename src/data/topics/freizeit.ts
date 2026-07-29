@@ -42,6 +42,56 @@ const topic: Topic = {
           { id: "bildschirmzeit", label: "zu viel ___", meaning: "quá nhiều thời gian dùng màn hình", answer: "Bildschirmzeit" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-hobby", label: "das Hobby", meaning: "sở thích" },
+              { id: "wa-freizeitbeschaeftigung", label: "die Freizeitbeschäftigung", meaning: "hoạt động giải trí" },
+              { id: "wa-verein", label: "der Verein", meaning: "câu lạc bộ/hội" },
+              { id: "wa-veranstaltung", label: "die Veranstaltung", meaning: "sự kiện" },
+              { id: "wa-langeweile3", label: "die Langeweile", meaning: "sự nhàm chán" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-zeit-vertreiben", label: "sich die Zeit vertreiben", meaning: "giết thời gian" },
+              { id: "wa-einem-hobby-nachgehen", label: "einem Hobby nachgehen", meaning: "theo đuổi một sở thích" },
+              { id: "wa-neue-leute-kennenlernen", label: "neue Leute kennenlernen", meaning: "làm quen người mới" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-sich-entspannen", label: "sich entspannen", meaning: "thư giãn" },
+              { id: "wa-teilnehmen", label: "teilnehmen an + Dat.", meaning: "tham gia vào", note: "trennbar, unregelmäßig: nimmt teil, nahm teil, hat teilgenommen" },
+              { id: "wa-sich-beschaeftigen", label: "sich beschäftigen mit + Dat.", meaning: "bận rộn/để tâm với" },
+              { id: "wa-geniessen", label: "genießen", meaning: "tận hưởng", note: "unregelmäßig: genießt, genoss, hat genossen" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-begeistert", label: "begeistert von + Dat.", meaning: "hào hứng với" },
+              { id: "wa-interessiert-freizeit", label: "interessiert an + Dat.", meaning: "quan tâm đến" },
+              { id: "wa-beschaeftigt", label: "beschäftigt mit + Dat.", meaning: "bận với" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

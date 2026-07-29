@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "kinderbetreuung", label: "die Kinderbetreuung", meaning: "chăm sóc trẻ em", synonyms: ["die Kita (Kindertagesstätte)"] },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-geschwister", label: "die Geschwister", meaning: "anh chị em" },
+              { id: "wa-verwandte", label: "der/die Verwandte", meaning: "họ hàng" },
+              { id: "wa-erziehung", label: "die Erziehung", meaning: "sự nuôi dạy" },
+              { id: "wa-vertrauen", label: "das Vertrauen", meaning: "sự tin tưởng" },
+              { id: "wa-elternteil", label: "der Elternteil", meaning: "một trong hai cha/mẹ" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-verantwortung-tragen", label: "Verantwortung für die Familie tragen", meaning: "gánh vác trách nhiệm gia đình" },
+              { id: "wa-zeit-verbringen", label: "Zeit mit der Familie verbringen", meaning: "dành thời gian cho gia đình" },
+              { id: "wa-ein-vorbild-sein", label: "ein Vorbild für die Kinder sein", meaning: "làm tấm gương cho con cái" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-erziehen", label: "erziehen", meaning: "nuôi dạy" },
+              { id: "wa-sich-kuemmern", label: "sich kümmern um + Akk.", meaning: "chăm lo cho" },
+              { id: "wa-grossziehen", label: "großziehen", meaning: "nuôi lớn", note: "trennbar, unregelmäßig: zieht groß, zog groß, hat großgezogen" },
+              { id: "wa-unterstuetzen", label: "unterstützen", meaning: "hỗ trợ" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-stolz", label: "stolz auf + Akk.", meaning: "tự hào về" },
+              { id: "wa-verantwortlich-familie", label: "verantwortlich für + Akk.", meaning: "chịu trách nhiệm về" },
+              { id: "wa-abhaengig", label: "abhängig von + Dat.", meaning: "phụ thuộc vào" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

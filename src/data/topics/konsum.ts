@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "widerrufsrecht", label: "das Widerrufsrecht", meaning: "quyền hủy đơn hàng" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-preis", label: "der Preis", meaning: "giá cả" },
+              { id: "wa-rabatt", label: "der Rabatt", meaning: "giảm giá" },
+              { id: "wa-rechnung", label: "die Rechnung", meaning: "hóa đơn" },
+              { id: "wa-verbraucher", label: "der Verbraucher", meaning: "người tiêu dùng" },
+              { id: "wa-ausgaben", label: "die Ausgaben", meaning: "chi tiêu" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-geld-ausgeben", label: "Geld für etwas ausgeben", meaning: "chi tiền cho việc gì" },
+              { id: "wa-preise-vergleichen", label: "Preise vergleichen", meaning: "so sánh giá" },
+              { id: "wa-ein-schnaeppchen-machen", label: "ein Schnäppchen machen", meaning: "mua được món hời" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-ausgeben", label: "ausgeben", meaning: "chi tiêu", note: "trennbar, unregelmäßig: gibt aus, gab aus, hat ausgegeben" },
+              { id: "wa-sparen", label: "sparen", meaning: "tiết kiệm" },
+              { id: "wa-sich-leisten", label: "sich leisten + Akk.", meaning: "đủ khả năng mua" },
+              { id: "wa-zurueckgeben", label: "zurückgeben", meaning: "trả lại (hàng)", note: "trennbar, unregelmäßig: gibt zurück, gab zurück, hat zurückgegeben" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-zufrieden-konsum", label: "zufrieden mit + Dat.", meaning: "hài lòng với (sản phẩm)" },
+              { id: "wa-abhaengig-konsum", label: "abhängig von + Dat.", meaning: "phụ thuộc vào" },
+              { id: "wa-verantwortlich-konsum", label: "verantwortlich für + Akk.", meaning: "có trách nhiệm về" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

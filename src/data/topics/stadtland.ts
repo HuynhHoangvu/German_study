@@ -52,6 +52,56 @@ const topic: Topic = {
           { id: "langeweile", label: "wenig Abwechslung", meaning: "ít sự đổi mới/nhàm chán", synonyms: ["die Langeweile"] },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-vorort", label: "der Vorort", meaning: "vùng ngoại ô" },
+              { id: "wa-nachbarschaft", label: "die Nachbarschaft", meaning: "khu phố/hàng xóm" },
+              { id: "wa-umgebung", label: "die Umgebung", meaning: "khu vực xung quanh" },
+              { id: "wa-mieter", label: "der Mieter", meaning: "người thuê nhà" },
+              { id: "wa-landschaft", label: "die Landschaft", meaning: "phong cảnh" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-aufs-land-ziehen", label: "aufs Land ziehen", meaning: "chuyển về nông thôn sống" },
+              { id: "wa-in-die-stadt-ziehen", label: "in die Stadt ziehen", meaning: "chuyển lên thành phố sống" },
+              { id: "wa-ein-ruhiges-leben-fuehren", label: "ein ruhiges Leben führen", meaning: "sống một cuộc sống yên bình" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-umziehen", label: "umziehen", meaning: "chuyển nhà/chuyển chỗ ở", note: "trennbar, unregelmäßig: zieht um, zog um, ist umgezogen" },
+              { id: "wa-pendeln", label: "pendeln", meaning: "đi lại (giữa nơi ở và nơi làm)" },
+              { id: "wa-sich-niederlassen", label: "sich niederlassen", meaning: "định cư/an cư" },
+              { id: "wa-genissen-land", label: "genießen", meaning: "tận hưởng", note: "unregelmäßig: genießt, genoss, hat genossen" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-umgeben", label: "umgeben von + Dat.", meaning: "được bao quanh bởi" },
+              { id: "wa-abhaengig-stadtland", label: "abhängig von + Dat.", meaning: "phụ thuộc vào" },
+              { id: "wa-weit-entfernt", label: "weit entfernt von + Dat.", meaning: "cách xa" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

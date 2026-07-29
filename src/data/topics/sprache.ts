@@ -51,6 +51,56 @@ const topic: Topic = {
           { id: "videoanruf", label: "der Videoanruf", meaning: "cuộc gọi video" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-aussprache", label: "die Aussprache", meaning: "cách phát âm" },
+              { id: "wa-grammatik", label: "die Grammatik", meaning: "ngữ pháp" },
+              { id: "wa-uebersetzung", label: "die Übersetzung", meaning: "bản dịch" },
+              { id: "wa-ausdruck", label: "der Ausdruck", meaning: "cách diễn đạt" },
+              { id: "wa-unterhaltung-sprache", label: "die Unterhaltung", meaning: "cuộc trò chuyện" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-eine-fremdsprache-beherrschen", label: "eine Fremdsprache beherrschen", meaning: "thông thạo một ngoại ngữ" },
+              { id: "wa-sich-verstaendlich-machen", label: "sich verständlich machen", meaning: "làm cho người khác hiểu mình" },
+              { id: "wa-in-kontakt-treten", label: "mit jemandem in Kontakt treten", meaning: "liên hệ/kết nối với ai đó" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-uebersetzen", label: "übersetzen", meaning: "dịch (ngôn ngữ)" },
+              { id: "wa-sich-ausdruecken", label: "sich ausdrücken", meaning: "diễn đạt bản thân", note: "trennbar: drückt sich aus, drückte sich aus, hat sich ausgedrückt" },
+              { id: "wa-verstehen", label: "verstehen", meaning: "hiểu", note: "unregelmäßig: versteht, verstand, hat verstanden" },
+              { id: "wa-kommunizieren", label: "kommunizieren mit + Dat.", meaning: "giao tiếp với" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-fliessend", label: "fließend in + Dat.", meaning: "trôi chảy trong (ngôn ngữ)" },
+              { id: "wa-vertraut", label: "vertraut mit + Dat.", meaning: "quen thuộc với" },
+              { id: "wa-interessiert-sprache", label: "interessiert an + Dat.", meaning: "quan tâm đến" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };

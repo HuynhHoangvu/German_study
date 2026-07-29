@@ -66,6 +66,56 @@ const topic: Topic = {
           { id: "meinung2", label: "Bildung als Schlüssel", meaning: "giáo dục là chìa khóa" },
         ],
       },
+      {
+        id: "wortarten",
+        label: "Wortschatz nach Wortart",
+        meaning: "từ vựng theo loại từ",
+        children: [
+          {
+            id: "wortarten-nomen",
+            label: "Nomen",
+            meaning: "danh từ",
+            children: [
+              { id: "wa-taeter", label: "der Täter", meaning: "thủ phạm" },
+              { id: "wa-opfer", label: "das Opfer", meaning: "nạn nhân" },
+              { id: "wa-zeuge", label: "der Zeuge", meaning: "nhân chứng" },
+              { id: "wa-gericht", label: "das Gericht", meaning: "tòa án" },
+              { id: "wa-strafe", label: "die Strafe", meaning: "hình phạt" },
+            ],
+          },
+          {
+            id: "wortarten-phrasen",
+            label: "Nominalphrasen",
+            meaning: "cụm danh từ",
+            children: [
+              { id: "wa-ein-verbrechen-begehen", label: "ein Verbrechen begehen", meaning: "phạm tội" },
+              { id: "wa-anzeige-erstatten", label: "Anzeige erstatten", meaning: "trình báo/tố cáo" },
+              { id: "wa-zu-einer-strafe-verurteilen", label: "zu einer Strafe verurteilen", meaning: "kết án" },
+            ],
+          },
+          {
+            id: "wortarten-verben",
+            label: "Verben",
+            meaning: "động từ",
+            children: [
+              { id: "wa-begehen", label: "begehen", meaning: "gây ra (tội)", note: "unregelmäßig: begeht, beging, hat begangen" },
+              { id: "wa-verurteilen", label: "verurteilen zu + Dat.", meaning: "kết án" },
+              { id: "wa-anklagen", label: "anklagen wegen + Gen.", meaning: "buộc tội vì" },
+              { id: "wa-verhaften", label: "verhaften", meaning: "bắt giữ" },
+            ],
+          },
+          {
+            id: "wortarten-adjektive",
+            label: "Adjektive + Präpositionen",
+            meaning: "tính từ kèm giới từ",
+            children: [
+              { id: "wa-schuldig", label: "schuldig an + Dat.", meaning: "có tội về" },
+              { id: "wa-verantwortlich-krim", label: "verantwortlich für + Akk.", meaning: "chịu trách nhiệm về" },
+              { id: "wa-unschuldig", label: "unschuldig an + Dat.", meaning: "vô tội về" },
+            ],
+          },
+        ],
+      },
     ],
   },
 };
