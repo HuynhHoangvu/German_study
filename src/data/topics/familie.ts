@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Gia đình",
   description: "Familienformen, Erziehung und Generationen",
   color: "#db2777",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Familie",
@@ -39,7 +39,7 @@ const topic: Topic = {
         meaning: "vấn đề gia đình",
         children: [
           { id: "generationenkonflikt", label: "der Generationenkonflikt", meaning: "xung đột thế hệ", note: "Generation (thế hệ) + Konflikt (xung đột)." },
-          { id: "zeitmangel", label: "der Zeitmangel", meaning: "thiếu thời gian", synonyms: ["wenig Zeit haben"] },
+          { id: "zeitmangel", label: "der chronische Zeitmangel", meaning: "tình trạng thiếu thời gian kéo dài", synonyms: ["wenig Zeit haben"] },
           { id: "scheidung", label: "die ___", meaning: "sự ly hôn", answer: "Scheidung", synonyms: ["die Trennung"] },
         ],
       },
@@ -65,7 +65,7 @@ const topic: Topic = {
               { id: "wa-geschwister", label: "die Geschwister", meaning: "anh chị em" },
               { id: "wa-verwandte", label: "der/die Verwandte", meaning: "họ hàng" },
               { id: "wa-erziehung", label: "die Erziehung", meaning: "sự nuôi dạy" },
-              { id: "wa-vertrauen", label: "das Vertrauen", meaning: "sự tin tưởng" },
+              { id: "wa-vertrauen", label: "das Vertrauensverhältnis", meaning: "mối quan hệ tin tưởng lẫn nhau", synonyms: ["das Vertrauen"] },
               { id: "wa-elternteil", label: "der Elternteil", meaning: "một trong hai cha/mẹ" },
             ],
           },

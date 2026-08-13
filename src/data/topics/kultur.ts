@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Văn hóa & Nghệ thuật",
   description: "Theater, Musik, Museen, Feste und interkulturelle Unterschiede",
   color: "#9333ea",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Kultur",
@@ -17,10 +17,10 @@ const topic: Topic = {
         label: "Kunstformen",
         meaning: "các loại hình nghệ thuật",
         children: [
-          { id: "theater", label: "das Theater", meaning: "nhà hát/kịch nghệ", synonyms: ["die Bühne"] },
-          { id: "museum", label: "das ___", meaning: "bảo tàng", answer: "Museum" },
-          { id: "musik", label: "die Musik", meaning: "âm nhạc" },
-          { id: "literatur", label: "die Literatur", meaning: "văn học" },
+          { id: "theater", label: "die darstellende Kunst", meaning: "nghệ thuật biểu diễn (sân khấu)", synonyms: ["die Bühnenkunst"], note: "Oberbegriff für Theater, Tanz, Oper etc." },
+          { id: "museum", label: "die ___", meaning: "cuộc triển lãm bảo tàng", answer: "Museumsausstellung", synonyms: ["die Dauerausstellung"] },
+          { id: "musik", label: "die zeitgenössische Musik", meaning: "âm nhạc đương đại", synonyms: ["die Klangkunst"] },
+          { id: "literatur", label: "die Literatur", meaning: "văn học", note: "oft mit Genitiv: die Literatur des 20. Jahrhunderts." },
         ],
       },
       {
@@ -28,9 +28,9 @@ const topic: Topic = {
         label: "Feste & Traditionen",
         meaning: "lễ hội & truyền thống",
         children: [
-          { id: "weihnachten", label: "das Weihnachten", meaning: "lễ Giáng sinh" },
-          { id: "brauchtum", label: "das ___", meaning: "phong tục tập quán", answer: "Brauchtum" },
-          { id: "volksfest", label: "das Volksfest", meaning: "lễ hội dân gian", synonyms: ["das Oktoberfest"] },
+          { id: "weihnachten", label: "das Brauchtum rund um Weihnachten", meaning: "phong tục xoay quanh lễ Giáng sinh", synonyms: ["der Weihnachtsbrauch"] },
+          { id: "brauchtum", label: "das überlieferte ___", meaning: "phong tục tập quán được lưu truyền", answer: "Brauchtum" },
+          { id: "volksfest", label: "das Volksfest", meaning: "lễ hội dân gian truyền thống", synonyms: ["das Traditionsfest"], note: "regional geprägte Großveranstaltung, z. B. das Oktoberfest." },
         ],
       },
       {
@@ -49,7 +49,7 @@ const topic: Topic = {
         meaning: "ý nghĩa của văn hóa",
         children: [
           { id: "identitaet", label: "die kulturelle Identität", meaning: "bản sắc văn hóa", synonyms: ["die kulturelle Zugehörigkeit"] },
-          { id: "austausch", label: "der kulturelle Austausch", meaning: "trao đổi văn hóa" },
+          { id: "austausch", label: "der interkulturelle Austausch", meaning: "trao đổi liên văn hóa", note: "sich austauschen mit + Dat. über + Akk." },
         ],
       },
       {
@@ -62,11 +62,11 @@ const topic: Topic = {
             label: "Nomen",
             meaning: "danh từ",
             children: [
-              { id: "wa-auffuehrung", label: "die Aufführung", meaning: "buổi biểu diễn" },
-              { id: "wa-kuenstler", label: "der Künstler", meaning: "nghệ sĩ" },
-              { id: "wa-ausstellung", label: "die Ausstellung", meaning: "triển lãm" },
-              { id: "wa-brauch", label: "der Brauch", meaning: "tập tục" },
-              { id: "wa-vielfalt", label: "die Vielfalt", meaning: "sự đa dạng" },
+              { id: "wa-auffuehrung", label: "die Uraufführung", meaning: "buổi công diễn đầu tiên", synonyms: ["die Premiere"] },
+              { id: "wa-kuenstler", label: "der Kulturschaffende", meaning: "người hoạt động sáng tạo văn hóa", synonyms: ["der Künstler"] },
+              { id: "wa-ausstellung", label: "die Wanderausstellung", meaning: "triển lãm lưu động", synonyms: ["die Ausstellung"] },
+              { id: "wa-brauch", label: "der überlieferte Brauch", meaning: "tập tục được lưu truyền", synonyms: ["der Ritus"] },
+              { id: "wa-vielfalt", label: "die kulturelle Vielfalt", meaning: "sự đa dạng văn hóa", synonyms: ["die Pluralität"] },
             ],
           },
           {
@@ -74,9 +74,9 @@ const topic: Topic = {
             label: "Nominalphrasen",
             meaning: "cụm danh từ",
             children: [
-              { id: "wa-eine-ausstellung-besuchen", label: "eine Ausstellung besuchen", meaning: "đi xem triển lãm" },
-              { id: "wa-ein-fest-feiern", label: "ein Fest feiern", meaning: "tổ chức lễ hội" },
-              { id: "wa-tradition-bewahren", label: "eine Tradition bewahren", meaning: "gìn giữ một truyền thống" },
+              { id: "wa-eine-ausstellung-besuchen", label: "eine Ausstellung besichtigen", meaning: "tham quan một triển lãm" },
+              { id: "wa-ein-fest-feiern", label: "ein Fest ausrichten", meaning: "tổ chức/đứng ra làm lễ hội" },
+              { id: "wa-tradition-bewahren", label: "eine Tradition pflegen und bewahren", meaning: "gìn giữ và vun đắp một truyền thống" },
             ],
           },
           {
@@ -84,10 +84,10 @@ const topic: Topic = {
             label: "Verben",
             meaning: "động từ",
             children: [
-              { id: "wa-auffuehren", label: "aufführen", meaning: "biểu diễn", note: "trennbar: führt auf, führte auf, hat aufgeführt" },
-              { id: "wa-feiern", label: "feiern", meaning: "tổ chức lễ/ăn mừng" },
-              { id: "wa-sich-interessieren", label: "sich interessieren für + Akk.", meaning: "quan tâm đến" },
-              { id: "wa-bewahren", label: "bewahren", meaning: "gìn giữ" },
+              { id: "wa-auffuehren", label: "aufführen", meaning: "biểu diễn/công diễn", note: "trennbar: führt auf, führte auf, hat aufgeführt" },
+              { id: "wa-feiern", label: "zelebrieren", meaning: "tổ chức trọng thể/ăn mừng", synonyms: ["feiern"], note: "gehobener als 'feiern', betont die Feierlichkeit." },
+              { id: "wa-sich-interessieren", label: "sich begeistern für + Akk.", meaning: "say mê/hào hứng với", note: "stärker als 'sich interessieren für'." },
+              { id: "wa-bewahren", label: "bewahren vor + Dat.", meaning: "gìn giữ, bảo vệ khỏi", note: "etwas vor dem Vergessen bewahren." },
             ],
           },
           {
@@ -95,8 +95,8 @@ const topic: Topic = {
             label: "Adjektive + Präpositionen",
             meaning: "tính từ kèm giới từ",
             children: [
-              { id: "wa-bekannt-kultur", label: "bekannt für + Akk.", meaning: "nổi tiếng vì" },
-              { id: "wa-typisch", label: "typisch für + Akk.", meaning: "đặc trưng cho" },
+              { id: "wa-bekannt-kultur", label: "renommiert für + Akk.", meaning: "danh tiếng, nổi danh vì", synonyms: ["bekannt für + Akk."] },
+              { id: "wa-typisch", label: "charakteristisch für + Akk.", meaning: "mang tính đặc trưng cho", synonyms: ["typisch für + Akk."] },
               { id: "wa-stolz-kultur", label: "stolz auf + Akk.", meaning: "tự hào về" },
             ],
           },

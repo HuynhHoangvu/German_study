@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Nhà ở",
   description: "Wohnformen, Wohnungssuche und Wohnungsmarkt",
   color: "#b45309",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Wohnen",
@@ -17,10 +17,10 @@ const topic: Topic = {
         label: "Wohnformen",
         meaning: "hình thức nhà ở",
         children: [
-          { id: "wohnung", label: "die Wohnung", meaning: "căn hộ" },
-          { id: "wg", label: "die ___", meaning: "ở ghép", answer: "Wohngemeinschaft", note: "kurz: WG" },
-          { id: "einfamilienhaus", label: "das Einfamilienhaus", meaning: "nhà ở riêng (một gia đình)" },
-          { id: "miete", label: "zur Miete wohnen", meaning: "ở nhà thuê" },
+          { id: "wohnung", label: "die Eigentumswohnung", meaning: "căn hộ sở hữu (mua đứt)", synonyms: ["die Mietwohnung"] },
+          { id: "wg", label: "die ___", meaning: "ở ghép", answer: "Wohngemeinschaft", note: "kurz: WG; Kollokation: 'in einer WG wohnen/leben'." },
+          { id: "einfamilienhaus", label: "das Einfamilienhaus", meaning: "nhà ở riêng (một gia đình)", synonyms: ["das Mehrfamilienhaus"] },
+          { id: "miete", label: "zur Miete wohnen", meaning: "ở nhà thuê", synonyms: ["im Eigenheim wohnen"] },
         ],
       },
       {
@@ -28,9 +28,9 @@ const topic: Topic = {
         label: "Wohnungssuche",
         meaning: "tìm nhà",
         children: [
-          { id: "makler", label: "der Makler", meaning: "môi giới nhà đất" },
+          { id: "makler", label: "der Immobilienmakler", meaning: "môi giới bất động sản" },
           { id: "besichtigung", label: "die ___", meaning: "xem nhà", answer: "Besichtigung" },
-          { id: "kaution", label: "die Kaution", meaning: "tiền đặt cọc" },
+          { id: "kaution", label: "die Kaution hinterlegen", meaning: "đặt tiền cọc", note: "Verb + Nomen-Kollokation; hinterlegen = ký gửi, đặt cọc." },
         ],
       },
       {
@@ -49,7 +49,7 @@ const topic: Topic = {
         meaning: "giải pháp",
         children: [
           { id: "sozialwohnungen", label: "mehr ___ bauen", meaning: "xây thêm nhà ở xã hội", answer: "Sozialwohnungen" },
-          { id: "mietpreisbremse", label: "die Mietpreisbremse", meaning: "trần giá thuê nhà" },
+          { id: "mietpreisbremse", label: "die Mietpreisbremse verschärfen", meaning: "siết chặt quy định trần giá thuê nhà" },
         ],
       },
       {
@@ -64,7 +64,7 @@ const topic: Topic = {
             children: [
               { id: "wa-vermieter", label: "der Vermieter", meaning: "chủ nhà cho thuê" },
               { id: "wa-mietvertrag", label: "der Mietvertrag", meaning: "hợp đồng thuê nhà" },
-              { id: "wa-nebenkosten", label: "die Nebenkosten", meaning: "chi phí phụ (điện nước...)" },
+              { id: "wa-nebenkosten", label: "die Nebenkostenabrechnung", meaning: "bảng quyết toán chi phí phụ (điện nước...)" },
               { id: "wa-umzug", label: "der Umzug", meaning: "sự chuyển nhà" },
               { id: "wa-vermietung", label: "die Vermietung", meaning: "việc cho thuê" },
             ],
@@ -85,7 +85,7 @@ const topic: Topic = {
             meaning: "động từ",
             children: [
               { id: "wa-mieten", label: "mieten", meaning: "thuê (nhà)" },
-              { id: "wa-vermieten", label: "vermieten", meaning: "cho thuê" },
+              { id: "wa-vermieten", label: "vermieten", meaning: "cho thuê", note: "trennbar? nein — untrennbares Präfix ver-; Kollokation: 'eine Wohnung an jmdn. vermieten'." },
               { id: "wa-einrichten", label: "einrichten", meaning: "trang trí/bài trí nội thất", note: "trennbar: richtet ein, richtete ein, hat eingerichtet" },
               { id: "wa-renovieren", label: "renovieren", meaning: "cải tạo/tân trang" },
             ],

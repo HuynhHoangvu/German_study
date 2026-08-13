@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Chăm sóc y tế & Bệnh viện",
   description: "Fachsprache Pflege: Stationen, Schichten, Geräte und Dokumentation",
   color: "#0369a1",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Krankenpflege",
@@ -20,7 +20,7 @@ const topic: Topic = {
           { id: "station", label: "die Station", meaning: "khoa/phòng bệnh" },
           { id: "intensivstation", label: "die ___", meaning: "khoa hồi sức tích cực", answer: "Intensivstation", note: "kurz: ICU" },
           { id: "notaufnahme", label: "die Notaufnahme", meaning: "khoa cấp cứu", note: "Not (khẩn cấp) + Aufnahme (tiếp nhận)." },
-          { id: "pflegeheim", label: "das Pflegeheim", meaning: "viện dưỡng lão", synonyms: ["das Altersheim"] },
+          { id: "pflegeheim", label: "die Pflegeeinrichtung", meaning: "cơ sở chăm sóc dài hạn", synonyms: ["das Pflegeheim"] },
         ],
       },
       {
@@ -31,7 +31,7 @@ const topic: Topic = {
           { id: "fruehschicht", label: "die Frühschicht", meaning: "ca sáng" },
           { id: "spaetschicht", label: "die ___", meaning: "ca chiều", answer: "Spätschicht" },
           { id: "nachtschicht", label: "die Nachtschicht", meaning: "ca đêm" },
-          { id: "uebergabe", label: "die Übergabe", meaning: "buổi bàn giao ca trực", note: "über + geben: chuyển giao thông tin bệnh nhân cho ca sau." },
+          { id: "uebergabe", label: "die Schichtübergabe", meaning: "buổi bàn giao ca trực", synonyms: ["die Übergabe"], note: "über + geben: die lückenlose Weitergabe patientenrelevanter Informationen an die Folgeschicht." },
         ],
       },
       {
@@ -41,9 +41,9 @@ const topic: Topic = {
         children: [
           { id: "spritze", label: "die Spritze", meaning: "mũi tiêm", synonyms: ["die Injektion"] },
           { id: "infusion", label: "die ___", meaning: "dây truyền dịch", answer: "Infusion" },
-          { id: "verband", label: "der Verband wechseln", meaning: "thay băng gạc" },
+          { id: "verband", label: "einen Verbandswechsel durchführen", meaning: "thực hiện thay băng gạc", synonyms: ["den Verband wechseln"] },
           { id: "rollstuhl", label: "der Rollstuhl", meaning: "xe lăn" },
-          { id: "gehhilfe", label: "die Gehhilfe", meaning: "dụng cụ tập đi" },
+          { id: "gehhilfe", label: "die Gehhilfe", meaning: "dụng cụ tập đi", synonyms: ["das Hilfsmittel zur Mobilisierung"] },
         ],
       },
       {
@@ -54,7 +54,7 @@ const topic: Topic = {
           { id: "pflegedokumentation", label: "die Pflegedokumentation", meaning: "hồ sơ theo dõi chăm sóc" },
           { id: "zustand", label: "der ___ hat sich verschlechtert", meaning: "tình trạng xấu đi", answer: "Zustand" },
           { id: "pflegebeduerftig", label: "pflegebedürftig sein", meaning: "cần được chăm sóc", note: "Pflege (chăm sóc) + bedürftig (cần đến)." },
-          { id: "visite", label: "die Visite", meaning: "buổi thăm khám cùng bác sĩ" },
+          { id: "visite", label: "die Visite", meaning: "buổi thăm khám cùng bác sĩ", note: "die Visite machen/abhalten = thực hiện buổi thăm khám (kết hợp với 'machen' hoặc 'abhalten')." },
         ],
       },
       {
@@ -69,8 +69,8 @@ const topic: Topic = {
             children: [
               { id: "wa-pflegekraft", label: "die Pflegekraft", meaning: "nhân viên điều dưỡng" },
               { id: "wa-diagnose", label: "die Diagnose", meaning: "chẩn đoán" },
-              { id: "wa-hygiene", label: "die Hygiene", meaning: "vệ sinh" },
-              { id: "wa-medikament", label: "das Medikament", meaning: "thuốc" },
+              { id: "wa-hygiene", label: "die Hygienevorschriften", meaning: "quy định vệ sinh", synonyms: ["die Hygiene"] },
+              { id: "wa-medikament", label: "das Medikament", meaning: "thuốc", synonyms: ["das Arzneimittel"] },
               { id: "wa-bettlaegerig", label: "der/die Bettlägerige", meaning: "người nằm liệt giường" },
             ],
           },
@@ -90,8 +90,8 @@ const topic: Topic = {
             meaning: "động từ",
             children: [
               { id: "wa-pflegen", label: "pflegen", meaning: "chăm sóc" },
-              { id: "wa-verabreichen", label: "verabreichen", meaning: "cho dùng (thuốc)" },
-              { id: "wa-sich-verschlechtern", label: "sich verschlechtern", meaning: "trở nên tệ hơn" },
+              { id: "wa-verabreichen", label: "verabreichen", meaning: "cho dùng (thuốc)", note: "gehobenes Verb, formeller als 'geben'; z. B. dem Patienten ein Medikament verabreichen." },
+              { id: "wa-sich-verschlechtern", label: "sich verschlechtern", meaning: "trở nên tệ hơn", note: "reflexives Verb; Gegenteil: sich verbessern/sich stabilisieren." },
               { id: "wa-desinfizieren", label: "desinfizieren", meaning: "khử trùng" },
             ],
           },

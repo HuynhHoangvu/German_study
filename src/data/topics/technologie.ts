@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Công nghệ & truyền thông",
   description: "Digitalisierung, soziale Medien und ihre Auswirkungen",
   color: "#4338ca",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Technologie",
@@ -17,9 +17,9 @@ const topic: Topic = {
         label: "Digitalisierung",
         meaning: "số hóa",
         children: [
-          { id: "smartphone", label: "das Smartphone", meaning: "điện thoại thông minh" },
+          { id: "smartphone", label: "das Smartphone", meaning: "điện thoại thông minh", note: "'ständig am Smartphone hängen' = dán mắt vào điện thoại liên tục." },
           { id: "kuenstlicheintelligenz", label: "die ___", meaning: "trí tuệ nhân tạo", answer: "künstliche Intelligenz", note: "kurz: KI" },
-          { id: "homeoffice2", label: "das digitale Arbeiten", meaning: "làm việc số hóa" },
+          { id: "homeoffice2", label: "die digitale Arbeitswelt", meaning: "thế giới việc làm số hóa", synonyms: ["das digitale Arbeiten"] },
         ],
       },
       {
@@ -27,9 +27,9 @@ const topic: Topic = {
         label: "Soziale Medien",
         meaning: "mạng xã hội",
         children: [
-          { id: "vernetzung", label: "die Vernetzung", meaning: "kết nối", synonyms: ["die Verbindung"] },
+          { id: "vernetzung", label: "die globale Vernetzung", meaning: "sự kết nối toàn cầu", synonyms: ["die Verbindung"] },
           { id: "informationsaustausch", label: "der ___", meaning: "trao đổi thông tin", answer: "Informationsaustausch" },
-          { id: "sucht", label: "die Social-Media-Sucht", meaning: "nghiện mạng xã hội", note: "Sucht = chứng nghiện, dùng cho nhiều loại (Handysucht, Spielsucht...)." },
+          { id: "sucht", label: "die Social-Media-Sucht", meaning: "chứng nghiện mạng xã hội", note: "Sucht = chứng nghiện, dùng cho nhiều loại (Handysucht, Spielsucht...); 'in eine Abhängigkeit geraten' = rơi vào tình trạng lệ thuộc." },
         ],
       },
       {
@@ -37,9 +37,9 @@ const topic: Topic = {
         label: "Risiken",
         meaning: "rủi ro",
         children: [
-          { id: "datenschutz", label: "der Datenschutz", meaning: "bảo mật dữ liệu", synonyms: ["der Datenmissbrauch (Gegenteil)"] },
-          { id: "fakenews", label: "die Fake News", meaning: "tin giả", synonyms: ["die Falschmeldung"] },
-          { id: "cybermobbing", label: "das ___", meaning: "bắt nạt trên mạng", answer: "Cybermobbing" },
+          { id: "datenschutz", label: "der Datenschutz", meaning: "bảo mật dữ liệu", synonyms: ["der Datenmissbrauch (Gegenteil)"], note: "'gegen den Datenschutz verstoßen' = vi phạm quy định bảo mật dữ liệu." },
+          { id: "fakenews", label: "gezielte Desinformation", meaning: "thông tin sai lệch có chủ đích", synonyms: ["die Fake News", "die Falschmeldung"] },
+          { id: "cybermobbing", label: "das ___", meaning: "bắt nạt trên mạng", answer: "Cybermobbing", note: "'Opfer von Cybermobbing werden' = trở thành nạn nhân của bắt nạt trên mạng." },
         ],
       },
       {
@@ -47,8 +47,8 @@ const topic: Topic = {
         label: "Vorteile",
         meaning: "lợi ích",
         children: [
-          { id: "zugang", label: "schneller Informationszugang", meaning: "truy cập thông tin nhanh" },
-          { id: "effizienz", label: "höhere Effizienz", meaning: "hiệu suất cao hơn" },
+          { id: "zugang", label: "ein unmittelbarer Informationszugang", meaning: "khả năng tiếp cận thông tin tức thời", synonyms: ["schneller Informationszugang"] },
+          { id: "effizienz", label: "eine deutliche Effizienzsteigerung", meaning: "sự gia tăng hiệu suất rõ rệt", synonyms: ["höhere Effizienz"] },
         ],
       },
       {
@@ -63,9 +63,9 @@ const topic: Topic = {
             children: [
               { id: "wa-geraet", label: "das Gerät", meaning: "thiết bị" },
               { id: "wa-anwendung", label: "die Anwendung / App", meaning: "ứng dụng" },
-              { id: "wa-datenschutz-n", label: "die Privatsphäre", meaning: "quyền riêng tư" },
+              { id: "wa-datenschutz-n", label: "die Privatsphäre", meaning: "quyền riêng tư", note: "'die Privatsphäre verletzen' = xâm phạm quyền riêng tư." },
               { id: "wa-netzwerk", label: "das Netzwerk", meaning: "mạng lưới" },
-              { id: "wa-erfindung", label: "die Erfindung", meaning: "phát minh" },
+              { id: "wa-erfindung", label: "die Erfindung", meaning: "phát minh", synonyms: ["die Innovation"] },
             ],
           },
           {
@@ -74,8 +74,8 @@ const topic: Topic = {
             meaning: "cụm danh từ",
             children: [
               { id: "wa-eine-app-herunterladen", label: "eine App herunterladen", meaning: "tải xuống một ứng dụng" },
-              { id: "wa-daten-schuetzen", label: "persönliche Daten schützen", meaning: "bảo vệ dữ liệu cá nhân" },
-              { id: "wa-mit-der-zeit-gehen", label: "mit der Zeit gehen", meaning: "bắt kịp thời đại" },
+              { id: "wa-daten-schuetzen", label: "persönliche Daten vor Missbrauch schützen", meaning: "bảo vệ dữ liệu cá nhân khỏi bị lạm dụng", synonyms: ["persönliche Daten schützen"] },
+              { id: "wa-mit-der-zeit-gehen", label: "mit der rasanten Entwicklung Schritt halten", meaning: "theo kịp tốc độ phát triển nhanh chóng", synonyms: ["mit der Zeit gehen"] },
             ],
           },
           {

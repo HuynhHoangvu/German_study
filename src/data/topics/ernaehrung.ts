@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Dinh dưỡng",
   description: "Essgewohnheiten, gesunde Ernährung und Ernährungstrends",
   color: "#65a30d",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Ernährung",
@@ -17,9 +17,9 @@ const topic: Topic = {
         label: "Ernährungstrends",
         meaning: "xu hướng ăn uống",
         children: [
-          { id: "vegetarisch", label: "vegetarisch leben", meaning: "ăn chay", synonyms: ["fleischlos essen"] },
-          { id: "vegan", label: "___ leben", meaning: "ăn thuần chay", answer: "vegan" },
-          { id: "bio", label: "Bio-Lebensmittel", meaning: "thực phẩm hữu cơ", synonyms: ["ökologische Lebensmittel"], note: "Bio = kurz für biologisch angebaut, ohne künstliche Zusätze." },
+          { id: "vegetarisch", label: "sich vegetarisch ernähren", meaning: "ăn chay", synonyms: ["fleischlos essen"] },
+          { id: "vegan", label: "sich ___ ernähren", meaning: "ăn thuần chay", answer: "vegan" },
+          { id: "bio", label: "Bio-Lebensmittel", meaning: "thực phẩm hữu cơ", synonyms: ["ökologische Lebensmittel", "Erzeugnisse aus kontrolliert biologischem Anbau"], note: "Bio = kurz für biologisch angebaut, ohne künstliche Zusätze." },
         ],
       },
       {
@@ -27,7 +27,7 @@ const topic: Topic = {
         label: "Essgewohnheiten",
         meaning: "thói quen ăn uống",
         children: [
-          { id: "fastfood2", label: "das Fast Food", meaning: "đồ ăn nhanh", synonyms: ["das Junkfood"] },
+          { id: "fastfood2", label: "der übermäßige Konsum von Fast Food", meaning: "việc tiêu thụ đồ ăn nhanh quá mức", synonyms: ["das Junkfood"] },
           { id: "fertiggerichte", label: "die ___", meaning: "đồ ăn chế biến sẵn", answer: "Fertiggerichte", note: "Fertiggerichte = Essen, das man nur noch aufwärmen muss." },
           { id: "hausgemacht", label: "hausgemachtes Essen", meaning: "đồ ăn tự nấu", synonyms: ["selbstgekochtes Essen"] },
         ],
@@ -38,7 +38,7 @@ const topic: Topic = {
         meaning: "vấn đề",
         children: [
           { id: "mangelernaehrung", label: "die Mangelernährung", meaning: "suy dinh dưỡng", synonyms: ["die Unterernährung"] },
-          { id: "zuckerkonsum", label: "hoher ___", meaning: "tiêu thụ đường cao", answer: "Zuckerkonsum" },
+          { id: "zuckerkonsum", label: "übermäßiger ___", meaning: "tiêu thụ đường quá mức", answer: "Zuckerkonsum" },
           { id: "lebensmittelverschwendung", label: "die Lebensmittelverschwendung", meaning: "lãng phí thực phẩm", note: "zusammengesetzt aus: Lebensmittel + Verschwendung." },
         ],
       },
@@ -47,8 +47,8 @@ const topic: Topic = {
         label: "Empfehlungen",
         meaning: "khuyến nghị",
         children: [
-          { id: "ausgewogen2", label: "ausgewogen essen", meaning: "ăn cân bằng", synonyms: ["sich gesund ernähren"] },
-          { id: "portionen", label: "kleinere Portionen", meaning: "khẩu phần nhỏ hơn" },
+          { id: "ausgewogen2", label: "sich ausgewogen ernähren", meaning: "ăn uống cân bằng", synonyms: ["sich gesund ernähren"] },
+          { id: "portionen", label: "die Portionsgröße reduzieren", meaning: "giảm khẩu phần ăn" },
         ],
       },
       {
@@ -63,7 +63,7 @@ const topic: Topic = {
             children: [
               { id: "wa-naehrstoff", label: "der Nährstoff", meaning: "chất dinh dưỡng" },
               { id: "wa-vitamin", label: "das Vitamin", meaning: "vitamin" },
-              { id: "wa-kalorie", label: "die Kalorie", meaning: "calo" },
+              { id: "wa-kalorie", label: "die Kalorie", meaning: "calo", note: "kalorienreich/kalorienarm = giàu/ít calo." },
               { id: "wa-mahlzeit", label: "die Mahlzeit", meaning: "bữa ăn" },
               { id: "wa-zutaten", label: "die Zutaten", meaning: "nguyên liệu" },
             ],
@@ -73,7 +73,7 @@ const topic: Topic = {
             label: "Nominalphrasen",
             meaning: "cụm danh từ",
             children: [
-              { id: "wa-eine-diaet-machen", label: "eine Diät machen", meaning: "ăn kiêng" },
+              { id: "wa-eine-diaet-machen", label: "eine Diät einhalten", meaning: "tuân thủ chế độ ăn kiêng", synonyms: ["eine Diät machen"] },
               { id: "wa-auf-die-ernaehrung-achten", label: "auf die Ernährung achten", meaning: "chú ý đến chế độ ăn" },
               { id: "wa-gesunde-mahlzeit", label: "eine gesunde Mahlzeit zubereiten", meaning: "chuẩn bị một bữa ăn lành mạnh" },
             ],

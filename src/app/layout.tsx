@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Deutsch Mindmap | Ôn tập tiếng Đức B1-B2",
+  title: "Deutsch Mindmap | Ôn tập tiếng Đức B2",
   description:
-    "Hệ thống mindmap học tiếng Đức theo chủ đề: từ vựng, đồng nghĩa, ghi chú và bài tập điền từ cho trình độ B1-B2.",
+    "Hệ thống mindmap học tiếng Đức theo chủ đề: từ vựng, đồng nghĩa, ghi chú và bài tập điền từ cho trình độ B2.",
 };
 
 export default function RootLayout({
@@ -59,7 +59,7 @@ export default function RootLayout({
         </header>
         <main className="flex-1">{children}</main>
         <footer className="border-t border-[var(--border)] py-6 text-center text-xs text-neutral-400">
-          Deutsch Mindmap · Tài liệu tự tổng hợp phục vụ ôn luyện tiếng Đức B1-B2
+          Deutsch Mindmap · Tài liệu tự tổng hợp phục vụ ôn luyện tiếng Đức B2
         </footer>
       </body>
     </html>

@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Tiêu dùng & Tiền bạc",
   description: "Einkaufsgewohnheiten, Online-Shopping, Sparen und Konsumgesellschaft",
   color: "#16a34a",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Konsum & Geld",
@@ -17,9 +17,9 @@ const topic: Topic = {
         label: "Einkaufsgewohnheiten",
         meaning: "thói quen mua sắm",
         children: [
-          { id: "onlineshopping", label: "das Online-Shopping", meaning: "mua sắm trực tuyến" },
-          { id: "werbung", label: "die ___", meaning: "quảng cáo", answer: "Werbung", synonyms: ["die Reklame"] },
-          { id: "impulskauf", label: "der Impulskauf", meaning: "mua sắm bốc đồng", note: "Impuls (bốc đồng) + Kauf (việc mua): mua không suy nghĩ trước." },
+          { id: "onlineshopping", label: "der Online-Konsum", meaning: "tiêu dùng trực tuyến", synonyms: ["das Online-Shopping"] },
+          { id: "werbung", label: "die ___", meaning: "quảng cáo", answer: "Werbung", synonyms: ["die Reklame"], note: "gezielte Werbung = quảng cáo nhắm mục tiêu." },
+          { id: "impulskauf", label: "der Impulskauf", meaning: "mua sắm bốc đồng", note: "Impuls (bốc đồng) + Kauf (việc mua): eine spontane Kaufentscheidung ohne vorheriges Abwägen." },
         ],
       },
       {
@@ -27,10 +27,10 @@ const topic: Topic = {
         label: "Finanzen",
         meaning: "tài chính",
         children: [
-          { id: "sparen", label: "das Sparen", meaning: "tiết kiệm", synonyms: ["das Rücklagen bilden"] },
-          { id: "schulden", label: "die ___", meaning: "nợ nần", answer: "Schulden" },
+          { id: "sparen", label: "Rücklagen bilden", meaning: "tích lũy khoản dự phòng", synonyms: ["das Sparen"] },
+          { id: "schulden", label: "die ___", meaning: "nợ nần", answer: "Schulden", note: "in die Schulden geraten = lâm vào cảnh nợ nần; verschuldet sein = bị mắc nợ." },
           { id: "kredit", label: "der Kredit", meaning: "khoản vay", synonyms: ["das Darlehen"] },
-          { id: "budget", label: "das Budget planen", meaning: "lập ngân sách" },
+          { id: "budget", label: "ein Budget veranschlagen", meaning: "dự trù ngân sách", synonyms: ["das Budget planen"] },
         ],
       },
       {
@@ -48,8 +48,8 @@ const topic: Topic = {
         label: "Verbraucherschutz",
         meaning: "bảo vệ người tiêu dùng",
         children: [
-          { id: "garantie", label: "die Garantie", meaning: "bảo hành" },
-          { id: "widerrufsrecht", label: "das Widerrufsrecht", meaning: "quyền hủy đơn hàng" },
+          { id: "garantie", label: "die Gewährleistung", meaning: "trách nhiệm bảo hành theo luật định", synonyms: ["die Garantie"] },
+          { id: "widerrufsrecht", label: "das Widerrufsrecht", meaning: "quyền hủy đơn hàng", note: "innerhalb der Widerrufsfrist vom Vertrag zurücktreten." },
         ],
       },
       {
@@ -62,10 +62,10 @@ const topic: Topic = {
             label: "Nomen",
             meaning: "danh từ",
             children: [
-              { id: "wa-preis", label: "der Preis", meaning: "giá cả" },
-              { id: "wa-rabatt", label: "der Rabatt", meaning: "giảm giá" },
+              { id: "wa-preis", label: "die Preisgestaltung", meaning: "cách định giá", synonyms: ["der Preis"] },
+              { id: "wa-rabatt", label: "der Rabatt", meaning: "giảm giá", synonyms: ["der Preisnachlass"] },
               { id: "wa-rechnung", label: "die Rechnung", meaning: "hóa đơn" },
-              { id: "wa-verbraucher", label: "der Verbraucher", meaning: "người tiêu dùng" },
+              { id: "wa-verbraucher", label: "der Verbraucher", meaning: "người tiêu dùng", synonyms: ["der Konsument"] },
               { id: "wa-ausgaben", label: "die Ausgaben", meaning: "chi tiêu" },
             ],
           },
@@ -76,7 +76,7 @@ const topic: Topic = {
             children: [
               { id: "wa-geld-ausgeben", label: "Geld für etwas ausgeben", meaning: "chi tiền cho việc gì" },
               { id: "wa-preise-vergleichen", label: "Preise vergleichen", meaning: "so sánh giá" },
-              { id: "wa-ein-schnaeppchen-machen", label: "ein Schnäppchen machen", meaning: "mua được món hời" },
+              { id: "wa-ein-schnaeppchen-machen", label: "ein Schnäppchen ergattern", meaning: "mua được món hời", synonyms: ["ein Schnäppchen machen"] },
             ],
           },
           {
@@ -85,7 +85,7 @@ const topic: Topic = {
             meaning: "động từ",
             children: [
               { id: "wa-ausgeben", label: "ausgeben", meaning: "chi tiêu", note: "trennbar, unregelmäßig: gibt aus, gab aus, hat ausgegeben" },
-              { id: "wa-sparen", label: "sparen", meaning: "tiết kiệm" },
+              { id: "wa-sparen", label: "sparen", meaning: "tiết kiệm", note: "sparen an + Dat. = tiết kiệm ở khoản gì; sparen für + Akk. = tiết kiệm để dành cho." },
               { id: "wa-sich-leisten", label: "sich leisten + Akk.", meaning: "đủ khả năng mua" },
               { id: "wa-zurueckgeben", label: "zurückgeben", meaning: "trả lại (hàng)", note: "trennbar, unregelmäßig: gibt zurück, gab zurück, hat zurückgegeben" },
             ],

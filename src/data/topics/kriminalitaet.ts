@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Tội phạm",
   description: "Ursachen, Arten und Bekämpfung von Kriminalität",
   color: "#c0264f",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Kriminalität",
@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "các loại tội phạm",
         children: [
           { id: "diebstahl", label: "der Diebstahl", meaning: "sự trộm cắp", synonyms: ["der Klau (ugs.)", "der Raub"] },
-          { id: "einbruch", label: "der Einbruch", meaning: "sự đột nhập" },
+          { id: "einbruch", label: "der Einbruch", meaning: "sự đột nhập", synonyms: ["der Einbruchsdiebstahl"] },
           { id: "betrug", label: "der ___", meaning: "sự lừa đảo", answer: "Betrug", note: "Er wurde wegen Betrugs angeklagt." },
           { id: "gewalt", label: "die Gewaltverbrechen", meaning: "tội phạm bạo lực" },
           { id: "cyberkrim", label: "die Cyberkriminalität", meaning: "tội phạm mạng" },
@@ -32,8 +32,8 @@ const topic: Topic = {
           { id: "armut", label: "die Armut", meaning: "nghèo đói", synonyms: ["die Not"] },
           { id: "arbeitslosigkeit", label: "die ___", meaning: "thất nghiệp", answer: "Arbeitslosigkeit" },
           { id: "drogen", label: "die Drogensucht", meaning: "nghiện ma túy" },
-          { id: "erziehung", label: "mangelnde Erziehung", meaning: "giáo dục thiếu sót" },
-          { id: "ungleichheit", label: "die soziale Ungleichheit", meaning: "bất bình đẳng xã hội" },
+          { id: "erziehung", label: "unzureichende Erziehung", meaning: "giáo dục không đầy đủ", synonyms: ["mangelnde Erziehung"] },
+          { id: "ungleichheit", label: "die soziale Ungleichheit", meaning: "bất bình đẳng xã hội", note: "oft in Verbindung mit 'soziale Verwahrlosung' (sự sao nhãng xã hội)." },
         ],
       },
       {
@@ -43,7 +43,7 @@ const topic: Topic = {
         children: [
           { id: "unsicherheit", label: "das Unsicherheitsgefühl", meaning: "cảm giác bất an" },
           { id: "vertrauensverlust", label: "der Vertrauensverlust", meaning: "mất niềm tin" },
-          { id: "kosten", label: "hohe Kosten für den Staat", meaning: "chi phí cao cho nhà nước", synonyms: ["die Ausgaben"] },
+          { id: "kosten", label: "erhebliche Kosten für den Staat", meaning: "chi phí đáng kể cho nhà nước", synonyms: ["hohe Kosten für den Staat"] },
         ],
       },
       {
@@ -62,8 +62,8 @@ const topic: Topic = {
         label: "Meine Meinung",
         meaning: "quan điểm cá nhân",
         children: [
-          { id: "meinung1", label: "Prävention ist besser als Strafe", meaning: "câu chủ đề mẫu để luyện nói" },
-          { id: "meinung2", label: "Bildung als Schlüssel", meaning: "giáo dục là chìa khóa" },
+          { id: "meinung1", label: "Prävention ist wirkungsvoller als bloße Bestrafung", meaning: "câu chủ đề mẫu để luyện nói (phòng ngừa hiệu quả hơn trừng phạt đơn thuần)" },
+          { id: "meinung2", label: "Bildung als Schlüssel zur Kriminalitätsbekämpfung", meaning: "giáo dục là chìa khóa để phòng chống tội phạm" },
         ],
       },
       {
@@ -76,11 +76,11 @@ const topic: Topic = {
             label: "Nomen",
             meaning: "danh từ",
             children: [
-              { id: "wa-taeter", label: "der Täter", meaning: "thủ phạm" },
+              { id: "wa-taeter", label: "der Täter", meaning: "thủ phạm", synonyms: ["der Straftäter"] },
               { id: "wa-opfer", label: "das Opfer", meaning: "nạn nhân" },
               { id: "wa-zeuge", label: "der Zeuge", meaning: "nhân chứng" },
-              { id: "wa-gericht", label: "das Gericht", meaning: "tòa án" },
-              { id: "wa-strafe", label: "die Strafe", meaning: "hình phạt" },
+              { id: "wa-gericht", label: "das Gericht", meaning: "tòa án", synonyms: ["die Justiz"] },
+              { id: "wa-strafe", label: "die Strafe", meaning: "hình phạt", synonyms: ["die Sanktion"] },
             ],
           },
           {
@@ -101,7 +101,7 @@ const topic: Topic = {
               { id: "wa-begehen", label: "begehen", meaning: "gây ra (tội)", note: "unregelmäßig: begeht, beging, hat begangen" },
               { id: "wa-verurteilen", label: "verurteilen zu + Dat.", meaning: "kết án" },
               { id: "wa-anklagen", label: "anklagen wegen + Gen.", meaning: "buộc tội vì" },
-              { id: "wa-verhaften", label: "verhaften", meaning: "bắt giữ" },
+              { id: "wa-verhaften", label: "verhaften", meaning: "bắt giữ", note: "meist im Passiv verwendet: verhaftet werden = bị bắt giữ." },
             ],
           },
           {

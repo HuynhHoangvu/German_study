@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Du lịch",
   description: "Reiseformen, Vorteile und Auswirkungen des Tourismus",
   color: "#0284c7",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Reisen",
@@ -61,11 +61,11 @@ const topic: Topic = {
             label: "Nomen",
             meaning: "danh từ",
             children: [
-              { id: "wa-reiseziel", label: "das Reiseziel", meaning: "điểm đến du lịch" },
-              { id: "wa-unterkunft", label: "die Unterkunft", meaning: "chỗ ở/lưu trú" },
-              { id: "wa-sehenswuerdigkeit", label: "die Sehenswürdigkeit", meaning: "địa điểm tham quan" },
-              { id: "wa-gepaeck", label: "das Gepäck", meaning: "hành lý" },
-              { id: "wa-reisepass", label: "der Reisepass", meaning: "hộ chiếu" },
+              { id: "wa-reiseziel", label: "das Reiseziel", meaning: "điểm đến du lịch", note: "oft mit Genitiv: das beliebteste Reiseziel der Region." },
+              { id: "wa-unterkunft", label: "die Unterkunftsmöglichkeit", meaning: "phương án chỗ ở/lưu trú", synonyms: ["die Unterkunft"] },
+              { id: "wa-sehenswuerdigkeit", label: "die Sehenswürdigkeit", meaning: "địa điểm tham quan nổi tiếng" },
+              { id: "wa-gepaeck", label: "das Reisegepäck", meaning: "hành lý du lịch", synonyms: ["das Gepäck"] },
+              { id: "wa-reisepass", label: "der Reisepass verlängern", meaning: "gia hạn hộ chiếu" },
             ],
           },
           {
@@ -73,9 +73,9 @@ const topic: Topic = {
             label: "Nominalphrasen",
             meaning: "cụm danh từ",
             children: [
-              { id: "wa-eine-reise-buchen", label: "eine Reise buchen", meaning: "đặt một chuyến đi" },
+              { id: "wa-eine-reise-buchen", label: "eine Reise im Voraus buchen", meaning: "đặt trước một chuyến đi" },
               { id: "wa-eine-sehenswuerdigkeit-besichtigen", label: "eine Sehenswürdigkeit besichtigen", meaning: "tham quan một địa điểm" },
-              { id: "wa-neue-kulturen-entdecken", label: "neue Kulturen entdecken", meaning: "khám phá những nền văn hóa mới" },
+              { id: "wa-neue-kulturen-entdecken", label: "fremde Kulturen erkunden", meaning: "khám phá những nền văn hóa xa lạ", synonyms: ["neue Kulturen entdecken"] },
             ],
           },
           {
@@ -83,10 +83,10 @@ const topic: Topic = {
             label: "Verben",
             meaning: "động từ",
             children: [
-              { id: "wa-buchen", label: "buchen", meaning: "đặt trước (vé, phòng...)" },
-              { id: "wa-uebernachten", label: "übernachten", meaning: "ngủ qua đêm" },
+              { id: "wa-buchen", label: "im Voraus buchen", meaning: "đặt trước (vé, phòng...)", synonyms: ["buchen"] },
+              { id: "wa-uebernachten", label: "übernachten", meaning: "ngủ qua đêm", note: "übernachten in + Dat.: in einem Hotel übernachten." },
               { id: "wa-sich-erholen-reisen", label: "sich erholen von + Dat.", meaning: "nghỉ ngơi hồi phục sau" },
-              { id: "wa-erkunden", label: "erkunden", meaning: "khám phá" },
+              { id: "wa-erkunden", label: "auf eigene Faust erkunden", meaning: "tự mình khám phá, không theo tour", synonyms: ["erkunden"] },
             ],
           },
           {
@@ -95,7 +95,7 @@ const topic: Topic = {
             meaning: "tính từ kèm giới từ",
             children: [
               { id: "wa-begeistert-reisen", label: "begeistert von + Dat.", meaning: "hào hứng với" },
-              { id: "wa-bekannt-reisen", label: "bekannt für + Akk.", meaning: "nổi tiếng vì" },
+              { id: "wa-bekannt-reisen", label: "weltberühmt für + Akk.", meaning: "nổi tiếng khắp thế giới vì", synonyms: ["bekannt für + Akk."] },
               { id: "wa-verantwortlich-reisen", label: "verantwortlich für + Akk.", meaning: "có trách nhiệm với (môi trường...)" },
             ],
           },

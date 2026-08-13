@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Giáo dục",
   description: "Schulsystem, Studium und lebenslanges Lernen",
   color: "#0f766e",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Bildung",
@@ -19,8 +19,8 @@ const topic: Topic = {
         children: [
           { id: "grundschule", label: "die Grundschule", meaning: "trường tiểu học" },
           { id: "gymnasium", label: "das ___", meaning: "trường trung học (hướng đại học)", answer: "Gymnasium" },
-          { id: "ausbildung", label: "die Ausbildung", meaning: "học nghề", synonyms: ["die Berufsausbildung"] },
-          { id: "studium", label: "das Studium", meaning: "việc học đại học" },
+          { id: "ausbildung", label: "die duale Berufsausbildung", meaning: "học nghề song hành (lý thuyết và thực hành)", note: "kết hợp học tại trường nghề và thực tập tại doanh nghiệp." },
+          { id: "studium", label: "das Studium", meaning: "việc học đại học", note: "ein Studium absolvieren/aufnehmen = hoàn thành/bắt đầu việc học đại học." },
         ],
       },
       {
@@ -28,8 +28,8 @@ const topic: Topic = {
         label: "Vorteile guter Bildung",
         meaning: "lợi ích giáo dục tốt",
         children: [
-          { id: "chancen", label: "bessere Berufschancen", meaning: "cơ hội nghề nghiệp tốt hơn", synonyms: ["bessere Jobaussichten"] },
-          { id: "selbststaendig2", label: "selbstständiges Denken", meaning: "tư duy độc lập", synonyms: ["kritisches Denken"] },
+          { id: "chancen", label: "verbesserte Berufsaussichten", meaning: "triển vọng nghề nghiệp được cải thiện", synonyms: ["bessere Jobaussichten"] },
+          { id: "selbststaendig2", label: "eigenständiges und kritisches Denken", meaning: "tư duy độc lập và phản biện", synonyms: ["kritisches Denkvermögen"] },
         ],
       },
       {
@@ -38,8 +38,8 @@ const topic: Topic = {
         meaning: "vấn đề",
         children: [
           { id: "chancenungleichheit", label: "die ___", meaning: "bất bình đẳng cơ hội", answer: "Chancenungleichheit", note: "Chance (cơ hội) + Ungleichheit (sự bất bình đẳng)." },
-          { id: "lehrermangel", label: "der Lehrermangel", meaning: "thiếu giáo viên" },
-          { id: "leistungsdruck", label: "der Leistungsdruck", meaning: "áp lực thành tích", synonyms: ["der Notendruck"] },
+          { id: "lehrermangel", label: "der akute Lehrermangel", meaning: "tình trạng thiếu giáo viên trầm trọng" },
+          { id: "leistungsdruck", label: "der Leistungsdruck", meaning: "áp lực thành tích", synonyms: ["der Notendruck"], note: "unter Leistungsdruck stehen/leiden." },
         ],
       },
       {
@@ -47,9 +47,9 @@ const topic: Topic = {
         label: "Lebenslanges Lernen",
         meaning: "học tập suốt đời",
         children: [
-          { id: "weiterbildung", label: "die Weiterbildung", meaning: "đào tạo nâng cao" },
-          { id: "onlinekurse", label: "die Onlinekurse", meaning: "khóa học trực tuyến" },
-          { id: "fremdsprachen", label: "___ lernen", meaning: "học ngoại ngữ", answer: "Fremdsprachen" },
+          { id: "weiterbildung", label: "die berufliche Weiterbildung", meaning: "đào tạo chuyên môn nâng cao" },
+          { id: "onlinekurse", label: "digitale Lernangebote", meaning: "các khóa học/nội dung học trực tuyến", synonyms: ["die Onlinekurse"] },
+          { id: "fremdsprachen", label: "___ erlernen", meaning: "trau dồi ngoại ngữ", answer: "Fremdsprachen" },
         ],
       },
       {
@@ -65,8 +65,8 @@ const topic: Topic = {
               { id: "wa-lehrer", label: "der Lehrer / die Lehrerin", meaning: "giáo viên" },
               { id: "wa-schueler", label: "der Schüler / die Schülerin", meaning: "học sinh" },
               { id: "wa-note", label: "die Note", meaning: "điểm số" },
-              { id: "wa-pruefung", label: "die Prüfung", meaning: "kỳ thi" },
-              { id: "wa-stipendium", label: "das Stipendium", meaning: "học bổng" },
+              { id: "wa-pruefung", label: "die Abschlussprüfung", meaning: "kỳ thi tốt nghiệp/kỳ thi cuối khóa", synonyms: ["die Prüfung"] },
+              { id: "wa-stipendium", label: "das Stipendium", meaning: "học bổng", note: "ein Stipendium erhalten/beantragen (nhận/xin học bổng)." },
             ],
           },
           {
@@ -75,8 +75,8 @@ const topic: Topic = {
             meaning: "cụm danh từ",
             children: [
               { id: "wa-eine-pruefung-ablegen", label: "eine Prüfung ablegen", meaning: "làm/tham gia một kỳ thi" },
-              { id: "wa-abschluss-machen", label: "einen Abschluss machen", meaning: "hoàn thành một bằng cấp" },
-              { id: "wa-wissen-erwerben", label: "Wissen erwerben", meaning: "thu nhận kiến thức" },
+              { id: "wa-abschluss-machen", label: "einen Abschluss erwerben", meaning: "đạt được một bằng cấp", synonyms: ["einen Abschluss machen"] },
+              { id: "wa-wissen-erwerben", label: "fundiertes Wissen erwerben", meaning: "thu nhận kiến thức nền tảng vững chắc" },
             ],
           },
           {
@@ -84,7 +84,7 @@ const topic: Topic = {
             label: "Verben",
             meaning: "động từ",
             children: [
-              { id: "wa-unterrichten", label: "unterrichten", meaning: "giảng dạy" },
+              { id: "wa-unterrichten", label: "unterrichten", meaning: "giảng dạy", note: "jemanden in etwas unterrichten (dạy ai môn gì)." },
               { id: "wa-bestehen", label: "bestehen", meaning: "vượt qua (kỳ thi)", note: "unregelmäßig: besteht, bestand, hat bestanden" },
               { id: "wa-durchfallen", label: "durchfallen", meaning: "trượt (kỳ thi)", note: "trennbar, unregelmäßig: fällt durch, fiel durch, ist durchgefallen" },
               { id: "wa-sich-vorbereiten", label: "sich vorbereiten auf + Akk.", meaning: "chuẩn bị cho" },

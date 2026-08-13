@@ -61,11 +61,11 @@ const topic: Topic = {
             label: "Nomen",
             meaning: "danh từ",
             children: [
-              { id: "wa-regierung", label: "die Regierung", meaning: "chính phủ" },
-              { id: "wa-gesetz", label: "das Gesetz", meaning: "luật/đạo luật" },
-              { id: "wa-buerger", label: "der Bürger", meaning: "công dân" },
-              { id: "wa-wahl", label: "die Wahl", meaning: "cuộc bầu cử" },
-              { id: "wa-gerechtigkeit", label: "die Gerechtigkeit", meaning: "sự công bằng" },
+              { id: "wa-regierung", label: "die Bundesregierung", meaning: "chính phủ liên bang", synonyms: ["die Regierung"] },
+              { id: "wa-gesetz", label: "der Gesetzesentwurf", meaning: "dự thảo luật", synonyms: ["das Gesetz"] },
+              { id: "wa-buerger", label: "der Staatsbürger", meaning: "công dân của nhà nước", synonyms: ["der Bürger"] },
+              { id: "wa-wahl", label: "die Bundestagswahl", meaning: "cuộc bầu cử quốc hội liên bang", synonyms: ["die Wahl"] },
+              { id: "wa-gerechtigkeit", label: "die soziale Gerechtigkeit", meaning: "sự công bằng xã hội", synonyms: ["die Chancengleichheit"] },
             ],
           },
           {
@@ -74,8 +74,8 @@ const topic: Topic = {
             meaning: "cụm danh từ",
             children: [
               { id: "wa-ein-gesetz-verabschieden", label: "ein Gesetz verabschieden", meaning: "thông qua một đạo luật" },
-              { id: "wa-an-der-wahl-teilnehmen", label: "an der Wahl teilnehmen", meaning: "tham gia bầu cử" },
-              { id: "wa-fuer-gleichheit-kaempfen", label: "für Gleichheit kämpfen", meaning: "đấu tranh vì sự bình đẳng" },
+              { id: "wa-an-der-wahl-teilnehmen", label: "sein Wahlrecht ausüben", meaning: "thực hiện quyền bầu cử của mình", synonyms: ["an der Wahl teilnehmen"] },
+              { id: "wa-fuer-gleichheit-kaempfen", label: "für Gleichheit eintreten", meaning: "đứng lên đấu tranh vì sự bình đẳng", synonyms: ["für Gleichheit kämpfen"] },
             ],
           },
           {
@@ -84,8 +84,8 @@ const topic: Topic = {
             meaning: "động từ",
             children: [
               { id: "wa-sich-engagieren", label: "sich engagieren für + Akk.", meaning: "tích cực tham gia/đấu tranh cho" },
-              { id: "wa-diskriminieren", label: "diskriminieren", meaning: "phân biệt đối xử" },
-              { id: "wa-integrieren", label: "integrieren", meaning: "hòa nhập" },
+              { id: "wa-diskriminieren", label: "diskriminieren aufgrund + Gen.", meaning: "phân biệt đối xử dựa trên", note: "diskriminiert werden aufgrund seiner Herkunft." },
+              { id: "wa-integrieren", label: "sich integrieren in + Akk.", meaning: "hòa nhập vào" },
               { id: "wa-abstimmen", label: "abstimmen über + Akk.", meaning: "bỏ phiếu về", note: "trennbar: stimmt ab, stimmte ab, hat abgestimmt" },
             ],
           },

@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Cấp cứu & Sơ cứu",
   description: "Notfälle, Unfälle und Erste-Hilfe-Maßnahmen",
   color: "#dc2626",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Notfall",
@@ -17,10 +17,10 @@ const topic: Topic = {
         label: "Arten von Notfällen",
         meaning: "các loại tình huống khẩn cấp",
         children: [
-          { id: "unfall", label: "der Unfall", meaning: "tai nạn" },
+          { id: "unfall", label: "der Unfall mit Personenschaden", meaning: "tai nạn gây thương tích cho người", synonyms: ["der Verkehrsunfall"] },
           { id: "herzinfarkt", label: "der ___", meaning: "nhồi máu cơ tim", answer: "Herzinfarkt" },
-          { id: "verbrennung", label: "die Verbrennung", meaning: "vết bỏng" },
-          { id: "bewusstlosigkeit", label: "die Bewusstlosigkeit", meaning: "sự bất tỉnh", note: "bewusst (có ý thức) + los (mất đi) + Bewusstlosigkeit." },
+          { id: "verbrennung", label: "die Verbrennung zweiten Grades", meaning: "vết bỏng độ hai", note: "Grade der Verbrennung: ersten, zweiten, dritten Grades." },
+          { id: "bewusstlosigkeit", label: "die Bewusstlosigkeit", meaning: "sự bất tỉnh", note: "bewusst (có ý thức) + los (mất đi, hậu tố phủ định) → bewusstlos → Bewusstlosigkeit." },
         ],
       },
       {
@@ -28,9 +28,9 @@ const topic: Topic = {
         label: "Erste-Hilfe-Maßnahmen",
         meaning: "biện pháp sơ cứu",
         children: [
-          { id: "wiederbelebung", label: "die Wiederbelebung", meaning: "hồi sức cấp cứu", synonyms: ["die Reanimation"] },
-          { id: "erstickung", label: "erste Hilfe bei ___", meaning: "sơ cứu khi bị nghẹt thở", answer: "Erstickung" },
-          { id: "stabile-seitenlage", label: "die stabile Seitenlage", meaning: "tư thế hồi phục nằm nghiêng" },
+          { id: "wiederbelebung", label: "die Herz-Lungen-Wiederbelebung", meaning: "hồi sức tim phổi", synonyms: ["die Reanimation"], note: "Abkürzung: HLW." },
+          { id: "erstickung", label: "erste Hilfe bei drohender ___", meaning: "sơ cứu khi có nguy cơ nghẹt thở", answer: "Erstickung" },
+          { id: "stabile-seitenlage", label: "die stabile Seitenlage", meaning: "tư thế hồi phục nằm nghiêng", note: "wird bei bewusstlosen, aber atmenden Personen angewendet." },
         ],
       },
       {
@@ -38,9 +38,9 @@ const topic: Topic = {
         label: "Hilfe rufen",
         meaning: "gọi trợ giúp",
         children: [
-          { id: "rettungswagen", label: "der Rettungswagen", meaning: "xe cấp cứu", synonyms: ["der Krankenwagen"] },
-          { id: "notruf", label: "den ___ wählen", meaning: "gọi số cấp cứu (112)", answer: "Notruf" },
-          { id: "notaufnahme2", label: "die Notaufnahme", meaning: "khoa cấp cứu" },
+          { id: "rettungswagen", label: "der Rettungswagen anfordern", meaning: "gọi xe cấp cứu đến", synonyms: ["den Krankenwagen alarmieren"] },
+          { id: "notruf", label: "den ___ absetzen", meaning: "thực hiện cuộc gọi cấp cứu (112)", answer: "Notruf", note: "einen Notruf absetzen = gọi báo khẩn cấp một cách trang trọng." },
+          { id: "notaufnahme2", label: "die Notaufnahme", meaning: "khoa cấp cứu", note: "in die Notaufnahme eingeliefert werden." },
         ],
       },
       {
@@ -48,8 +48,8 @@ const topic: Topic = {
         label: "Vorbeugung",
         meaning: "phòng ngừa",
         children: [
-          { id: "erstehilfekurs", label: "der Erste-Hilfe-Kurs", meaning: "khóa học sơ cứu" },
-          { id: "verbandskasten", label: "der Verbandskasten", meaning: "hộp sơ cứu" },
+          { id: "erstehilfekurs", label: "der Erste-Hilfe-Kurs absolvieren", meaning: "hoàn thành khóa học sơ cứu", note: "einen Kurs absolvieren = học và hoàn tất khóa học." },
+          { id: "verbandskasten", label: "der Verbandskasten", meaning: "hộp sơ cứu", synonyms: ["das Erste-Hilfe-Set"] },
         ],
       },
       {
@@ -62,11 +62,11 @@ const topic: Topic = {
             label: "Nomen",
             meaning: "danh từ",
             children: [
-              { id: "wa-verletzte", label: "der/die Verletzte", meaning: "người bị thương" },
-              { id: "wa-ersthelfer", label: "der Ersthelfer", meaning: "người sơ cứu" },
-              { id: "wa-gefahr", label: "die Gefahr", meaning: "nguy hiểm" },
-              { id: "wa-atemstillstand", label: "der Atemstillstand", meaning: "ngừng thở" },
-              { id: "wa-blutung", label: "die Blutung", meaning: "sự chảy máu" },
+              { id: "wa-verletzte", label: "der/die Schwerverletzte", meaning: "người bị thương nặng", synonyms: ["der/die Verletzte"] },
+              { id: "wa-ersthelfer", label: "der Ersthelfer", meaning: "người sơ cứu ban đầu", note: "gesetzliche Pflicht in Deutschland: Erste Hilfe zu leisten." },
+              { id: "wa-gefahr", label: "die Lebensgefahr", meaning: "nguy hiểm đến tính mạng", synonyms: ["die akute Gefahr"] },
+              { id: "wa-atemstillstand", label: "der Atemstillstand", meaning: "ngừng thở", synonyms: ["der Kreislaufstillstand"] },
+              { id: "wa-blutung", label: "die starke Blutung", meaning: "sự chảy máu nghiêm trọng", synonyms: ["die Verblutung"] },
             ],
           },
           {
@@ -74,8 +74,8 @@ const topic: Topic = {
             label: "Nominalphrasen",
             meaning: "cụm danh từ",
             children: [
-              { id: "wa-erste-hilfe-leisten", label: "erste Hilfe leisten", meaning: "sơ cứu" },
-              { id: "wa-den-notruf-waehlen", label: "den Notruf wählen", meaning: "gọi số cấp cứu" },
+              { id: "wa-erste-hilfe-leisten", label: "erste Hilfe leisten", meaning: "tiến hành sơ cứu" },
+              { id: "wa-den-notruf-waehlen", label: "den Notruf absetzen", meaning: "thực hiện cuộc gọi báo khẩn cấp" },
               { id: "wa-in-sicherheit-bringen", label: "jemanden in Sicherheit bringen", meaning: "đưa ai đó đến nơi an toàn" },
             ],
           },
@@ -84,10 +84,10 @@ const topic: Topic = {
             label: "Verben",
             meaning: "động từ",
             children: [
-              { id: "wa-retten", label: "retten", meaning: "cứu" },
-              { id: "wa-verletzen", label: "sich verletzen", meaning: "bị thương" },
-              { id: "wa-bluten", label: "bluten", meaning: "chảy máu" },
-              { id: "wa-reagieren", label: "reagieren auf + Akk.", meaning: "phản ứng với" },
+              { id: "wa-retten", label: "jemanden vor dem Ertrinken retten", meaning: "cứu ai khỏi đuối nước", note: "retten vor + Dat." },
+              { id: "wa-verletzen", label: "sich schwer verletzen", meaning: "bị thương nặng", synonyms: ["sich verletzen"] },
+              { id: "wa-bluten", label: "stark bluten", meaning: "chảy máu nhiều" },
+              { id: "wa-reagieren", label: "besonnen reagieren auf + Akk.", meaning: "phản ứng bình tĩnh, sáng suốt trước", note: "besonnen = giữ bình tĩnh, sáng suốt trong tình huống khẩn cấp." },
             ],
           },
           {
@@ -97,7 +97,7 @@ const topic: Topic = {
             children: [
               { id: "wa-bewusstlos", label: "bewusstlos sein", meaning: "bất tỉnh" },
               { id: "wa-verantwortlich-notfall", label: "verantwortlich für + Akk.", meaning: "chịu trách nhiệm về" },
-              { id: "wa-bereit", label: "bereit für + Akk.", meaning: "sẵn sàng cho" },
+              { id: "wa-bereit", label: "gewappnet für + Akk.", meaning: "chuẩn bị sẵn sàng, ứng phó tốt với", synonyms: ["bereit für + Akk."] },
             ],
           },
         ],

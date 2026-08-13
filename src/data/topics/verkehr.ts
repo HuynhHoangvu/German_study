@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Giao thông",
   description: "Verkehrsmittel, Probleme und Lösungen im Verkehr",
   color: "#2563a8",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Verkehr",
@@ -17,11 +17,11 @@ const topic: Topic = {
         label: "Verkehrsmittel",
         meaning: "phương tiện giao thông",
         children: [
-          { id: "auto", label: "das Auto", meaning: "ô tô", synonyms: ["der Wagen", "der PKW"] },
-          { id: "zug", label: "der Zug", meaning: "tàu hỏa" },
+          { id: "auto", label: "der Individualverkehr", meaning: "giao thông cá nhân (ô tô riêng)", synonyms: ["der Wagen", "der PKW"] },
+          { id: "zug", label: "der Fernverkehrszug", meaning: "tàu hỏa (đường dài)", synonyms: ["der Regionalzug"] },
           { id: "fahrrad", label: "das ___", meaning: "xe đạp", answer: "Fahrrad" },
-          { id: "bus", label: "der Bus", meaning: "xe buýt" },
-          { id: "oepnv", label: "der ÖPNV", meaning: "phương tiện công cộng", note: "öffentlicher Personennahverkehr" },
+          { id: "bus", label: "der Linienbus", meaning: "xe buýt công cộng theo tuyến" },
+          { id: "oepnv", label: "der ÖPNV", meaning: "phương tiện công cộng", note: "Abkürzung für 'öffentlicher Personennahverkehr'; oft in Kollokationen wie 'den ÖPNV ausbauen/nutzen'." },
         ],
       },
       {
@@ -41,9 +41,9 @@ const topic: Topic = {
         label: "Vor- und Nachteile Auto",
         meaning: "ưu nhược điểm ô tô",
         children: [
-          { id: "flexibel", label: "flexibel und bequem", meaning: "linh hoạt và tiện lợi" },
-          { id: "umweltschaedlich", label: "umweltschädlich", meaning: "gây hại môi trường" },
-          { id: "teuer", label: "hohe Unterhaltskosten", meaning: "chi phí bảo trì cao" },
+          { id: "flexibel", label: "hohe zeitliche Flexibilität", meaning: "tính linh hoạt cao về thời gian" },
+          { id: "umweltschaedlich", label: "umweltschädlich", meaning: "gây hại môi trường", synonyms: ["klimaschädlich"] },
+          { id: "teuer", label: "hohe Unterhaltskosten", meaning: "chi phí bảo trì cao", synonyms: ["die Anschaffungskosten"] },
         ],
       },
       {
@@ -51,10 +51,10 @@ const topic: Topic = {
         label: "Lösungen",
         meaning: "giải pháp",
         children: [
-          { id: "ausbau", label: "Ausbau des ÖPNV", meaning: "mở rộng giao thông công cộng" },
-          { id: "radwege", label: "mehr Radwege bauen", meaning: "xây thêm làn xe đạp" },
+          { id: "ausbau", label: "den ÖPNV konsequent ausbauen", meaning: "mở rộng giao thông công cộng một cách triệt để" },
+          { id: "radwege", label: "das Radwegenetz erweitern", meaning: "mở rộng mạng lưới làn xe đạp" },
           { id: "elektro", label: "die ___", meaning: "xe điện", answer: "Elektroautos" },
-          { id: "carsharing", label: "das Carsharing", meaning: "chia sẻ xe" },
+          { id: "carsharing", label: "das Carsharing fördern", meaning: "khuyến khích mô hình chia sẻ xe" },
           { id: "tempolimit", label: "ein Tempolimit einführen", meaning: "áp dụng giới hạn tốc độ" },
         ],
       },
@@ -77,11 +77,11 @@ const topic: Topic = {
             label: "Nomen",
             meaning: "danh từ",
             children: [
-              { id: "wa-fahrer", label: "der Fahrer", meaning: "người lái xe" },
+              { id: "wa-fahrer", label: "der Verkehrsteilnehmer", meaning: "người tham gia giao thông" },
               { id: "wa-fahrplan", label: "der Fahrplan", meaning: "lịch trình chạy xe" },
               { id: "wa-verkehrsschild", label: "das Verkehrsschild", meaning: "biển báo giao thông" },
               { id: "wa-fahrkarte", label: "die Fahrkarte", meaning: "vé xe" },
-              { id: "wa-geschwindigkeit", label: "die Geschwindigkeit", meaning: "tốc độ" },
+              { id: "wa-geschwindigkeitsbegrenzung", label: "die Geschwindigkeitsbegrenzung", meaning: "giới hạn tốc độ" },
             ],
           },
           {
@@ -102,7 +102,7 @@ const topic: Topic = {
               { id: "wa-fahren", label: "fahren", meaning: "lái xe/đi (bằng phương tiện)", note: "unregelmäßig: fährt, fuhr, ist gefahren" },
               { id: "wa-umsteigen", label: "umsteigen", meaning: "đổi chuyến/đổi xe", note: "trennbar, unregelmäßig: steigt um, stieg um, ist umgestiegen" },
               { id: "wa-parken", label: "parken", meaning: "đỗ xe" },
-              { id: "wa-sich-verspaeten", label: "sich verspäten", meaning: "bị trễ giờ" },
+              { id: "wa-sich-verspaeten", label: "sich verspäten", meaning: "bị trễ giờ", note: "reflexives Verb, oft mit Zeitangabe: 'sich um X Minuten verspäten'." },
             ],
           },
           {

@@ -6,7 +6,7 @@ export default function Home() {
     <div className="mx-auto max-w-7xl px-5 py-12">
       <section className="mb-10">
         <span className="inline-block text-xs font-semibold tracking-wide uppercase text-[var(--brand)] bg-[var(--brand-soft)] px-3 py-1 rounded-full mb-4">
-          Ôn luyện tiếng Đức B1 · B2
+          Ôn luyện tiếng Đức B2
         </span>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight max-w-2xl">
           Học từ vựng tiếng Đức qua sơ đồ tư duy

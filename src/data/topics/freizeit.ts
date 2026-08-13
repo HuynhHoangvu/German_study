@@ -6,7 +6,7 @@ const topic: Topic = {
   titleVi: "Thời gian rảnh",
   description: "Freizeitaktivitäten, Hobbys und ihre Bedeutung",
   color: "#c026d3",
-  level: "B1-B2",
+  level: "B2",
   root: {
     id: "root",
     label: "Freizeit",
@@ -17,9 +17,9 @@ const topic: Topic = {
         label: "Aktivitäten",
         meaning: "hoạt động",
         children: [
-          { id: "sport2", label: "Sport treiben", meaning: "tập thể thao", synonyms: ["sich sportlich betätigen"] },
+          { id: "sport2", label: "sich sportlich betätigen", meaning: "vận động thể thao", synonyms: ["Sport treiben"] },
           { id: "lesen", label: "___", meaning: "đọc sách", answer: "lesen" },
-          { id: "reisen2", label: "reisen", meaning: "du lịch" },
+          { id: "reisen2", label: "auf Reisen gehen", meaning: "đi du lịch", synonyms: ["reisen"] },
           { id: "ehrenamt", label: "sich ehrenamtlich engagieren", meaning: "hoạt động tình nguyện", synonyms: ["freiwillig arbeiten"], note: "ehrenamtlich = không lương, tự nguyện vì cộng đồng." },
         ],
       },
@@ -38,7 +38,7 @@ const topic: Topic = {
         label: "Probleme",
         meaning: "vấn đề",
         children: [
-          { id: "zeitmangel2", label: "der Zeitmangel", meaning: "thiếu thời gian", synonyms: ["wenig Zeit haben"] },
+          { id: "zeitmangel2", label: "der chronische Zeitmangel", meaning: "tình trạng thiếu thời gian kéo dài", synonyms: ["wenig Zeit haben"] },
           { id: "bildschirmzeit", label: "zu viel ___", meaning: "quá nhiều thời gian dùng màn hình", answer: "Bildschirmzeit" },
         ],
       },
@@ -54,9 +54,9 @@ const topic: Topic = {
             children: [
               { id: "wa-hobby", label: "das Hobby", meaning: "sở thích" },
               { id: "wa-freizeitbeschaeftigung", label: "die Freizeitbeschäftigung", meaning: "hoạt động giải trí" },
-              { id: "wa-verein", label: "der Verein", meaning: "câu lạc bộ/hội" },
+              { id: "wa-verein", label: "der Verein", meaning: "câu lạc bộ/hội", note: "einem Verein beitreten (gia nhập một hội)." },
               { id: "wa-veranstaltung", label: "die Veranstaltung", meaning: "sự kiện" },
-              { id: "wa-langeweile3", label: "die Langeweile", meaning: "sự nhàm chán" },
+              { id: "wa-langeweile3", label: "die Langeweile", meaning: "sự nhàm chán", note: "vor Langeweile = vì quá nhàm chán." },
             ],
           },
           {
