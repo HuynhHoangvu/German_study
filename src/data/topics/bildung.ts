@@ -53,6 +53,87 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trends",
+        label: "Aktuelle Trend-Themen",
+        meaning: "các chủ đề xu hướng (dùng cho phần Nói/Viết Teil 1)",
+        children: [
+          {
+            id: "trend-gapyear",
+            label: "Gap-Year nach dem Studium",
+            meaning: "năm nghỉ sau khi tốt nghiệp",
+            children: [
+              {
+                id: "trend-gapyear-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "gy-v1", label: "praktische Erfahrungen im Ausland sammeln", meaning: "tích lũy kinh nghiệm thực tế ở nước ngoài" },
+                  { id: "gy-v2", label: "Zeit für Selbstfindung und Orientierung", meaning: "có thời gian tìm hiểu bản thân và định hướng" },
+                  { id: "gy-v3", label: "eine Verschnaufpause vor dem Berufseinstieg", meaning: "khoảng nghỉ trước khi bước vào công việc" },
+                ],
+              },
+              {
+                id: "trend-gapyear-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "gy-n1", label: "der verzögerte Berufseinstieg", meaning: "việc bắt đầu sự nghiệp bị trì hoãn" },
+                  { id: "gy-n2", label: "hohe Kosten für Reisen und Aufenthalt", meaning: "chi phí cao cho việc đi lại và lưu trú" },
+                  { id: "gy-n3", label: "die Gefahr, den Anschluss zu verlieren", meaning: "nguy cơ bị tụt lại so với bạn bè đồng trang lứa" },
+                ],
+              },
+              {
+                id: "trend-gapyear-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "gy-a1", label: "ein Praktikum parallel zum Studienabschluss absolvieren", meaning: "thực tập song song với việc hoàn thành bằng cấp" },
+                  { id: "gy-a2", label: "ein kurzer, gezielter Auslandsaufenthalt statt eines ganzen Jahres", meaning: "một chuyến đi nước ngoài ngắn, có mục tiêu rõ ràng thay vì cả năm" },
+                ],
+              },
+              {
+                id: "trend-gapyear-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "gy-vn1", label: "ein Gap-Year ist in Vietnam gesellschaftlich noch wenig akzeptiert", meaning: "năm nghỉ chưa được xã hội Việt Nam chấp nhận rộng rãi" },
+                  { id: "gy-vn2", label: "viele Eltern erwarten einen nahtlosen Übergang ins Berufsleben", meaning: "nhiều phụ huynh kỳ vọng con chuyển tiếp ngay vào công việc" },
+                ],
+              },
+            ],
+          },
+          {
+            id: "trend-fremdsprachen-kiga",
+            label: "Fremdsprachen ab dem Kindergarten",
+            meaning: "học ngoại ngữ từ tuổi mẫu giáo",
+            children: [
+              {
+                id: "trend-fremdsprachen-kiga-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "fs-v1", label: "Kinder lernen Sprachen in jungem Alter besonders leicht", meaning: "trẻ nhỏ tiếp thu ngôn ngữ dễ dàng hơn ở độ tuổi này" },
+                  { id: "fs-v2", label: "eine authentische Aussprache wird von Anfang an geprägt", meaning: "phát âm chuẩn được hình thành ngay từ đầu" },
+                  { id: "fs-v3", label: "die kognitive Entwicklung wird gefördert", meaning: "sự phát triển nhận thức được thúc đẩy" },
+                ],
+              },
+              {
+                id: "trend-fremdsprachen-kiga-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "fs-n1", label: "die Gefahr der Überforderung im frühen Kindesalter", meaning: "nguy cơ quá tải ở độ tuổi còn quá nhỏ" },
+                  { id: "fs-n2", label: "der Mangel an qualifizierten Erzieherinnen und Erziehern", meaning: "thiếu giáo viên mầm non đủ trình độ" },
+                  { id: "fs-n3", label: "hohe zusätzliche Kosten für die Eltern", meaning: "chi phí phát sinh cao cho phụ huynh" },
+                ],
+              },
+              {
+                id: "trend-fremdsprachen-kiga-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "fs-a1", label: "spielerischer Fremdsprachenkontakt statt strukturierten Unterrichts", meaning: "tiếp xúc ngoại ngữ qua trò chơi thay vì học có cấu trúc" },
+                  { id: "fs-a2", label: "der Fremdsprachenunterricht erst ab der Grundschule", meaning: "chỉ bắt đầu dạy ngoại ngữ từ bậc tiểu học" },
+                ],
+              },
+              {
+                id: "trend-fremdsprachen-kiga-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "fs-vn1", label: "Englisch wird in vielen Kindergärten in Großstädten bereits angeboten", meaning: "tiếng Anh đã được dạy ở nhiều trường mẫu giáo tại các thành phố lớn" },
+                  { id: "fs-vn2", label: "auf dem Land ist ein solches Angebot noch selten", meaning: "ở nông thôn dịch vụ này vẫn còn hiếm" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",

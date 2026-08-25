@@ -52,6 +52,85 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trends",
+        label: "Aktuelle Trend-Themen",
+        meaning: "các chủ đề xu hướng (dùng cho phần Nói/Viết Teil 1)",
+        children: [
+          {
+            id: "trend-ebooks",
+            label: "E-Books vs. gedruckte Bücher",
+            meaning: "sách điện tử vs. sách giấy",
+            children: [
+              {
+                id: "trend-ebooks-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "eb-v1", label: "platzsparend und jederzeit griffbereit", meaning: "tiết kiệm chỗ và luôn sẵn có mọi lúc" },
+                  { id: "eb-v2", label: "sofortiger Zugriff auf ein riesiges Angebot", meaning: "truy cập tức thì vào kho sách khổng lồ" },
+                  { id: "eb-v3", label: "die Schriftgröße lässt sich individuell anpassen", meaning: "có thể tự điều chỉnh cỡ chữ theo ý muốn" },
+                ],
+              },
+              {
+                id: "trend-ebooks-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "eb-n1", label: "das haptische Leseerlebnis geht verloren", meaning: "trải nghiệm cầm nắm khi đọc bị mất đi" },
+                  { id: "eb-n2", label: "die Bildschirmzeit belastet die Augen", meaning: "thời gian nhìn màn hình gây mỏi mắt" },
+                  { id: "eb-n3", label: "man ist auf einen Akku bzw. ein Gerät angewiesen", meaning: "phải phụ thuộc vào pin hoặc thiết bị" },
+                ],
+              },
+              {
+                id: "trend-ebooks-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "eb-a1", label: "Hörbücher als Ergänzung nutzen", meaning: "dùng sách nói như một hình thức bổ sung" },
+                  { id: "eb-a2", label: "gedruckte Bücher aus der Bibliothek ausleihen", meaning: "mượn sách giấy từ thư viện" },
+                ],
+              },
+              {
+                id: "trend-ebooks-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "eb-vn1", label: "gedruckte Bücher genießen nach wie vor hohes Ansehen", meaning: "sách giấy vẫn được coi trọng như trước" },
+                  { id: "eb-vn2", label: "E-Books gewinnen vor allem unter jungen Leuten an Beliebtheit", meaning: "sách điện tử ngày càng phổ biến, nhất là với giới trẻ" },
+                ],
+              },
+            ],
+          },
+          {
+            id: "trend-smartphonekinder",
+            label: "Smartphones für Kinder",
+            meaning: "trẻ em và điện thoại thông minh",
+            children: [
+              {
+                id: "trend-smartphonekinder-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "sk-v1", label: "die Kinder sind für die Eltern jederzeit erreichbar", meaning: "cha mẹ có thể liên lạc với con bất cứ lúc nào" },
+                  { id: "sk-v2", label: "ein früher, spielerischer Umgang mit digitalen Medien", meaning: "làm quen sớm và tự nhiên với thiết bị số" },
+                ],
+              },
+              {
+                id: "trend-smartphonekinder-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "sk-n1", label: "die Gefahr, in eine Abhängigkeit zu geraten", meaning: "nguy cơ rơi vào tình trạng lệ thuộc" },
+                  { id: "sk-n2", label: "der Kontakt mit ungeeigneten Inhalten", meaning: "tiếp xúc với nội dung không phù hợp" },
+                  { id: "sk-n3", label: "die soziale Entwicklung kann darunter leiden", meaning: "sự phát triển kỹ năng xã hội có thể bị ảnh hưởng" },
+                ],
+              },
+              {
+                id: "trend-smartphonekinder-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "sk-a1", label: "ein einfaches Kindertelefon ohne Internetzugang", meaning: "điện thoại đơn giản dành cho trẻ, không có internet" },
+                  { id: "sk-a2", label: "feste Bildschirmzeiten mit den Eltern vereinbaren", meaning: "thỏa thuận thời gian dùng màn hình cố định với cha mẹ" },
+                ],
+              },
+              {
+                id: "trend-smartphonekinder-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "sk-vn1", label: "immer mehr Kinder besitzen bereits im Grundschulalter ein eigenes Smartphone", meaning: "ngày càng nhiều trẻ đã có điện thoại riêng từ bậc tiểu học" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",

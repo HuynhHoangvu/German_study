@@ -55,6 +55,83 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trends",
+        label: "Aktuelle Trend-Themen",
+        meaning: "các chủ đề xu hướng (dùng cho phần Nói/Viết Teil 1)",
+        children: [
+          {
+            id: "trend-homeoffice",
+            label: "Home-Office",
+            meaning: "làm việc tại nhà",
+            children: [
+              {
+                id: "trend-homeoffice-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "th-v1", label: "kein Arbeitsweg / Pendelzeit sparen", meaning: "không mất thời gian đi lại" },
+                  { id: "th-v2", label: "die Vereinbarkeit von Beruf und Familie", meaning: "cân bằng công việc và gia đình" },
+                  { id: "th-v3", label: "konzentrierter arbeiten können", meaning: "có thể làm việc tập trung hơn" },
+                ],
+              },
+              {
+                id: "trend-homeoffice-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "th-n1", label: "der Mangel an direktem Austausch mit Kollegen", meaning: "thiếu trao đổi trực tiếp với đồng nghiệp" },
+                  { id: "th-n2", label: "die Grenze zwischen Beruf und Privatleben verschwimmt", meaning: "ranh giới công việc - đời tư bị mờ nhạt" },
+                  { id: "th-n3", label: "die Gefahr der sozialen Isolation", meaning: "nguy cơ bị cô lập xã hội" },
+                ],
+              },
+              {
+                id: "trend-homeoffice-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "th-a1", label: "das hybride Arbeitsmodell (teils Büro, teils Zuhause)", meaning: "mô hình làm việc kết hợp" },
+                  { id: "th-a2", label: "feste Bürotage pro Woche vereinbaren", meaning: "thỏa thuận ngày cố định đến văn phòng" },
+                ],
+              },
+              {
+                id: "trend-homeoffice-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "th-vn1", label: "Home-Office setzt sich vor allem in der IT-Branche durch", meaning: "làm việc tại nhà phổ biến nhất trong ngành IT" },
+                  { id: "th-vn2", label: "in vielen Betrieben ist Präsenz im Büro noch die Norm", meaning: "ở nhiều công ty, có mặt tại văn phòng vẫn là chuẩn mực" },
+                ],
+              },
+            ],
+          },
+          {
+            id: "trend-4tage",
+            label: "die 4-Tage-Woche",
+            meaning: "tuần làm việc 4 ngày",
+            children: [
+              {
+                id: "trend-4tage-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "t4-v1", label: "mehr Zeit für Erholung und Familie", meaning: "nhiều thời gian nghỉ ngơi và gia đình hơn" },
+                  { id: "t4-v2", label: "die Produktivität kann sich sogar steigern", meaning: "năng suất thậm chí có thể tăng" },
+                ],
+              },
+              {
+                id: "trend-4tage-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "t4-n1", label: "höherer Arbeitsdruck an den verbleibenden Tagen", meaning: "áp lực cao hơn trong những ngày còn lại" },
+                  { id: "t4-n2", label: "nicht in jeder Branche umsetzbar", meaning: "không thể áp dụng ở mọi ngành nghề" },
+                ],
+              },
+              {
+                id: "trend-4tage-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "t4-a1", label: "verkürzte Arbeitstage bei gleicher Wochenstundenzahl", meaning: "rút ngắn giờ mỗi ngày, giữ tổng giờ/tuần" },
+                ],
+              },
+              {
+                id: "trend-4tage-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "t4-vn1", label: "die 4-Tage-Woche ist bisher kaum verbreitet", meaning: "tuần 4 ngày hiện chưa phổ biến" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",

@@ -53,6 +53,87 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trends",
+        label: "Aktuelle Trend-Themen",
+        meaning: "các chủ đề xu hướng (dùng cho phần Nói/Viết Teil 1)",
+        children: [
+          {
+            id: "trend-bargeldlos",
+            label: "Bargeldloses Bezahlen",
+            meaning: "thanh toán không dùng tiền mặt",
+            children: [
+              {
+                id: "trend-bargeldlos-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "bz-v1", label: "schnellere und bequemere Zahlungsabwicklung", meaning: "thanh toán nhanh và tiện lợi hơn" },
+                  { id: "bz-v2", label: "die Ausgaben lassen sich leichter nachverfolgen", meaning: "dễ theo dõi chi tiêu hơn" },
+                  { id: "bz-v3", label: "man muss kein Bargeld mit sich führen", meaning: "không cần mang theo tiền mặt" },
+                ],
+              },
+              {
+                id: "trend-bargeldlos-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "bz-n1", label: "die Gefahr des Datenmissbrauchs", meaning: "nguy cơ dữ liệu bị lạm dụng" },
+                  { id: "bz-n2", label: "man verliert schneller den Überblick über die Ausgaben", meaning: "dễ mất kiểm soát chi tiêu hơn" },
+                  { id: "bz-n3", label: "ältere Menschen tun sich oft schwer mit der Umstellung", meaning: "người lớn tuổi thường gặp khó khăn khi chuyển đổi" },
+                ],
+              },
+              {
+                id: "trend-bargeldlos-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "bz-a1", label: "eine Kombination aus Bargeld und digitalen Zahlungsmitteln", meaning: "kết hợp tiền mặt và phương thức thanh toán số" },
+                  { id: "bz-a2", label: "ein festes Ausgabenlimit pro Monat setzen", meaning: "đặt hạn mức chi tiêu cố định hằng tháng" },
+                ],
+              },
+              {
+                id: "trend-bargeldlos-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "bz-vn1", label: "das bargeldlose Bezahlen per App verbreitet sich rasant, vor allem in den Großstädten", meaning: "thanh toán qua ứng dụng đang lan rộng nhanh chóng, nhất là ở các thành phố lớn" },
+                  { id: "bz-vn2", label: "auf dem Land wird nach wie vor überwiegend mit Bargeld bezahlt", meaning: "ở nông thôn vẫn chủ yếu thanh toán bằng tiền mặt" },
+                ],
+              },
+            ],
+          },
+          {
+            id: "trend-onlineshop",
+            label: "Online-Shopping vs. Einkaufen im traditionellen Geschäft",
+            meaning: "mua sắm trực tuyến vs. mua sắm ở cửa hàng truyền thống",
+            children: [
+              {
+                id: "trend-onlineshop-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "os-v1", label: "rund um die Uhr von zu Hause aus einkaufen können", meaning: "có thể mua sắm mọi lúc ngay tại nhà" },
+                  { id: "os-v2", label: "Preise und Angebote lassen sich leicht vergleichen", meaning: "dễ dàng so sánh giá cả và ưu đãi" },
+                  { id: "os-v3", label: "eine größere Auswahl an Produkten", meaning: "sự lựa chọn sản phẩm phong phú hơn" },
+                ],
+              },
+              {
+                id: "trend-onlineshop-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "os-n1", label: "man kann die Ware vor dem Kauf nicht anfassen oder anprobieren", meaning: "không thể sờ hay thử hàng trước khi mua" },
+                  { id: "os-n2", label: "lange Lieferzeiten und mögliche Retouren", meaning: "thời gian giao hàng lâu và khả năng phải trả hàng" },
+                  { id: "os-n3", label: "der stationäre Einzelhandel gerät zunehmend unter Druck", meaning: "ngành bán lẻ truyền thống ngày càng chịu áp lực" },
+                ],
+              },
+              {
+                id: "trend-onlineshop-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "os-a1", label: "das Prinzip 'online informieren, offline kaufen' nutzen", meaning: "tìm hiểu trực tuyến rồi mua trực tiếp tại cửa hàng" },
+                  { id: "os-a2", label: "lokale Geschäfte gezielt unterstützen", meaning: "chủ động ủng hộ các cửa hàng địa phương" },
+                ],
+              },
+              {
+                id: "trend-onlineshop-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "os-vn1", label: "Online-Shopping boomt vor allem unter jungen Leuten in den Städten", meaning: "mua sắm trực tuyến bùng nổ đặc biệt trong giới trẻ thành thị" },
+                  { id: "os-vn2", label: "traditionelle Märkte und kleine Läden spielen weiterhin eine wichtige Rolle", meaning: "chợ truyền thống và cửa hàng nhỏ vẫn đóng vai trò quan trọng" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",

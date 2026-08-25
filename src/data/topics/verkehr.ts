@@ -68,6 +68,86 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trends",
+        label: "Aktuelle Trend-Themen",
+        meaning: "các chủ đề xu hướng (dùng cho phần Nói/Viết Teil 1)",
+        children: [
+          {
+            id: "trend-elektroauto",
+            label: "Elektroautos",
+            meaning: "xe điện",
+            children: [
+              {
+                id: "trend-elektroauto-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "te-v1", label: "keine direkten Abgasemissionen im Fahrbetrieb", meaning: "không phát thải khí thải trực tiếp khi vận hành" },
+                  { id: "te-v2", label: "geringere Betriebskosten dank günstigerem Strom als Benzin", meaning: "chi phí vận hành thấp hơn vì điện rẻ hơn xăng" },
+                  { id: "te-v3", label: "deutlich leiser als Verbrennungsmotoren", meaning: "êm ái hơn nhiều so với động cơ đốt trong" },
+                ],
+              },
+              {
+                id: "trend-elektroauto-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "te-n1", label: "hoher Anschaffungspreis im Vergleich zu Benzinautos", meaning: "giá mua ban đầu cao hơn so với xe xăng" },
+                  { id: "te-n2", label: "die begrenzte Reichweite und lange Ladezeiten", meaning: "quãng đường đi được có hạn và thời gian sạc lâu" },
+                  { id: "te-n3", label: "das noch lückenhafte Netz an Ladestationen", meaning: "mạng lưới trạm sạc vẫn còn thưa thớt" },
+                ],
+              },
+              {
+                id: "trend-elektroauto-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "te-a1", label: "staatliche Kaufprämien und Steuervergünstigungen anbieten", meaning: "đưa ra trợ cấp mua xe và ưu đãi thuế của nhà nước" },
+                  { id: "te-a2", label: "das Ladenetz flächendeckend ausbauen", meaning: "mở rộng mạng lưới trạm sạc trên diện rộng" },
+                ],
+              },
+              {
+                id: "trend-elektroauto-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "te-vn1", label: "einheimische Hersteller wie VinFast treiben die Verbreitung von Elektroautos voran", meaning: "các hãng nội địa như VinFast đang thúc đẩy phổ biến xe điện" },
+                  { id: "te-vn2", label: "das Ladeinfrastrukturnetz steckt noch in den Anfängen", meaning: "hạ tầng trạm sạc vẫn còn ở giai đoạn khởi đầu" },
+                ],
+              },
+            ],
+          },
+          {
+            id: "trend-autofrei",
+            label: "Autofreie Innenstadt",
+            meaning: "cấm ô tô trong trung tâm thành phố",
+            children: [
+              {
+                id: "trend-autofrei-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "ta-v1", label: "weniger Lärm- und Luftverschmutzung im Stadtzentrum", meaning: "giảm tiếng ồn và ô nhiễm không khí ở trung tâm thành phố" },
+                  { id: "ta-v2", label: "mehr Platz und Sicherheit für Fußgänger und Radfahrer", meaning: "nhiều không gian và an toàn hơn cho người đi bộ và xe đạp" },
+                  { id: "ta-v3", label: "die Aufenthaltsqualität in der Innenstadt steigt", meaning: "chất lượng không gian sống ở trung tâm thành phố tăng lên" },
+                ],
+              },
+              {
+                id: "trend-autofrei-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "ta-n1", label: "Einbußen für den innerstädtischen Einzelhandel befürchtet", meaning: "lo ngại thiệt hại cho hoạt động bán lẻ trong trung tâm thành phố" },
+                  { id: "ta-n2", label: "eingeschränkte Erreichbarkeit für ältere und mobilitätseingeschränkte Menschen", meaning: "khả năng tiếp cận bị hạn chế đối với người già và người khuyết tật vận động" },
+                ],
+              },
+              {
+                id: "trend-autofrei-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "ta-a1", label: "Park-and-Ride-Systeme am Stadtrand einrichten", meaning: "xây dựng hệ thống gửi xe ở ngoại ô rồi đi tiếp bằng xe công cộng" },
+                  { id: "ta-a2", label: "den ÖPNV und das Radwegenetz als Ausgleich ausbauen", meaning: "mở rộng giao thông công cộng và mạng lưới xe đạp để bù đắp" },
+                ],
+              },
+              {
+                id: "trend-autofrei-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "ta-vn1", label: "in Hanoi und Ho-Chi-Minh-Stadt gibt es erste Pilotprojekte für autofreie Zonen", meaning: "Hà Nội và TP.HCM đã có một số dự án thí điểm khu vực cấm ô tô" },
+                  { id: "ta-vn2", label: "der ÖPNV ist noch nicht gut genug ausgebaut, um das Auto vollständig zu ersetzen", meaning: "giao thông công cộng chưa đủ phát triển để thay thế hoàn toàn ô tô" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",

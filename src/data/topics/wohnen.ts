@@ -53,6 +53,85 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trends",
+        label: "Aktuelle Trend-Themen",
+        meaning: "các chủ đề xu hướng (dùng cho phần Nói/Viết Teil 1)",
+        children: [
+          {
+            id: "trend-hotelmama",
+            label: "Hotel Mama",
+            meaning: "thanh niên sống chung với bố mẹ quá lâu",
+            children: [
+              {
+                id: "trend-hotelmama-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "hm-v1", label: "keine Mietkosten und finanzielle Entlastung", meaning: "không tốn tiền thuê nhà, giảm gánh nặng tài chính" },
+                  { id: "hm-v2", label: "mehr Zeit, um Geld für später anzusparen", meaning: "có nhiều thời gian hơn để tiết kiệm tiền cho tương lai" },
+                  { id: "hm-v3", label: "die vertraute Umgebung und emotionale Unterstützung", meaning: "môi trường quen thuộc và sự hỗ trợ về tinh thần" },
+                ],
+              },
+              {
+                id: "trend-hotelmama-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "hm-n1", label: "mangelnde Privatsphäre und Unabhängigkeit", meaning: "thiếu không gian riêng tư và sự độc lập" },
+                  { id: "hm-n2", label: "der verzögerte Schritt ins eigenständige Leben", meaning: "chậm trễ trong việc bước vào cuộc sống tự lập" },
+                  { id: "hm-n3", label: "mögliche Konflikte wegen unterschiedlicher Lebensgewohnheiten", meaning: "dễ xảy ra mâu thuẫn do thói quen sống khác nhau" },
+                ],
+              },
+              {
+                id: "trend-hotelmama-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "hm-a1", label: "eine kleine, günstige Wohnung mit Freunden teilen", meaning: "ở ghép căn hộ nhỏ, giá rẻ cùng bạn bè" },
+                  { id: "hm-a2", label: "sich schrittweise finanziell unabhängig machen", meaning: "dần dần tự chủ về tài chính" },
+                ],
+              },
+              {
+                id: "trend-hotelmama-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "hm-vn1", label: "aus kultureller Tradition bleiben viele junge Menschen lange im Elternhaus", meaning: "do truyền thống văn hóa, nhiều bạn trẻ ở lại nhà bố mẹ rất lâu" },
+                  { id: "hm-vn2", label: "in Großstädten wagen immer mehr junge Leute den Auszug", meaning: "ở các thành phố lớn, ngày càng nhiều bạn trẻ dám ra ở riêng" },
+                ],
+              },
+            ],
+          },
+          {
+            id: "trend-wg",
+            label: "Wohngemeinschaft (WG)",
+            meaning: "sống trong căn hộ chia sẻ",
+            children: [
+              {
+                id: "trend-wg-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "wg-v1", label: "geteilte Mietkosten senken die finanzielle Belastung", meaning: "chia sẻ tiền thuê giúp giảm gánh nặng tài chính" },
+                  { id: "wg-v2", label: "soziale Kontakte und gegenseitige Unterstützung im Alltag", meaning: "có bạn bè và hỗ trợ lẫn nhau trong sinh hoạt hằng ngày" },
+                  { id: "wg-v3", label: "mehr Unabhängigkeit vom Elternhaus", meaning: "độc lập hơn với gia đình bố mẹ" },
+                ],
+              },
+              {
+                id: "trend-wg-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "wg-n1", label: "Konflikte wegen Sauberkeit oder Lautstärke", meaning: "mâu thuẫn vì vấn đề vệ sinh hoặc tiếng ồn" },
+                  { id: "wg-n2", label: "weniger Privatsphäre als in einer eigenen Wohnung", meaning: "ít riêng tư hơn so với ở căn hộ riêng" },
+                ],
+              },
+              {
+                id: "trend-wg-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "wg-a1", label: "eine eigene, kleinere Wohnung allein beziehen", meaning: "tự thuê một căn hộ nhỏ hơn, ở một mình" },
+                  { id: "wg-a2", label: "klare Regeln für das Zusammenleben vereinbaren", meaning: "thỏa thuận quy tắc rõ ràng cho việc sống chung" },
+                ],
+              },
+              {
+                id: "trend-wg-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "wg-vn1", label: "besonders unter Studierenden und Berufseinsteigern in den Großstädten beliebt", meaning: "phổ biến đặc biệt trong sinh viên và người mới đi làm ở các thành phố lớn" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",

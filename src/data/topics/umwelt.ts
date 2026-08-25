@@ -56,6 +56,86 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trends",
+        label: "Aktuelle Trend-Themen",
+        meaning: "các chủ đề xu hướng (dùng cho phần Nói/Viết Teil 1)",
+        children: [
+          {
+            id: "trend-plastik",
+            label: "Plastikverpackungen und Umweltsteuer",
+            meaning: "bao bì nhựa và thuế môi trường",
+            children: [
+              {
+                id: "trend-plastik-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "tp-v1", label: "die Umweltsteuer setzt einen finanziellen Anreiz zur Vermeidung von Plastik", meaning: "thuế môi trường tạo động lực tài chính để hạn chế dùng nhựa" },
+                  { id: "tp-v2", label: "die Einnahmen können in den Umweltschutz reinvestiert werden", meaning: "nguồn thu có thể được tái đầu tư vào bảo vệ môi trường" },
+                  { id: "tp-v3", label: "das Umweltbewusstsein der Verbraucher wird geschärft", meaning: "ý thức bảo vệ môi trường của người tiêu dùng được nâng cao" },
+                ],
+              },
+              {
+                id: "trend-plastik-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "tp-n1", label: "die Mehrkosten werden oft an die Verbraucher weitergegeben", meaning: "chi phí tăng thêm thường bị chuyển sang cho người tiêu dùng" },
+                  { id: "tp-n2", label: "einkommensschwache Haushalte werden überproportional belastet", meaning: "các hộ gia đình thu nhập thấp bị ảnh hưởng nặng nề hơn" },
+                  { id: "tp-n3", label: "Unternehmen weichen teils auf andere, ebenso schädliche Verpackungen aus", meaning: "doanh nghiệp đôi khi chuyển sang loại bao bì khác cũng gây hại không kém" },
+                ],
+              },
+              {
+                id: "trend-plastik-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "tp-a1", label: "biologisch abbaubare Verpackungen verwenden", meaning: "sử dụng bao bì có thể phân hủy sinh học" },
+                  { id: "tp-a2", label: "ein Pfandsystem für Mehrwegverpackungen einführen", meaning: "áp dụng hệ thống đặt cọc cho bao bì tái sử dụng" },
+                ],
+              },
+              {
+                id: "trend-plastik-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "tp-vn1", label: "Plastiktüten werden im Alltag trotz Verbotsversuchen weiterhin stark genutzt", meaning: "túi ni-lông vẫn được dùng nhiều trong đời sống dù đã có nỗ lực cấm" },
+                  { id: "tp-vn2", label: "in Supermärkten setzt sich langsam eine Umweltgebühr auf Plastiktüten durch", meaning: "các siêu thị dần áp dụng phí môi trường cho túi ni-lông" },
+                ],
+              },
+            ],
+          },
+          {
+            id: "trend-secondhand",
+            label: "Second-Hand-Artikel kaufen",
+            meaning: "mua đồ cũ",
+            children: [
+              {
+                id: "trend-secondhand-vorteile", label: "Vorteile", meaning: "ưu điểm",
+                children: [
+                  { id: "ts-v1", label: "Ressourcen und Rohstoffe werden geschont", meaning: "tài nguyên và nguyên liệu thô được tiết kiệm" },
+                  { id: "ts-v2", label: "deutlich günstiger als Neuware", meaning: "rẻ hơn đáng kể so với hàng mới" },
+                  { id: "ts-v3", label: "der Lebenszyklus von Produkten wird verlängert", meaning: "kéo dài vòng đời sản phẩm" },
+                ],
+              },
+              {
+                id: "trend-secondhand-nachteile", label: "Nachteile", meaning: "nhược điểm",
+                children: [
+                  { id: "ts-n1", label: "eingeschränkte Qualitäts- und Garantiesicherheit", meaning: "khó đảm bảo chất lượng và bảo hành" },
+                  { id: "ts-n2", label: "begrenzte Auswahl an Größen und Modellen", meaning: "lựa chọn về kích cỡ và mẫu mã hạn chế" },
+                ],
+              },
+              {
+                id: "trend-secondhand-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+                children: [
+                  { id: "ts-a1", label: "Kleidertauschbörsen und Flohmärkte nutzen", meaning: "sử dụng chợ trao đổi quần áo và chợ đồ cũ" },
+                  { id: "ts-a2", label: "Online-Plattformen für gebrauchte Waren nutzen", meaning: "sử dụng nền tảng trực tuyến để mua bán đồ cũ" },
+                ],
+              },
+              {
+                id: "trend-secondhand-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+                children: [
+                  { id: "ts-vn1", label: "der Second-Hand-Markt für Kleidung (\"đồ si\") wird bei jungen Leuten immer beliebter", meaning: "thị trường đồ si (quần áo cũ) ngày càng phổ biến trong giới trẻ" },
+                  { id: "ts-vn2", label: "Second-Hand-Elektronik gilt bei vielen noch als weniger vertrauenswürdig", meaning: "đồ điện tử cũ vẫn bị nhiều người coi là kém tin cậy" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",
