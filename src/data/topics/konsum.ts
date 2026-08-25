@@ -134,6 +134,42 @@ const topic: Topic = {
         ],
       },
       {
+        id: "trend-konsumzwang",
+        label: "Konsumzwang bei jungen Leuten",
+        meaning: "áp lực tiêu dùng ở giới trẻ",
+        children: [
+          {
+            id: "trend-konsumzwang-vorteile", label: "Vorteile", meaning: "ưu điểm (mặt tích cực có kiểm soát)",
+            children: [
+              { id: "kz-v1", label: "durch neue Produkte bleibt man technisch auf dem neuesten Stand", meaning: "nhờ sản phẩm mới, luôn cập nhật công nghệ" },
+              { id: "kz-v2", label: "Statussymbole können das Selbstbewusstsein kurzfristig stärken", meaning: "biểu tượng địa vị có thể tạm thời tăng sự tự tin" },
+            ],
+          },
+          {
+            id: "trend-konsumzwang-nachteile", label: "Nachteile", meaning: "nhược điểm",
+            children: [
+              { id: "kz-n1", label: "der soziale Druck, mit Trends mithalten zu müssen", meaning: "áp lực xã hội phải bắt kịp xu hướng" },
+              { id: "kz-n2", label: "die Gefahr, in die Schuldenfalle zu geraten", meaning: "nguy cơ rơi vào bẫy nợ nần" },
+              { id: "kz-n3", label: "der Einfluss von Influencern auf das Kaufverhalten", meaning: "ảnh hưởng của người có sức ảnh hưởng đến hành vi mua sắm" },
+            ],
+          },
+          {
+            id: "trend-konsumzwang-alt", label: "Alternativen / Möglichkeiten", meaning: "giải pháp thay thế",
+            children: [
+              { id: "kz-a1", label: "einen bewussten und minimalistischen Lebensstil pflegen", meaning: "duy trì lối sống tiêu dùng có ý thức và tối giản" },
+              { id: "kz-a2", label: "Finanzkompetenz bereits in der Schule vermitteln", meaning: "dạy kiến thức tài chính ngay từ trường học" },
+            ],
+          },
+          {
+            id: "trend-konsumzwang-vn", label: "Situation in Vietnam", meaning: "tình hình ở Việt Nam",
+            children: [
+              { id: "kz-vn1", label: "Social-Media-Trends üben einen starken Einfluss auf junge Konsumenten aus", meaning: "xu hướng mạng xã hội ảnh hưởng mạnh đến người tiêu dùng trẻ" },
+              { id: "kz-vn2", label: "Ratenkäufe und 'Kaufe jetzt, zahle später' werden zunehmend beliebter", meaning: "mua trả góp và 'mua trước trả sau' ngày càng phổ biến" },
+            ],
+          },
+        ],
+      },
+      {
         id: "wortarten",
         label: "Wortschatz nach Wortart",
         meaning: "từ vựng theo loại từ",

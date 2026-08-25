@@ -22,6 +22,10 @@ import koerper from "./koerper";
 import notfall from "./notfall";
 import person from "./person";
 import stadtland from "./stadtland";
+import ehrenamt from "./ehrenamt";
+import haustiere from "./haustiere";
+import aussehen from "./aussehen";
+import beziehungen from "./beziehungen";
 
 export const topics: Topic[] = [
   gesundheit,
@@ -46,6 +50,10 @@ export const topics: Topic[] = [
   notfall,
   person,
   stadtland,
+  ehrenamt,
+  haustiere,
+  aussehen,
+  beziehungen,
 ];
 
 export function getTopic(slug: string): Topic | undefined {
