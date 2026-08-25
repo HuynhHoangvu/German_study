@@ -33,6 +33,10 @@ import {
   ShieldCheck,
   Clock,
   Compass,
+  HeartHandshake,
+  PawPrint,
+  Shirt,
+  Users2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -59,6 +63,10 @@ export const topicIcons: Record<string, LucideIcon> = {
   notfall: Siren,
   person: UserRound,
   stadtland: Building2,
+  ehrenamt: HeartHandshake,
+  haustiere: PawPrint,
+  aussehen: Shirt,
+  beziehungen: Users2,
 };
 
 export function getTopicIcon(slug: string): LucideIcon {

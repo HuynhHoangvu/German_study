@@ -30,18 +30,57 @@ export type FlowNodeData = {
   branchColor: string;
   branchIndex: number;
   solved?: boolean;
+  hasChildren: boolean;
+  childCount: number;
+  collapsed: boolean;
+  onToggleCollapse?: () => void;
 };
+
+/**
+ * Nodes with children, at this depth or deeper, that should start
+ * collapsed by default — keeps the root and top-level branches visible
+ * (the classic mindmap fan-out) while hiding deeper detail (Trend-Themen
+ * sub-branches, Wortschatz-nach-Wortart groups, etc.) until expanded.
+ */
+const DEFAULT_COLLAPSE_MIN_DEPTH = 2;
+
+export function getDefaultCollapsed(root: VocabNode): Set<string> {
+  const ids = new Set<string>();
+  function walk(vocab: VocabNode, depth: number) {
+    if (depth >= DEFAULT_COLLAPSE_MIN_DEPTH && (vocab.children?.length ?? 0) > 0) {
+      ids.add(vocab.id);
+    }
+    vocab.children?.forEach((child) => walk(child, depth + 1));
+  }
+  walk(root, 0);
+  return ids;
+}
+
+/** All node ids in the tree that have children (i.e. can be collapsed). */
+export function getAllCollapsibleIds(root: VocabNode): Set<string> {
+  const ids = new Set<string>();
+  function walk(vocab: VocabNode) {
+    if ((vocab.children?.length ?? 0) > 0) ids.add(vocab.id);
+    vocab.children?.forEach(walk);
+  }
+  walk(root);
+  return ids;
+}
 
 /**
  * Classic horizontal mind-map layout: root centered vertically on the far
  * left, branches fanning out to the right stacked vertically, each
  * branch's own children fanning further right — matching a traditional
  * hand-drawn mindmap (root -> branch -> leaf, left to right).
+ *
+ * Nodes listed in `collapsedIds` are rendered but their children are not
+ * walked/laid out, so deep sub-trees can be hidden until expanded.
  */
 export function buildFlow(
   root: VocabNode,
   color: string,
-  _direction: "LR" | "TB" = "LR"
+  _direction: "LR" | "TB" = "LR",
+  collapsedIds: Set<string> = new Set()
 ): { nodes: Node<FlowNodeData>[]; edges: Edge[] } {
   const nodes: Node<FlowNodeData>[] = [];
   const edges: Edge[] = [];
@@ -54,10 +93,21 @@ export function buildFlow(
     parentId?: string
   ) {
     const size = sizeForDepth(depth);
+    const hasChildren = (vocab.children?.length ?? 0) > 0;
+    const collapsed = hasChildren && collapsedIds.has(vocab.id);
     nodes.push({
       id: vocab.id,
       position: { x: 0, y: 0 },
-      data: { vocab, depth, color, branchColor, branchIndex },
+      data: {
+        vocab,
+        depth,
+        color,
+        branchColor,
+        branchIndex,
+        hasChildren,
+        childCount: vocab.children?.length ?? 0,
+        collapsed,
+      },
       type: "vocab",
       width: size.width,
       height: size.height,
@@ -72,6 +122,7 @@ export function buildFlow(
         style: { stroke: branchColor, strokeWidth: 2.25, opacity: 0.75 },
       });
     }
+    if (collapsed) return;
     vocab.children?.forEach((child, i) => {
       const childBranchColor = depth === 0 ? BRANCH_PALETTE[i % BRANCH_PALETTE.length] : branchColor;
       const childBranchIndex = depth === 0 ? i : branchIndex;

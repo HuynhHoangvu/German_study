@@ -2,6 +2,7 @@
 
 import { createElement } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
+import { ChevronRight, ChevronDown } from "lucide-react";
 import { FlowNodeData } from "@/lib/layout";
 import { getBranchIcon } from "@/lib/icons";
 
@@ -12,7 +13,7 @@ function splitBlank(label: string): [string, string] {
 }
 
 export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNodeData>) {
-  const { vocab, depth, color, branchColor, branchIndex, solved } = data;
+  const { vocab, depth, color, branchColor, branchIndex, solved, hasChildren, collapsed, childCount, onToggleCollapse } = data;
   const isRoot = depth === 0;
   const isBranch = depth === 1;
   const isLeaf = !vocab.children || vocab.children.length === 0;
@@ -81,6 +82,19 @@ export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNod
       <span className={`leading-snug ${isRoot ? "font-bold text-[16px] sm:text-[17px]" : "font-semibold text-[14px] sm:text-[15px]"}`}>
         {text}
       </span>
+      {hasChildren && !isRoot && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleCollapse?.();
+          }}
+          title={collapsed ? `Mở rộng (${childCount})` : "Thu gọn"}
+          className="shrink-0 flex items-center justify-center gap-0.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors px-1 py-0.5 -mr-1"
+        >
+          {collapsed ? <ChevronRight size={14} strokeWidth={2.5} /> : <ChevronDown size={14} strokeWidth={2.5} />}
+          {collapsed && <span className="text-[10px] font-bold pr-0.5">{childCount}</span>}
+        </button>
+      )}
     </div>
   );
 }

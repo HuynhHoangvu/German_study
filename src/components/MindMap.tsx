@@ -9,10 +9,10 @@ import ReactFlow, {
   Node,
   ReactFlowInstance,
 } from "reactflow";
-import { BookMarked } from "lucide-react";
+import { BookMarked, TrendingUp, Maximize2, Minimize2 } from "lucide-react";
 import "reactflow/dist/style.css";
 import { Topic, VocabNode } from "@/types/topic";
-import { buildFlow, FlowNodeData } from "@/lib/layout";
+import { buildFlow, FlowNodeData, getDefaultCollapsed, getAllCollapsibleIds } from "@/lib/layout";
 import VocabNodeComponent from "@/components/VocabNode";
 import NodeDetailPanel from "@/components/NodeDetailPanel";
 import { getSolvedBlanks } from "@/lib/progress";
@@ -43,59 +43,118 @@ function findVocab(node: VocabNode, id: string): VocabNode | null {
 
 export default function MindMap({ topic }: { topic: Topic }) {
   const isMobile = useIsMobile();
-  const { nodes: baseNodes, edges } = useMemo(
-    () => buildFlow(topic.root, topic.color, "LR"),
-    [topic]
-  );
 
   const reactFlowInstance = useRef<ReactFlowInstance | null>(null);
   const hasWortarten = useMemo(
     () => (topic.root.children ?? []).some((c) => c.id === "wortarten"),
     [topic]
   );
+  const hasTrends = useMemo(
+    () => (topic.root.children ?? []).some((c) => c.id === "trends"),
+    [topic]
+  );
+  const allCollapsibleIds = useMemo(() => getAllCollapsibleIds(topic.root), [topic]);
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [solvedIds, setSolvedIds] = useState<Set<string>>(new Set());
+  const [collapsedIds, setCollapsedIds] = useState<Set<string>>(() => getDefaultCollapsed(topic.root));
 
   useEffect(() => {
     setSolvedIds(getSolvedBlanks(topic.slug));
     setSelectedId(null);
-  }, [topic.slug]);
+    setCollapsedIds(getDefaultCollapsed(topic.root));
+  }, [topic]);
 
   const handleSolved = useCallback((id: string) => {
     setSolvedIds((prev) => new Set(prev).add(id));
   }, []);
+
+  const toggleCollapse = useCallback((id: string) => {
+    setCollapsedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }, []);
+
+  const expandNode = useCallback((id: string) => {
+    setCollapsedIds((prev) => {
+      if (!prev.has(id)) return prev;
+      const next = new Set(prev);
+      next.delete(id);
+      return next;
+    });
+  }, []);
+
+  const jumpTo = useCallback(
+    (id: string) => {
+      expandNode(id);
+      setTimeout(() => {
+        reactFlowInstance.current?.fitView({ nodes: [{ id }], padding: 0.3, duration: 400 });
+      }, 30);
+    },
+    [expandNode]
+  );
+
+  const allExpanded = collapsedIds.size === 0;
+  const toggleExpandAll = useCallback(() => {
+    setCollapsedIds(allExpanded ? allCollapsibleIds : new Set());
+  }, [allExpanded, allCollapsibleIds]);
+
+  const { nodes: baseNodes, edges } = useMemo(
+    () => buildFlow(topic.root, topic.color, "LR", collapsedIds),
+    [topic, collapsedIds]
+  );
 
   const nodes: Node<FlowNodeData>[] = useMemo(
     () =>
       baseNodes.map((n) => ({
         ...n,
         selected: n.id === selectedId,
-        data: { ...n.data, solved: solvedIds.has(n.id) },
+        data: {
+          ...n.data,
+          solved: solvedIds.has(n.id),
+          onToggleCollapse: n.data.hasChildren ? () => toggleCollapse(n.id) : undefined,
+        },
       })),
-    [baseNodes, selectedId, solvedIds]
+    [baseNodes, selectedId, solvedIds, toggleCollapse]
   );
 
   const selectedVocab = selectedId ? findVocab(topic.root, selectedId) : null;
 
   return (
     <div className="flex flex-col gap-4">
-      {hasWortarten && (
+      <div className="flex flex-wrap items-center gap-2">
+        {hasWortarten && (
+          <button
+            onClick={() => jumpTo("wortarten")}
+            className="inline-flex items-center gap-1.5 rounded-full text-white text-xs sm:text-sm font-medium px-3.5 py-1.5 hover:opacity-90 transition-opacity"
+            style={{ background: topic.color }}
+          >
+            <BookMarked size={15} strokeWidth={2.25} />
+            Wortschatz nach Wortart
+          </button>
+        )}
+        {hasTrends && (
+          <button
+            onClick={() => jumpTo("trends")}
+            className="inline-flex items-center gap-1.5 rounded-full text-white text-xs sm:text-sm font-medium px-3.5 py-1.5 hover:opacity-90 transition-opacity"
+            style={{ background: topic.color }}
+          >
+            <TrendingUp size={15} strokeWidth={2.25} />
+            Trend-Themen
+          </button>
+        )}
         <button
-          onClick={() =>
-            reactFlowInstance.current?.fitView({
-              nodes: [{ id: "wortarten" }],
-              padding: 0.3,
-              duration: 400,
-            })
-          }
-          className="self-start inline-flex items-center gap-1.5 rounded-full text-white text-xs sm:text-sm font-medium px-3.5 py-1.5 hover:opacity-90 transition-opacity"
-          style={{ background: topic.color }}
+          onClick={toggleExpandAll}
+          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] text-xs sm:text-sm font-medium px-3.5 py-1.5 hover:bg-black/[0.03] dark:hover:bg-white/[0.06] transition-colors"
+          style={{ color: "var(--foreground)" }}
         >
-          <BookMarked size={15} strokeWidth={2.25} />
-          Wortschatz nach Wortart
+          {allExpanded ? <Minimize2 size={15} strokeWidth={2.25} /> : <Maximize2 size={15} strokeWidth={2.25} />}
+          {allExpanded ? "Thu gọn tất cả" : "Mở rộng tất cả"}
         </button>
-      )}
+      </div>
       <div className="relative w-full h-[70vh] sm:h-[70vh] lg:h-[75vh] rounded-2xl border border-[var(--border)] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
         <ReactFlow
           nodes={nodes}
