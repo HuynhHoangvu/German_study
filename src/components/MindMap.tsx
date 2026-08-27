@@ -182,7 +182,8 @@ export default function MindMap({ topic }: { topic: Topic }) {
           nodesConnectable={false}
           panOnDrag
           zoomOnPinch
-          panOnScroll={false}
+          panOnScroll
+          panOnScrollMode="free"
           proOptions={{ hideAttribution: true }}
         >
           <Background variant={BackgroundVariant.Dots} gap={20} size={1} color="#d4d4d8" />

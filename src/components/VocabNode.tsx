@@ -84,15 +84,18 @@ export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNod
       </span>
       {hasChildren && !isRoot && (
         <button
+          onPointerDown={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()}
+          onTouchStart={(e) => e.stopPropagation()}
           onClick={(e) => {
             e.stopPropagation();
             onToggleCollapse?.();
           }}
           title={collapsed ? `Mở rộng (${childCount})` : "Thu gọn"}
-          className="shrink-0 flex items-center justify-center gap-0.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors px-1 py-0.5 -mr-1"
+          className="shrink-0 flex items-center justify-center gap-0.5 rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors -mr-1.5 min-w-[30px] min-h-[30px] px-1.5"
         >
-          {collapsed ? <ChevronRight size={14} strokeWidth={2.5} /> : <ChevronDown size={14} strokeWidth={2.5} />}
-          {collapsed && <span className="text-[10px] font-bold pr-0.5">{childCount}</span>}
+          {collapsed ? <ChevronRight size={16} strokeWidth={2.75} /> : <ChevronDown size={16} strokeWidth={2.75} />}
+          {collapsed && <span className="text-[11px] font-bold pr-0.5">{childCount}</span>}
         </button>
       )}
     </div>
