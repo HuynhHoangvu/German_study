@@ -42,10 +42,10 @@ export default function RootLayout({
               </span>
             </Link>
             <nav className="flex items-center gap-3 sm:gap-5 text-sm font-medium text-neutral-500">
-              <Link href="/dashboard" className="hidden sm:inline hover:text-[var(--brand)] transition-colors">
+              <Link href="/dashboard" className="hover:text-[var(--brand)] transition-colors">
                 Gợi ý học
               </Link>
-              <Link href="/" className="hidden sm:inline hover:text-[var(--brand)] transition-colors">
+              <Link href="/" className="hover:text-[var(--brand)] transition-colors">
                 Chủ đề
               </Link>
               <a
