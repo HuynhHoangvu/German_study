@@ -6,6 +6,7 @@ import ReactFlow, {
   Controls,
   MiniMap,
   BackgroundVariant,
+  PanOnScrollMode,
   Node,
   ReactFlowInstance,
 } from "reactflow";
@@ -183,7 +184,7 @@ export default function MindMap({ topic }: { topic: Topic }) {
           panOnDrag
           zoomOnPinch
           panOnScroll
-          panOnScrollMode="free"
+          panOnScrollMode={PanOnScrollMode.Free}
           proOptions={{ hideAttribution: true }}
         >
           <Background variant={BackgroundVariant.Dots} gap={20} size={1} color="#d4d4d8" />
