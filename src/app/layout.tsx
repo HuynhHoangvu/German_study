@@ -45,6 +45,9 @@ export default function RootLayout({
               <Link href="/dashboard" className="hover:text-[var(--brand)] transition-colors">
                 Gợi ý học
               </Link>
+              <Link href="/de-thi" className="hover:text-[var(--brand)] transition-colors">
+                Đề thi thử
+              </Link>
               <Link href="/" className="hover:text-[var(--brand)] transition-colors">
                 Chủ đề
               </Link>

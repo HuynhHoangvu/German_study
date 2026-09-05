@@ -177,6 +177,17 @@ export default function DashboardPage() {
           </div>
         </div>
 
+        <Link
+          href="/de-thi"
+          className="flex items-center justify-between rounded-2xl border border-[var(--border)] bg-[var(--brand)] text-white p-4 sm:p-5 mb-6 hover:opacity-90 transition-opacity"
+        >
+          <div>
+            <p className="font-semibold text-base">Luyện đề thi thử đầy đủ 4 kỹ năng</p>
+            <p className="text-sm text-white/80">Lesen · Hören · Schreiben · Sprechen — chấm điểm ngay</p>
+          </div>
+          <span className="text-sm font-medium shrink-0">Vào làm đề →</span>
+        </Link>
+
         <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 sm:p-5">
           <h3 className="font-semibold text-base mb-3">Tài liệu &amp; bộ đề khuyến nghị</h3>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
