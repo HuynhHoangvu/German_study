@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getTopic, topics, countBlanks, countNodes } from "@/data/topics";
 import MindMap from "@/components/MindMap";
+import VisitTracker from "@/components/VisitTracker";
 import { getTopicIcon } from "@/lib/icons";
 
 export function generateStaticParams() {
@@ -23,6 +24,7 @@ export default async function TopicPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-5 py-6 sm:py-8">
+      <VisitTracker topicSlug={topic.slug} />
       <Link href="/" className="text-sm text-neutral-400 hover:text-[var(--brand)]">
         ← Tất cả chủ đề
       </Link>
