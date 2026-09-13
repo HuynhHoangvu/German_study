@@ -37,6 +37,11 @@ import {
   PawPrint,
   Shirt,
   Users2,
+  ArrowRightLeft,
+  Link2,
+  SpellCheck,
+  MessagesSquare,
+  Sparkle,
   type LucideIcon,
 } from "lucide-react";
 
@@ -67,6 +72,12 @@ export const topicIcons: Record<string, LucideIcon> = {
   haustiere: PawPrint,
   aussehen: Shirt,
   beziehungen: Users2,
+  "verben-praep-akkusativ": ArrowRightLeft,
+  "verben-praep-dativ": ArrowRightLeft,
+  "adjektive-praepositionen": Sparkle,
+  konnektoren: Link2,
+  "grammatik-strukturen": SpellCheck,
+  redemittel: MessagesSquare,
 };
 
 export function getTopicIcon(slug: string): LucideIcon {

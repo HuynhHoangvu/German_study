@@ -1,4 +1,4 @@
-import { topics, countBlanks } from "@/data/topics";
+import { themaTopics, grammatikTopics, countBlanks } from "@/data/topics";
 import TopicCard from "@/components/TopicCard";
 
 export default function Home() {
@@ -18,10 +18,30 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {topics.map((topic) => (
-          <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
-        ))}
+      <section className="mb-10">
+        <h2 className="text-lg font-bold mb-1">Chủ đề từ vựng</h2>
+        <p className="text-sm text-neutral-500 mb-4">
+          Từ vựng theo chủ đề kèm nhánh Trend-Themen (ưu điểm, nhược điểm, giải pháp, tình hình ở
+          Việt Nam) cho phần Nói &amp; Viết.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {themaTopics.map((topic) => (
+            <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-bold mb-1">Ngữ pháp &amp; Redemittel</h2>
+        <p className="text-sm text-neutral-500 mb-4">
+          Động từ/tính từ đi với giới từ, liên từ, cấu trúc ngữ pháp B2 và mẫu câu thi — mỗi mục
+          đều có định nghĩa tiếng Đức, ví dụ kèm dịch và bài điền từ.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {grammatikTopics.map((topic) => (
+            <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
+          ))}
+        </div>
       </section>
     </div>
   );

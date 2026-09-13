@@ -26,6 +26,12 @@ import ehrenamt from "./ehrenamt";
 import haustiere from "./haustiere";
 import aussehen from "./aussehen";
 import beziehungen from "./beziehungen";
+import verbenPraepAkkusativ from "./verben-praep-akkusativ";
+import verbenPraepDativ from "./verben-praep-dativ";
+import adjektivePraepositionen from "./adjektive-praepositionen";
+import konnektoren from "./konnektoren";
+import grammatikStrukturen from "./grammatik-strukturen";
+import redemittel from "./redemittel";
 
 export const topics: Topic[] = [
   gesundheit,
@@ -54,7 +60,17 @@ export const topics: Topic[] = [
   haustiere,
   aussehen,
   beziehungen,
+  verbenPraepAkkusativ,
+  verbenPraepDativ,
+  adjektivePraepositionen,
+  konnektoren,
+  grammatikStrukturen,
+  redemittel,
 ];
+
+/** Topics grouped for the home page: vocabulary themes vs. grammar sections. */
+export const themaTopics: Topic[] = topics.filter((t) => (t.category ?? "thema") === "thema");
+export const grammatikTopics: Topic[] = topics.filter((t) => t.category === "grammatik");
 
 export function getTopic(slug: string): Topic | undefined {
   return topics.find((t) => t.slug === slug);

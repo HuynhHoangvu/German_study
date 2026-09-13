@@ -1,17 +1,30 @@
+/** One example sentence: the German sentence plus its Vietnamese translation. */
+export type Example = {
+  de: string;
+  vi: string;
+};
+
 export type VocabNode = {
   id: string;
   /** German label. Use "___" inside the label to mark a fill-in-the-blank spot. */
   label: string;
   /** Vietnamese meaning */
   meaning?: string;
+  /** German definition / paraphrase (e.g. "Auf etwas oder jemanden gut aufpassen.") */
+  definition?: string;
   /** German synonyms / related words */
   synonyms?: string[];
-  /** Extra note / example sentence */
+  /** Extra note / usage hint */
   note?: string;
+  /** Example sentences shown as "Beispiel 1, Beispiel 2, …" */
+  examples?: Example[];
   /** If set, this node is a fill-in-the-blank exercise; answer is checked against user input */
   answer?: string;
   children?: VocabNode[];
 };
+
+/** Vocabulary topics vs. grammar / exam-language sections. */
+export type TopicCategory = "thema" | "grammatik";
 
 export type Topic = {
   slug: string;
@@ -20,5 +33,7 @@ export type Topic = {
   description: string;
   color: string;
   level: "B1" | "B2" | "B1-B2";
+  /** Defaults to "thema" when omitted. */
+  category?: TopicCategory;
   root: VocabNode;
 };

@@ -90,6 +90,13 @@ export default function NodeDetailPanel({
         </p>
       )}
 
+      {vocab.definition && (
+        <p className="text-sm text-neutral-500 mt-1">
+          <span className="font-semibold text-neutral-400">Bedeutung: </span>
+          <span className="italic">{vocab.definition}</span>
+        </p>
+      )}
+
       {vocab.synonyms && vocab.synonyms.length > 0 && (
         <p className="text-sm text-neutral-500 mt-1">
           <span className="font-semibold text-neutral-400">Từ đồng nghĩa: </span>
@@ -102,6 +109,35 @@ export default function NodeDetailPanel({
           <span className="font-semibold text-neutral-400">Ghi chú: </span>
           {vocab.note}
         </p>
+      )}
+
+      {vocab.examples && vocab.examples.length > 0 && (
+        <div className="mt-3 space-y-2">
+          {vocab.examples.map((example, i) => (
+            <div
+              key={i}
+              className="rounded-lg px-3 py-2 bg-[var(--brand-soft)] border border-[var(--border)]"
+            >
+              <div className="flex items-start gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-wide shrink-0 mt-0.5" style={{ color }}>
+                  Beispiel {i + 1}
+                </span>
+                <button
+                  onClick={() => speakGerman(example.de)}
+                  aria-label="Nghe câu ví dụ"
+                  title="Nghe câu ví dụ"
+                  className="ml-auto shrink-0 text-xs opacity-60 hover:opacity-100"
+                >
+                  🔊
+                </button>
+              </div>
+              <p className="text-sm font-medium mt-0.5" style={{ color: "var(--foreground)" }}>
+                {example.de}
+              </p>
+              <p className="text-xs text-neutral-500 mt-0.5">{example.vi}</p>
+            </div>
+          ))}
+        </div>
       )}
 
       {isBlank && !solved && (
