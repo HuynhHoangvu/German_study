@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "học ngoại ngữ",
         children: [
           { id: "onlinekurs", label: "der Online-Sprachkurs", meaning: "khóa học ngôn ngữ trực tuyến", note: "'einen Sprachkurs belegen' = đăng ký/theo học một khóa ngôn ngữ." },
-          { id: "sprachaufenthalt", label: "der ___", meaning: "chuyến du học ngôn ngữ", answer: "Sprachaufenthalt", note: "Sprache (ngôn ngữ) + Aufenthalt (thời gian lưu trú)." },
+          { id: "sprachaufenthalt", label: "der Sprachaufenthalt", meaning: "chuyến du học ngôn ngữ", note: "Sprache (ngôn ngữ) + Aufenthalt (thời gian lưu trú)." },
           { id: "wortschatz", label: "den Wortschatz systematisch erweitern", meaning: "mở rộng vốn từ một cách có hệ thống", synonyms: ["sich Vokabeln aneignen"] },
         ],
       },
@@ -28,7 +28,7 @@ const topic: Topic = {
         meaning: "giao tiếp",
         children: [
           { id: "koerpersprache", label: "die Körpersprache", meaning: "ngôn ngữ cơ thể", note: "'nonverbale Signale deuten' = giải mã tín hiệu phi ngôn từ." },
-          { id: "missverstaendnis", label: "ein ___ ausräumen", meaning: "giải tỏa/làm rõ một sự hiểu lầm", answer: "Missverständnis", note: "miss- (sai/nhầm) + Verständnis (sự hiểu); 'ausräumen' = dọn dẹp, ở đây nghĩa bóng là giải tỏa hiểu lầm." },
+          { id: "missverstaendnis", label: "ein Missverständnis ausräumen", meaning: "giải tỏa/làm rõ một sự hiểu lầm", note: "miss- (sai/nhầm) + Verständnis (sự hiểu); 'ausräumen' = dọn dẹp, ở đây nghĩa bóng là giải tỏa hiểu lầm." },
           { id: "mimik", label: "die Mimik und Gestik", meaning: "biểu cảm và cử chỉ", synonyms: ["Gesichtsausdruck und Handbewegungen"] },
         ],
       },
@@ -38,7 +38,7 @@ const topic: Topic = {
         meaning: "đa ngôn ngữ",
         children: [
           { id: "muttersprache", label: "die Muttersprache", meaning: "tiếng mẹ đẻ", synonyms: ["die Erstsprache"] },
-          { id: "dialekt", label: "einen ___ sprechen", meaning: "nói một phương ngữ", answer: "Dialekt", note: "phân biệt với 'die Mundart' (từ trang trọng/địa phương hơn cho 'phương ngữ')." },
+          { id: "dialekt", label: "einen Dialekt sprechen", meaning: "nói một phương ngữ", note: "phân biệt với 'die Mundart' (từ trang trọng/địa phương hơn cho 'phương ngữ')." },
           { id: "vorteile2", label: "kognitive Vorteile", meaning: "lợi ích nhận thức", note: "kognitiv = liên quan đến tư duy, trí não; 'die kognitive Flexibilität fördern' = thúc đẩy sự linh hoạt tư duy." },
         ],
       },

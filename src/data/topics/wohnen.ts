@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "hình thức nhà ở",
         children: [
           { id: "wohnung", label: "die Eigentumswohnung", meaning: "căn hộ sở hữu (mua đứt)", synonyms: ["die Mietwohnung"] },
-          { id: "wg", label: "die ___", meaning: "ở ghép", answer: "Wohngemeinschaft", note: "kurz: WG; Kollokation: 'in einer WG wohnen/leben'." },
+          { id: "wg", label: "die Wohngemeinschaft", meaning: "ở ghép", note: "kurz: WG; Kollokation: 'in einer WG wohnen/leben'." },
           { id: "einfamilienhaus", label: "das Einfamilienhaus", meaning: "nhà ở riêng (một gia đình)", synonyms: ["das Mehrfamilienhaus"] },
           { id: "miete", label: "zur Miete wohnen", meaning: "ở nhà thuê", synonyms: ["im Eigenheim wohnen"] },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "tìm nhà",
         children: [
           { id: "makler", label: "der Immobilienmakler", meaning: "môi giới bất động sản" },
-          { id: "besichtigung", label: "die ___", meaning: "xem nhà", answer: "Besichtigung" },
+          { id: "besichtigung", label: "die Besichtigung", meaning: "xem nhà" },
           { id: "kaution", label: "die Kaution hinterlegen", meaning: "đặt tiền cọc", note: "Verb + Nomen-Kollokation; hinterlegen = ký gửi, đặt cọc." },
         ],
       },
@@ -48,7 +48,7 @@ const topic: Topic = {
         label: "Lösungen",
         meaning: "giải pháp",
         children: [
-          { id: "sozialwohnungen", label: "mehr ___ bauen", meaning: "xây thêm nhà ở xã hội", answer: "Sozialwohnungen" },
+          { id: "sozialwohnungen", label: "mehr Sozialwohnungen bauen", meaning: "xây thêm nhà ở xã hội" },
           { id: "mietpreisbremse", label: "die Mietpreisbremse verschärfen", meaning: "siết chặt quy định trần giá thuê nhà" },
         ],
       },

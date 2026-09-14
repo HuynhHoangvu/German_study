@@ -1,4 +1,4 @@
-import { themaTopics, grammatikTopics, praepositionTopics, countBlanks } from "@/data/topics";
+import { themaTopics, grammatikTopics, praepositionTopics, countNodes } from "@/data/topics";
 import TopicCard from "@/components/TopicCard";
 
 export default function Home() {
@@ -13,8 +13,8 @@ export default function Home() {
         </h1>
         <p className="mt-3 text-neutral-500 max-w-xl">
           Mỗi chủ đề là một mindmap tương tác: nhấp vào từng nhánh để xem nghĩa, từ đồng
-          nghĩa, ghi chú, và hoàn thành các ô điền từ để ghi nhớ lâu hơn. Tiến độ được lưu
-          tự động trên trình duyệt của bạn.
+          nghĩa, ghi chú và câu ví dụ kèm phát âm. Tiến độ học được lưu tự động trên trình
+          duyệt của bạn.
         </p>
       </section>
 
@@ -26,7 +26,7 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {themaTopics.map((topic) => (
-            <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
+            <TopicCard key={topic.slug} topic={topic} totalNodes={countNodes(topic.root)} />
           ))}
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {praepositionTopics.map((topic) => (
-            <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
+            <TopicCard key={topic.slug} topic={topic} totalNodes={countNodes(topic.root)} />
           ))}
         </div>
       </section>
@@ -49,11 +49,11 @@ export default function Home() {
         <h2 className="text-lg font-bold mb-1">Ngữ pháp &amp; Redemittel</h2>
         <p className="text-sm text-neutral-500 mb-4">
           Động từ/tính từ đi với giới từ, liên từ, cấu trúc ngữ pháp B2 và mẫu câu thi — mỗi mục
-          đều có định nghĩa tiếng Đức, ví dụ kèm dịch và bài điền từ.
+          đều có định nghĩa tiếng Đức và ví dụ kèm bản dịch.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {grammatikTopics.map((topic) => (
-            <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
+            <TopicCard key={topic.slug} topic={topic} totalNodes={countNodes(topic.root)} />
           ))}
         </div>
       </section>

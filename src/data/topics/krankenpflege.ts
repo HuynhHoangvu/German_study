@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "các khoa trong bệnh viện",
         children: [
           { id: "station", label: "die Station", meaning: "khoa/phòng bệnh" },
-          { id: "intensivstation", label: "die ___", meaning: "khoa hồi sức tích cực", answer: "Intensivstation", note: "kurz: ICU" },
+          { id: "intensivstation", label: "die Intensivstation", meaning: "khoa hồi sức tích cực", note: "kurz: ICU" },
           { id: "notaufnahme", label: "die Notaufnahme", meaning: "khoa cấp cứu", note: "Not (khẩn cấp) + Aufnahme (tiếp nhận)." },
           { id: "pflegeheim", label: "die Pflegeeinrichtung", meaning: "cơ sở chăm sóc dài hạn", synonyms: ["das Pflegeheim"] },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "ca trực",
         children: [
           { id: "fruehschicht", label: "die Frühschicht", meaning: "ca sáng" },
-          { id: "spaetschicht", label: "die ___", meaning: "ca chiều", answer: "Spätschicht" },
+          { id: "spaetschicht", label: "die Spätschicht", meaning: "ca chiều" },
           { id: "nachtschicht", label: "die Nachtschicht", meaning: "ca đêm" },
           { id: "uebergabe", label: "die Schichtübergabe", meaning: "buổi bàn giao ca trực", synonyms: ["die Übergabe"], note: "über + geben: die lückenlose Weitergabe patientenrelevanter Informationen an die Folgeschicht." },
         ],
@@ -40,7 +40,7 @@ const topic: Topic = {
         meaning: "dụng cụ & thiết bị y tế",
         children: [
           { id: "spritze", label: "die Spritze", meaning: "mũi tiêm", synonyms: ["die Injektion"] },
-          { id: "infusion", label: "die ___", meaning: "dây truyền dịch", answer: "Infusion" },
+          { id: "infusion", label: "die Infusion", meaning: "dây truyền dịch" },
           { id: "verband", label: "einen Verbandswechsel durchführen", meaning: "thực hiện thay băng gạc", synonyms: ["den Verband wechseln"] },
           { id: "rollstuhl", label: "der Rollstuhl", meaning: "xe lăn" },
           { id: "gehhilfe", label: "die Gehhilfe", meaning: "dụng cụ tập đi", synonyms: ["das Hilfsmittel zur Mobilisierung"] },
@@ -52,7 +52,7 @@ const topic: Topic = {
         meaning: "bàn giao & hồ sơ",
         children: [
           { id: "pflegedokumentation", label: "die Pflegedokumentation", meaning: "hồ sơ theo dõi chăm sóc" },
-          { id: "zustand", label: "der ___ hat sich verschlechtert", meaning: "tình trạng xấu đi", answer: "Zustand" },
+          { id: "zustand", label: "der Zustand hat sich verschlechtert", meaning: "tình trạng xấu đi" },
           { id: "pflegebeduerftig", label: "pflegebedürftig sein", meaning: "cần được chăm sóc", note: "Pflege (chăm sóc) + bedürftig (cần đến)." },
           { id: "visite", label: "die Visite", meaning: "buổi thăm khám cùng bác sĩ", note: "die Visite machen/abhalten = thực hiện buổi thăm khám (kết hợp với 'machen' hoặc 'abhalten')." },
         ],

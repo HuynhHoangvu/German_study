@@ -29,7 +29,6 @@ export type FlowNodeData = {
   color: string;
   branchColor: string;
   branchIndex: number;
-  solved?: boolean;
   hasChildren: boolean;
   childCount: number;
   collapsed: boolean;

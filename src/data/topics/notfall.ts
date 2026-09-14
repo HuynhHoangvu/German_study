@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "các loại tình huống khẩn cấp",
         children: [
           { id: "unfall", label: "der Unfall mit Personenschaden", meaning: "tai nạn gây thương tích cho người", synonyms: ["der Verkehrsunfall"] },
-          { id: "herzinfarkt", label: "der ___", meaning: "nhồi máu cơ tim", answer: "Herzinfarkt" },
+          { id: "herzinfarkt", label: "der Herzinfarkt", meaning: "nhồi máu cơ tim" },
           { id: "verbrennung", label: "die Verbrennung zweiten Grades", meaning: "vết bỏng độ hai", note: "Grade der Verbrennung: ersten, zweiten, dritten Grades." },
           { id: "bewusstlosigkeit", label: "die Bewusstlosigkeit", meaning: "sự bất tỉnh", note: "bewusst (có ý thức) + los (mất đi, hậu tố phủ định) → bewusstlos → Bewusstlosigkeit." },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "biện pháp sơ cứu",
         children: [
           { id: "wiederbelebung", label: "die Herz-Lungen-Wiederbelebung", meaning: "hồi sức tim phổi", synonyms: ["die Reanimation"], note: "Abkürzung: HLW." },
-          { id: "erstickung", label: "erste Hilfe bei drohender ___", meaning: "sơ cứu khi có nguy cơ nghẹt thở", answer: "Erstickung" },
+          { id: "erstickung", label: "erste Hilfe bei drohender Erstickung", meaning: "sơ cứu khi có nguy cơ nghẹt thở" },
           { id: "stabile-seitenlage", label: "die stabile Seitenlage", meaning: "tư thế hồi phục nằm nghiêng", note: "wird bei bewusstlosen, aber atmenden Personen angewendet." },
         ],
       },
@@ -39,7 +39,7 @@ const topic: Topic = {
         meaning: "gọi trợ giúp",
         children: [
           { id: "rettungswagen", label: "der Rettungswagen anfordern", meaning: "gọi xe cấp cứu đến", synonyms: ["den Krankenwagen alarmieren"] },
-          { id: "notruf", label: "den ___ absetzen", meaning: "thực hiện cuộc gọi cấp cứu (112)", answer: "Notruf", note: "einen Notruf absetzen = gọi báo khẩn cấp một cách trang trọng." },
+          { id: "notruf", label: "den Notruf absetzen", meaning: "thực hiện cuộc gọi cấp cứu (112)", note: "einen Notruf absetzen = gọi báo khẩn cấp một cách trang trọng." },
           { id: "notaufnahme2", label: "die Notaufnahme", meaning: "khoa cấp cứu", note: "in die Notaufnahme eingeliefert werden." },
         ],
       },

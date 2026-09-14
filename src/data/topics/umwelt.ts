@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "vấn đề môi trường",
         children: [
           { id: "klimawandel", label: "der Klimawandel", meaning: "biến đổi khí hậu", synonyms: ["die globale Erwärmung", "die Erderwärmung"], note: "Zusammensetzung aus Klima + Wandel; oft in Kollokationen wie 'den Klimawandel eindämmen/bekämpfen'." },
-          { id: "luftverschmutzung", label: "die ___", meaning: "ô nhiễm không khí", answer: "Luftverschmutzung" },
+          { id: "luftverschmutzung", label: "die Luftverschmutzung", meaning: "ô nhiễm không khí" },
           { id: "plastikmuell", label: "die Plastikvermüllung", meaning: "tình trạng ô nhiễm rác thải nhựa", synonyms: ["die Vermüllung der Meere"] },
           { id: "abholzung", label: "die Abholzung", meaning: "phá rừng", synonyms: ["die Rodung", "die Entwaldung"] },
           { id: "artensterben", label: "das Artensterben", meaning: "tuyệt chủng loài", note: "Zusammensetzung aus Art (loài) + Sterben (sự chết đi); häufig als 'das sechste Massenaussterben' bezeichnet." },
@@ -39,7 +39,7 @@ const topic: Topic = {
         label: "Folgen",
         meaning: "hậu quả",
         children: [
-          { id: "naturkatastrophen", label: "die ___", meaning: "thảm họa thiên nhiên", answer: "Naturkatastrophen" },
+          { id: "naturkatastrophen", label: "die Naturkatastrophen", meaning: "thảm họa thiên nhiên" },
           { id: "meeresspiegel", label: "der kontinuierlich steigende Meeresspiegel", meaning: "mực nước biển không ngừng dâng cao" },
           { id: "duerre", label: "die anhaltende Dürre", meaning: "hạn hán kéo dài", synonyms: ["die Wasserknappheit"] },
         ],
@@ -52,7 +52,7 @@ const topic: Topic = {
           { id: "erneuerbar", label: "auf erneuerbare Energien umsteigen", meaning: "chuyển sang sử dụng năng lượng tái tạo", synonyms: ["Solar-, Windenergie"], note: "umsteigen auf + Akk. (chuyển đổi sang); trennbares Verb: steigt ... um, umgestiegen." },
           { id: "recycling", label: "das Recycling konsequent umsetzen", meaning: "thực hiện tái chế một cách triệt để" },
           { id: "oepnv2", label: "auf den öffentlichen Nahverkehr umsteigen", meaning: "chuyển sang dùng phương tiện công cộng" },
-          { id: "reduzieren", label: "den Ressourcenverbrauch ___", meaning: "giảm mức tiêu thụ tài nguyên", answer: "reduzieren" },
+          { id: "reduzieren", label: "den Ressourcenverbrauch reduzieren", meaning: "giảm mức tiêu thụ tài nguyên" },
         ],
       },
       {

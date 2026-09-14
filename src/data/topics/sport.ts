@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "các môn thể thao",
         children: [
           { id: "breitensport", label: "der Breitensport", meaning: "thể thao đại chúng", note: "breit (rộng rãi) + Sport: thể thao cho mọi người, không mang tính thi đấu chuyên nghiệp; đối lập với 'Leistungssport'." },
-          { id: "leistungssport", label: "der ___", meaning: "thể thao thành tích cao", answer: "Leistungssport", synonyms: ["der Spitzensport", "der Profisport"] },
+          { id: "leistungssport", label: "der Leistungssport", meaning: "thể thao thành tích cao", synonyms: ["der Spitzensport", "der Profisport"] },
           { id: "extremsport", label: "der Extremsport", meaning: "thể thao mạo hiểm", synonyms: ["der Risikosport"], note: "thường đi kèm 'ein hohes Verletzungsrisiko eingehen' (chấp nhận rủi ro chấn thương cao)." },
           { id: "mannschaftssport", label: "der Mannschaftssport", meaning: "thể thao đồng đội", synonyms: ["der Teamsport"], note: "đối lập với 'der Individualsport' (thể thao cá nhân)." },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "thể hình",
         children: [
           { id: "fitnessstudio", label: "das Fitnessstudio", meaning: "phòng tập gym", synonyms: ["das Fitnesscenter"], note: "'ein Fitnessstudio-Abo abschließen' = ký hợp đồng thành viên phòng gym." },
-          { id: "training", label: "ein intensives ___ absolvieren", meaning: "hoàn thành một buổi tập luyện cường độ cao", answer: "Training", note: "'absolvieren' (hoàn thành, trải qua) mang sắc thái trang trọng hơn 'machen'." },
+          { id: "training", label: "ein intensives Training absolvieren", meaning: "hoàn thành một buổi tập luyện cường độ cao", note: "'absolvieren' (hoàn thành, trải qua) mang sắc thái trang trọng hơn 'machen'." },
           { id: "ausdauer", label: "die Ausdauer", meaning: "sức bền", synonyms: ["die Kondition", "das Durchhaltevermögen"] },
         ],
       },
@@ -39,7 +39,7 @@ const topic: Topic = {
         meaning: "lợi ích",
         children: [
           { id: "koerperlich", label: "die körperliche Leistungsfähigkeit", meaning: "năng lực thể chất", note: "trang trọng hơn 'körperliche Fitness'." },
-          { id: "teamgeist", label: "der ___ stärken", meaning: "củng cố tinh thần đồng đội", answer: "Teamgeist" },
+          { id: "teamgeist", label: "der Teamgeist stärken", meaning: "củng cố tinh thần đồng đội" },
           { id: "stressabbau", label: "der Stressabbau", meaning: "giải tỏa căng thẳng", note: "'Stress abbauen' (giảm/giải tỏa căng thẳng) — động từ tách 'abbauen'." },
         ],
       },
@@ -84,7 +84,7 @@ const topic: Topic = {
             label: "Verben",
             meaning: "động từ",
             children: [
-              { id: "wa-trainieren", label: "trainieren", meaning: "luyện tập", synonyms: ["sich vorbereiten auf + Akk."] },
+              { id: "wa-trainieren", label: "trainieren", meaning: "câu ví dụ mẫu", synonyms: ["sich vorbereiten auf + Akk."] },
               { id: "wa-gewinnen", label: "gewinnen", meaning: "thắng", note: "unregelmäßig: gewinnt, gewann, hat gewonnen" },
               { id: "wa-verlieren", label: "verlieren", meaning: "thua", note: "unregelmäßig: verliert, verlor, hat verloren" },
               { id: "wa-sich-anstrengen", label: "sich anstrengen", meaning: "gắng sức, nỗ lực hết mình", note: "phản thân + 'sich' im Akkusativ; danh từ tương ứng: 'die Anstrengung'." },

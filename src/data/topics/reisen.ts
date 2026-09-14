@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "hình thức du lịch",
         children: [
           { id: "pauschalreise", label: "die Pauschalreise", meaning: "du lịch trọn gói", note: "Pauschal = trọn gói, đã bao gồm mọi chi phí." },
-          { id: "individualreise", label: "die ___", meaning: "du lịch tự túc", answer: "Individualreise" },
+          { id: "individualreise", label: "die Individualreise", meaning: "du lịch tự túc" },
           { id: "rucksacktourismus", label: "der Rucksacktourismus", meaning: "du lịch bụi", synonyms: ["das Backpacking"] },
         ],
       },
@@ -29,7 +29,7 @@ const topic: Topic = {
         children: [
           { id: "horizonterweiterung", label: "die Horizonterweiterung", meaning: "mở mang tầm nhìn", note: "Horizont (chân trời/tầm nhìn) + Erweiterung (mở rộng)." },
           { id: "erholung2", label: "die Erholung vom Alltag", meaning: "nghỉ ngơi khỏi đời thường", synonyms: ["die Entspannung"] },
-          { id: "kulturaustausch", label: "der ___", meaning: "trao đổi văn hóa", answer: "Kulturaustausch" },
+          { id: "kulturaustausch", label: "der Kulturaustausch", meaning: "trao đổi văn hóa" },
         ],
       },
       {
@@ -48,7 +48,7 @@ const topic: Topic = {
         meaning: "du lịch bền vững",
         children: [
           { id: "oekotourismus", label: "der Ökotourismus", meaning: "du lịch sinh thái" },
-          { id: "regional", label: "regional und ___ reisen", meaning: "du lịch bền vững, gần địa phương", answer: "nachhaltig" },
+          { id: "regional", label: "regional und nachhaltig reisen", meaning: "du lịch bền vững, gần địa phương" },
         ],
       },
       {

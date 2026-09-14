@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "xu hướng ăn uống",
         children: [
           { id: "vegetarisch", label: "sich vegetarisch ernähren", meaning: "ăn chay", synonyms: ["fleischlos essen"] },
-          { id: "vegan", label: "sich ___ ernähren", meaning: "ăn thuần chay", answer: "vegan" },
+          { id: "vegan", label: "sich vegan ernähren", meaning: "ăn thuần chay" },
           { id: "bio", label: "Bio-Lebensmittel", meaning: "thực phẩm hữu cơ", synonyms: ["ökologische Lebensmittel", "Erzeugnisse aus kontrolliert biologischem Anbau"], note: "Bio = kurz für biologisch angebaut, ohne künstliche Zusätze." },
         ],
       },
@@ -28,7 +28,7 @@ const topic: Topic = {
         meaning: "thói quen ăn uống",
         children: [
           { id: "fastfood2", label: "der übermäßige Konsum von Fast Food", meaning: "việc tiêu thụ đồ ăn nhanh quá mức", synonyms: ["das Junkfood"] },
-          { id: "fertiggerichte", label: "die ___", meaning: "đồ ăn chế biến sẵn", answer: "Fertiggerichte", note: "Fertiggerichte = Essen, das man nur noch aufwärmen muss." },
+          { id: "fertiggerichte", label: "die Fertiggerichte", meaning: "đồ ăn chế biến sẵn", note: "Fertiggerichte = Essen, das man nur noch aufwärmen muss." },
           { id: "hausgemacht", label: "hausgemachtes Essen", meaning: "đồ ăn tự nấu", synonyms: ["selbstgekochtes Essen"] },
         ],
       },
@@ -38,7 +38,7 @@ const topic: Topic = {
         meaning: "vấn đề",
         children: [
           { id: "mangelernaehrung", label: "die Mangelernährung", meaning: "suy dinh dưỡng", synonyms: ["die Unterernährung"] },
-          { id: "zuckerkonsum", label: "übermäßiger ___", meaning: "tiêu thụ đường quá mức", answer: "Zuckerkonsum" },
+          { id: "zuckerkonsum", label: "übermäßiger Zuckerkonsum", meaning: "tiêu thụ đường quá mức" },
           { id: "lebensmittelverschwendung", label: "die Lebensmittelverschwendung", meaning: "lãng phí thực phẩm", note: "zusammengesetzt aus: Lebensmittel + Verschwendung." },
         ],
       },

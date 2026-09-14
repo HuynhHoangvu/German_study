@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "các loại mối quan hệ",
         children: [
           { id: "freundschaft", label: "die enge Freundschaft", meaning: "tình bạn thân thiết", synonyms: ["die Vertrautheit"], note: "eine enge Freundschaft pflegen = duy trì một tình bạn thân thiết." },
-          { id: "bekanntschaft", label: "die ___", meaning: "mối quen biết (chưa thân)", answer: "Bekanntschaft", note: "flüchtige Bekanntschaft = quen biết sơ sài." },
+          { id: "bekanntschaft", label: "die Bekanntschaft", meaning: "mối quen biết (chưa thân)", note: "flüchtige Bekanntschaft = quen biết sơ sài." },
           { id: "partnerschaft", label: "die gleichberechtigte Partnerschaft", meaning: "mối quan hệ bình đẳng (bạn đời)", synonyms: ["die Beziehung auf Augenhöhe"] },
           { id: "nachbarschaftsverhaeltnis", label: "das Nachbarschaftsverhältnis", meaning: "mối quan hệ hàng xóm", note: "ein gutes Nachbarschaftsverhältnis pflegen." },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "xung đột và giao tiếp",
         children: [
           { id: "missverstaendnis", label: "ein Missverständnis ausräumen", meaning: "giải quyết một hiểu lầm", synonyms: ["ein Missverständnis klären"] },
-          { id: "streit", label: "einen ___ schlichten", meaning: "hòa giải một cuộc cãi vã", answer: "Streit", synonyms: ["einen Konflikt beilegen"] },
+          { id: "streit", label: "einen Streit schlichten", meaning: "hòa giải một cuộc cãi vã", synonyms: ["einen Konflikt beilegen"] },
           { id: "vertrauensbruch", label: "der Vertrauensbruch", meaning: "sự phản bội lòng tin", note: "das Vertrauen brechen/missbrauchen." },
           { id: "kompromiss", label: "einen Kompromiss eingehen", meaning: "chấp nhận một sự thỏa hiệp", synonyms: ["sich einigen auf + Akk."] },
         ],
@@ -40,7 +40,7 @@ const topic: Topic = {
         meaning: "sự gần gũi và khoảng cách",
         children: [
           { id: "sich-entfremden", label: "sich voneinander entfremden", meaning: "trở nên xa cách nhau", note: "reflexiv: entfremdet sich, entfremdete sich, hat sich entfremdet." },
-          { id: "kontakt-halten", label: "den ___ pflegen", meaning: "duy trì liên lạc", answer: "Kontakt", synonyms: ["in Kontakt bleiben"] },
+          { id: "kontakt-halten", label: "den Kontakt pflegen", meaning: "duy trì liên lạc", synonyms: ["in Kontakt bleiben"] },
           { id: "einsamkeit", label: "die soziale Isolation", meaning: "sự cô lập xã hội", synonyms: ["die Einsamkeit"] },
         ],
       },

@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "hình thức gia đình",
         children: [
           { id: "kernfamilie", label: "die Kernfamilie", meaning: "gia đình hạt nhân", synonyms: ["die Kleinfamilie"] },
-          { id: "alleinerziehend", label: "___ Elternteil", meaning: "cha/mẹ đơn thân", answer: "alleinerziehendes", note: "alleinerziehend = allein + erziehen: nuôi con một mình." },
+          { id: "alleinerziehend", label: "alleinerziehendes Elternteil", meaning: "cha/mẹ đơn thân", note: "alleinerziehend = allein + erziehen: nuôi con một mình." },
           { id: "patchwork", label: "die Patchworkfamilie", meaning: "gia đình ghép (tái hôn)", note: "Familie mit Kindern aus früheren Beziehungen." },
           { id: "grossfamilie", label: "die Großfamilie", meaning: "gia đình nhiều thế hệ", synonyms: ["die Mehrgenerationenfamilie"] },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "nuôi dạy con",
         children: [
           { id: "autoritaer", label: "autoritärer Erziehungsstil", meaning: "phong cách nuôi dạy độc đoán", synonyms: ["streng erziehen"] },
-          { id: "liberal", label: "___ Erziehungsstil", meaning: "phong cách nuôi dạy tự do", answer: "liberaler" },
+          { id: "liberal", label: "liberaler Erziehungsstil", meaning: "phong cách nuôi dạy tự do" },
           { id: "werte", label: "die Werte vermitteln", meaning: "truyền đạt giá trị", synonyms: ["Werte weitergeben"] },
         ],
       },
@@ -40,7 +40,7 @@ const topic: Topic = {
         children: [
           { id: "generationenkonflikt", label: "der Generationenkonflikt", meaning: "xung đột thế hệ", note: "Generation (thế hệ) + Konflikt (xung đột)." },
           { id: "zeitmangel", label: "der chronische Zeitmangel", meaning: "tình trạng thiếu thời gian kéo dài", synonyms: ["wenig Zeit haben"] },
-          { id: "scheidung", label: "die ___", meaning: "sự ly hôn", answer: "Scheidung", synonyms: ["die Trennung"] },
+          { id: "scheidung", label: "die Scheidung", meaning: "sự ly hôn", synonyms: ["die Trennung"] },
         ],
       },
       {

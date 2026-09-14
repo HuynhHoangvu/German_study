@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "hoạt động",
         children: [
           { id: "sport2", label: "sich sportlich betätigen", meaning: "vận động thể thao", synonyms: ["Sport treiben"] },
-          { id: "lesen", label: "___", meaning: "đọc sách", answer: "lesen" },
+          { id: "lesen", label: "lesen", meaning: "đọc sách" },
           { id: "reisen2", label: "auf Reisen gehen", meaning: "đi du lịch", synonyms: ["reisen"] },
           { id: "ehrenamt", label: "sich ehrenamtlich engagieren", meaning: "hoạt động tình nguyện", synonyms: ["freiwillig arbeiten"], note: "ehrenamtlich = không lương, tự nguyện vì cộng đồng." },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "ý nghĩa",
         children: [
           { id: "erholung3", label: "die Erholung", meaning: "sự nghỉ ngơi", synonyms: ["die Entspannung"] },
-          { id: "ausgleich", label: "der ___ zum Alltag", meaning: "sự cân bằng với đời thường", answer: "Ausgleich" },
+          { id: "ausgleich", label: "der Ausgleich zum Alltag", meaning: "sự cân bằng với đời thường" },
           { id: "selbstverwirklichung", label: "die Selbstverwirklichung", meaning: "tự hiện thực hóa bản thân", note: "selbst (tự) + Verwirklichung (hiện thực hóa)." },
         ],
       },
@@ -39,7 +39,7 @@ const topic: Topic = {
         meaning: "vấn đề",
         children: [
           { id: "zeitmangel2", label: "der chronische Zeitmangel", meaning: "tình trạng thiếu thời gian kéo dài", synonyms: ["wenig Zeit haben"] },
-          { id: "bildschirmzeit", label: "zu viel ___", meaning: "quá nhiều thời gian dùng màn hình", answer: "Bildschirmzeit" },
+          { id: "bildschirmzeit", label: "zu viel Bildschirmzeit", meaning: "quá nhiều thời gian dùng màn hình" },
         ],
       },
       {

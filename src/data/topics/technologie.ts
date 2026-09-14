@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "số hóa",
         children: [
           { id: "smartphone", label: "das Smartphone", meaning: "điện thoại thông minh", note: "'ständig am Smartphone hängen' = dán mắt vào điện thoại liên tục." },
-          { id: "kuenstlicheintelligenz", label: "die ___", meaning: "trí tuệ nhân tạo", answer: "künstliche Intelligenz", note: "kurz: KI" },
+          { id: "kuenstlicheintelligenz", label: "die künstliche Intelligenz", meaning: "trí tuệ nhân tạo", note: "kurz: KI" },
           { id: "homeoffice2", label: "die digitale Arbeitswelt", meaning: "thế giới việc làm số hóa", synonyms: ["das digitale Arbeiten"] },
         ],
       },
@@ -28,7 +28,7 @@ const topic: Topic = {
         meaning: "mạng xã hội",
         children: [
           { id: "vernetzung", label: "die globale Vernetzung", meaning: "sự kết nối toàn cầu", synonyms: ["die Verbindung"] },
-          { id: "informationsaustausch", label: "der ___", meaning: "trao đổi thông tin", answer: "Informationsaustausch" },
+          { id: "informationsaustausch", label: "der Informationsaustausch", meaning: "trao đổi thông tin" },
           { id: "sucht", label: "die Social-Media-Sucht", meaning: "chứng nghiện mạng xã hội", note: "Sucht = chứng nghiện, dùng cho nhiều loại (Handysucht, Spielsucht...); 'in eine Abhängigkeit geraten' = rơi vào tình trạng lệ thuộc." },
         ],
       },
@@ -39,7 +39,7 @@ const topic: Topic = {
         children: [
           { id: "datenschutz", label: "der Datenschutz", meaning: "bảo mật dữ liệu", synonyms: ["der Datenmissbrauch (Gegenteil)"], note: "'gegen den Datenschutz verstoßen' = vi phạm quy định bảo mật dữ liệu." },
           { id: "fakenews", label: "gezielte Desinformation", meaning: "thông tin sai lệch có chủ đích", synonyms: ["die Fake News", "die Falschmeldung"] },
-          { id: "cybermobbing", label: "das ___", meaning: "bắt nạt trên mạng", answer: "Cybermobbing", note: "'Opfer von Cybermobbing werden' = trở thành nạn nhân của bắt nạt trên mạng." },
+          { id: "cybermobbing", label: "das Cybermobbing", meaning: "bắt nạt trên mạng", note: "'Opfer von Cybermobbing werden' = trở thành nạn nhân của bắt nạt trên mạng." },
         ],
       },
       {

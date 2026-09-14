@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "ngoại hình",
         children: [
           { id: "grossgewachsen", label: "hochgewachsen sein", meaning: "cao ráo, dong dỏng", synonyms: ["großgewachsen sein"] },
-          { id: "schlank", label: "___ gebaut sein", meaning: "vóc dáng thon gọn, mảnh mai", answer: "schlank", synonyms: ["schmächtig"] },
+          { id: "schlank", label: "schlank gebaut sein", meaning: "vóc dáng thon gọn, mảnh mai", synonyms: ["schmächtig"] },
           { id: "gepflegt", label: "ein gepflegtes Erscheinungsbild haben", meaning: "có ngoại hình chỉn chu, gọn gàng", synonyms: ["gepflegt aussehen"] },
         ],
       },
@@ -28,7 +28,7 @@ const topic: Topic = {
         meaning: "tính cách",
         children: [
           { id: "freundlich", label: "aufgeschlossen und hilfsbereit", meaning: "cởi mở và nhiệt tình giúp đỡ", synonyms: ["freundlich und zuvorkommend"] },
-          { id: "humorvoll", label: "___ sein", meaning: "có óc hài hước tinh tế", answer: "humorvoll", synonyms: ["schlagfertig"], note: "schlagfertig = phản ứng dí dỏm, nhanh trí." },
+          { id: "humorvoll", label: "humorvoll sein", meaning: "có óc hài hước tinh tế", synonyms: ["schlagfertig"], note: "schlagfertig = phản ứng dí dỏm, nhanh trí." },
           { id: "zuverlaessig", label: "zuverlässig sein", meaning: "đáng tin cậy", note: "sich auf jemanden verlassen können + Akk." },
           { id: "ehrgeizig", label: "ehrgeizig und zielstrebig", meaning: "có tham vọng và kiên định theo đuổi mục tiêu", synonyms: ["strebsam"] },
         ],
@@ -39,7 +39,7 @@ const topic: Topic = {
         meaning: "mối quan hệ",
         children: [
           { id: "kennenlernen", label: "sich näher kennenlernen", meaning: "tìm hiểu, làm quen sâu hơn với nhau" },
-          { id: "seit-jahren", label: "wir kennen uns seit ___ Jahren", meaning: "chúng tôi quen nhau đã ... năm", answer: "zehn" },
+          { id: "seit-jahren", label: "wir kennen uns seit zehn Jahren", meaning: "chúng tôi quen nhau đã ... năm" },
           { id: "vertrauen", label: "einander blind vertrauen", meaning: "tin tưởng tuyệt đối lẫn nhau", note: "einander = lẫn nhau (dùng thay cho 'sich gegenseitig'); blind vertrauen = tin tưởng tuyệt đối." },
         ],
       },

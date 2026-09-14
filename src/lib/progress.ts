@@ -4,7 +4,7 @@ const STORAGE_KEY = "german-mindmap-progress";
 
 type ProgressStore = {
   [topicSlug: string]: {
-    completedBlanks?: string[];
+    /** Ids of the vocabulary nodes the learner has opened. */
     visitedNodes?: string[];
     lastVisitedAt?: number;
   };
@@ -25,25 +25,26 @@ function writeStore(store: ProgressStore) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
 }
 
-export function markBlankSolved(topicSlug: string, nodeId: string) {
+/** Records that the learner has opened (studied) one vocabulary node. */
+export function markNodeStudied(topicSlug: string, nodeId: string) {
   const store = readStore();
   const entry = store[topicSlug] ?? {};
-  const set = new Set(entry.completedBlanks ?? []);
+  const set = new Set(entry.visitedNodes ?? []);
   set.add(nodeId);
-  entry.completedBlanks = Array.from(set);
+  entry.visitedNodes = Array.from(set);
   store[topicSlug] = entry;
   writeStore(store);
 }
 
-export function getSolvedBlanks(topicSlug: string): Set<string> {
+export function getStudiedNodes(topicSlug: string): Set<string> {
   const store = readStore();
-  return new Set(store[topicSlug]?.completedBlanks ?? []);
+  return new Set(store[topicSlug]?.visitedNodes ?? []);
 }
 
-export function getTopicProgress(topicSlug: string, totalBlanks: number): number {
-  if (totalBlanks === 0) return 0;
-  const solved = getSolvedBlanks(topicSlug).size;
-  return Math.round((solved / totalBlanks) * 100);
+export function getTopicProgress(topicSlug: string, totalNodes: number): number {
+  if (totalNodes === 0) return 0;
+  const studied = getStudiedNodes(topicSlug).size;
+  return Math.min(100, Math.round((studied / totalNodes) * 100));
 }
 
 export function resetTopicProgress(topicSlug: string) {
@@ -71,25 +72,25 @@ export type TopicProgressInfo = {
   titleVi: string;
   color: string;
   percent: number;
-  solved: number;
+  studied: number;
   total: number;
   lastVisitedAt?: number;
 };
 
 export function getAllTopicsProgress(
   topics: Topic[],
-  countBlanks: (root: VocabNode) => number
+  countNodes: (root: VocabNode) => number
 ): TopicProgressInfo[] {
   return topics.map((topic) => {
-    const total = countBlanks(topic.root);
-    const solved = getSolvedBlanks(topic.slug).size;
+    const total = countNodes(topic.root);
+    const studied = Math.min(getStudiedNodes(topic.slug).size, total);
     return {
       slug: topic.slug,
       title: topic.title,
       titleVi: topic.titleVi,
       color: topic.color,
-      percent: total === 0 ? 0 : Math.round((solved / total) * 100),
-      solved,
+      percent: total === 0 ? 0 : Math.round((studied / total) * 100),
+      studied,
       total,
       lastVisitedAt: getLastVisited(topic.slug),
     };
@@ -98,17 +99,17 @@ export function getAllTopicsProgress(
 
 export function getOverallStats(
   topics: Topic[],
-  countBlanks: (root: VocabNode) => number
+  countNodes: (root: VocabNode) => number
 ) {
-  const all = getAllTopicsProgress(topics, countBlanks);
-  const totalBlanks = all.reduce((sum, t) => sum + t.total, 0);
-  const totalSolved = all.reduce((sum, t) => sum + t.solved, 0);
+  const all = getAllTopicsProgress(topics, countNodes);
+  const totalNodes = all.reduce((sum, t) => sum + t.total, 0);
+  const totalStudied = all.reduce((sum, t) => sum + t.studied, 0);
   const done = all.filter((t) => t.total > 0 && t.percent === 100).length;
   const inProgress = all.filter((t) => t.percent > 0 && t.percent < 100).length;
   const notStarted = all.filter((t) => t.percent === 0).length;
 
   return {
-    overallPercent: totalBlanks === 0 ? 0 : Math.round((totalSolved / totalBlanks) * 100),
+    overallPercent: totalNodes === 0 ? 0 : Math.round((totalStudied / totalNodes) * 100),
     done,
     inProgress,
     notStarted,
@@ -122,10 +123,10 @@ export type Suggestion = TopicProgressInfo & { reason: SuggestionReason };
 
 export function getSuggestions(
   topics: Topic[],
-  countBlanks: (root: VocabNode) => number,
+  countNodes: (root: VocabNode) => number,
   limit = 3
 ): Suggestion[] {
-  const all = getAllTopicsProgress(topics, countBlanks);
+  const all = getAllTopicsProgress(topics, countNodes);
 
   const inProgress = all
     .filter((t) => t.percent > 0 && t.percent < 100)

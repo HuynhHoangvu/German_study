@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "các loại hình nghệ thuật",
         children: [
           { id: "theater", label: "die darstellende Kunst", meaning: "nghệ thuật biểu diễn (sân khấu)", synonyms: ["die Bühnenkunst"], note: "Oberbegriff für Theater, Tanz, Oper etc." },
-          { id: "museum", label: "die ___", meaning: "cuộc triển lãm bảo tàng", answer: "Museumsausstellung", synonyms: ["die Dauerausstellung"] },
+          { id: "museum", label: "die Museumsausstellung", meaning: "cuộc triển lãm bảo tàng", synonyms: ["die Dauerausstellung"] },
           { id: "musik", label: "die zeitgenössische Musik", meaning: "âm nhạc đương đại", synonyms: ["die Klangkunst"] },
           { id: "literatur", label: "die Literatur", meaning: "văn học", note: "oft mit Genitiv: die Literatur des 20. Jahrhunderts." },
         ],
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "lễ hội & truyền thống",
         children: [
           { id: "weihnachten", label: "das Brauchtum rund um Weihnachten", meaning: "phong tục xoay quanh lễ Giáng sinh", synonyms: ["der Weihnachtsbrauch"] },
-          { id: "brauchtum", label: "das überlieferte ___", meaning: "phong tục tập quán được lưu truyền", answer: "Brauchtum" },
+          { id: "brauchtum", label: "das überlieferte Brauchtum", meaning: "phong tục tập quán được lưu truyền" },
           { id: "volksfest", label: "das Volksfest", meaning: "lễ hội dân gian truyền thống", synonyms: ["das Traditionsfest"], note: "regional geprägte Großveranstaltung, z. B. das Oktoberfest." },
         ],
       },
@@ -39,7 +39,7 @@ const topic: Topic = {
         meaning: "khác biệt liên văn hóa",
         children: [
           { id: "wertvorstellungen", label: "die Wertvorstellungen", meaning: "quan niệm giá trị", note: "Wert (giá trị) + Vorstellung (quan niệm)." },
-          { id: "toleranz", label: "die ___", meaning: "sự khoan dung", answer: "Toleranz" },
+          { id: "toleranz", label: "die Toleranz", meaning: "sự khoan dung" },
           { id: "integration", label: "die Integration", meaning: "sự hòa nhập", synonyms: ["die Eingliederung"] },
         ],
       },

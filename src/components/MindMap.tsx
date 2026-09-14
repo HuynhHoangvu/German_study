@@ -22,7 +22,7 @@ import {
 } from "@/lib/layout";
 import VocabNodeComponent from "@/components/VocabNode";
 import NodeDetailPanel from "@/components/NodeDetailPanel";
-import { getSolvedBlanks } from "@/lib/progress";
+import { markNodeStudied } from "@/lib/progress";
 import { speakGerman } from "@/lib/speech";
 
 const nodeTypes = { vocab: VocabNodeComponent };
@@ -63,11 +63,9 @@ export default function MindMap({ topic }: { topic: Topic }) {
   const allCollapsibleIds = useMemo(() => getAllCollapsibleIds(topic.root), [topic]);
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [solvedIds, setSolvedIds] = useState<Set<string>>(new Set());
   const [collapsedIds, setCollapsedIds] = useState<Set<string>>(() => getDefaultCollapsed(topic.root));
 
   useEffect(() => {
-    setSolvedIds(getSolvedBlanks(topic.slug));
     setSelectedId(null);
     setCollapsedIds(getDefaultCollapsed(topic.root));
   }, [topic]);
@@ -81,10 +79,6 @@ export default function MindMap({ topic }: { topic: Topic }) {
     }, 150);
     return () => clearTimeout(timer);
   }, [topic]);
-
-  const handleSolved = useCallback((id: string) => {
-    setSolvedIds((prev) => new Set(prev).add(id));
-  }, []);
 
   const toggleCollapse = useCallback((id: string) => {
     setCollapsedIds((prev) => {
@@ -134,11 +128,10 @@ export default function MindMap({ topic }: { topic: Topic }) {
         selected: n.id === selectedId,
         data: {
           ...n.data,
-          solved: solvedIds.has(n.id),
           onToggleCollapse: n.data.hasChildren ? () => toggleCollapse(n.id) : undefined,
         },
       })),
-    [baseNodes, selectedId, solvedIds, toggleCollapse]
+    [baseNodes, selectedId, toggleCollapse]
   );
 
   const selectedVocab = selectedId ? findVocab(topic.root, selectedId) : null;
@@ -185,13 +178,9 @@ export default function MindMap({ topic }: { topic: Topic }) {
           }}
           onNodeClick={(_, node) => {
             setSelectedId(node.id);
-            const data = node.data as FlowNodeData;
-            const vocab = data.vocab;
-            const isBlank = Boolean(vocab.answer);
-            const alreadySolved = solvedIds.has(node.id);
-            if (!isBlank || alreadySolved) {
-              speakGerman(vocab.label.replace("___", vocab.answer ?? ""));
-            }
+            const { vocab } = node.data as FlowNodeData;
+            markNodeStudied(topic.slug, node.id);
+            speakGerman(vocab.label);
           }}
           onPaneClick={() => setSelectedId(null)}
           fitView
@@ -223,9 +212,6 @@ export default function MindMap({ topic }: { topic: Topic }) {
               <NodeDetailPanel
                 vocab={selectedVocab}
                 color={topic.color}
-                topicSlug={topic.slug}
-                solved={selectedId ? solvedIds.has(selectedId) : false}
-                onSolved={handleSolved}
                 onClose={() => setSelectedId(null)}
               />
             </div>

@@ -17,10 +17,10 @@ const topic: Topic = {
         label: "Arten von ehrenamtlicher Arbeit",
         meaning: "các hình thức hoạt động tình nguyện",
         children: [
-          { id: "sozialarbeit", label: "die soziale ___", meaning: "công tác xã hội", answer: "Arbeit", note: "z. B. Altenheime, Obdachlosenhilfe besuchen." },
+          { id: "sozialarbeit", label: "die soziale Arbeit", meaning: "công tác xã hội", note: "z. B. Altenheime, Obdachlosenhilfe besuchen." },
           { id: "umweltschutz-ehrenamt", label: "sich im Umweltschutz engagieren", meaning: "tham gia hoạt động bảo vệ môi trường", synonyms: ["Müllsammelaktionen organisieren"] },
           { id: "nachhilfe", label: "kostenlose Nachhilfe geben", meaning: "dạy kèm miễn phí", note: "häufig für Kinder aus einkommensschwachen Familien." },
-          { id: "katastrophenhilfe", label: "die ___", meaning: "cứu trợ thiên tai", answer: "Katastrophenhilfe", synonyms: ["die Nothilfe"] },
+          { id: "katastrophenhilfe", label: "die Katastrophenhilfe", meaning: "cứu trợ thiên tai", synonyms: ["die Nothilfe"] },
         ],
       },
       {
@@ -31,7 +31,7 @@ const topic: Topic = {
           { id: "sinnstiftung", label: "eine sinnstiftende Tätigkeit", meaning: "công việc mang lại ý nghĩa", note: "sinnstiftend = tạo ra ý nghĩa cho bản thân người làm." },
           { id: "gesellschaft-mitgestalten", label: "die Gesellschaft mitgestalten", meaning: "góp phần định hình xã hội" },
           { id: "sozialekompetenz", label: "soziale Kompetenzen erwerben", meaning: "trau dồi kỹ năng xã hội", synonyms: ["soziale Fähigkeiten entwickeln"] },
-          { id: "dankbarkeit", label: "etwas an die Gesellschaft ___", meaning: "trả ơn/cống hiến lại cho xã hội", answer: "zurückgeben" },
+          { id: "dankbarkeit", label: "etwas an die Gesellschaft zurückgeben", meaning: "trả ơn/cống hiến lại cho xã hội" },
         ],
       },
       {
@@ -41,7 +41,7 @@ const topic: Topic = {
         children: [
           { id: "verein", label: "der gemeinnützige Verein", meaning: "hội/đoàn phi lợi nhuận", note: "gemeinnützig = vì lợi ích công cộng, được miễn thuế." },
           { id: "freiwilligendienst", label: "ein freiwilliges soziales Jahr (FSJ) leisten", meaning: "tham gia một năm phục vụ xã hội tự nguyện" },
-          { id: "ehrenamtskarte", label: "die ___", meaning: "thẻ ưu đãi cho người tình nguyện", answer: "Ehrenamtskarte", note: "nhiều bang ở Đức cấp thẻ này để tri ân người tình nguyện." },
+          { id: "ehrenamtskarte", label: "die Ehrenamtskarte", meaning: "thẻ ưu đãi cho người tình nguyện", note: "nhiều bang ở Đức cấp thẻ này để tri ân người tình nguyện." },
           { id: "koordination", label: "die Koordination der Freiwilligen", meaning: "sự điều phối tình nguyện viên", synonyms: ["das Freiwilligenmanagement"] },
         ],
       },

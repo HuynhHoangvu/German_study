@@ -111,7 +111,3 @@ export function countNodes(node: Topic["root"]): number {
   return 1 + (node.children?.reduce((sum, c) => sum + countNodes(c), 0) ?? 0);
 }
 
-export function countBlanks(node: Topic["root"]): number {
-  const own = node.answer ? 1 : 0;
-  return own + (node.children?.reduce((sum, c) => sum + countBlanks(c), 0) ?? 0);
-}

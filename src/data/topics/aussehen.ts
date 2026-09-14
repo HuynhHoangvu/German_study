@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "phong cách ăn mặc",
         children: [
           { id: "leger", label: "leger gekleidet sein", meaning: "ăn mặc thoải mái, không trang trọng", synonyms: ["lässig gekleidet sein"], note: "trái nghĩa với 'schick' hoặc 'seriös' gekleidet sein." },
-          { id: "seriös", label: "einen ___ Eindruck hinterlassen", meaning: "để lại ấn tượng nghiêm túc/chỉn chu", answer: "seriösen", note: "thường dùng khi nói về trang phục công sở, phỏng vấn." },
+          { id: "seriös", label: "einen seriösen Eindruck hinterlassen", meaning: "để lại ấn tượng nghiêm túc/chỉn chu", note: "thường dùng khi nói về trang phục công sở, phỏng vấn." },
           { id: "modebewusst", label: "modebewusst", meaning: "am hiểu thời trang, chú ý mốt", synonyms: ["stilbewusst"] },
           { id: "outfit", label: "das Outfit auf einen Anlass abstimmen", meaning: "chọn trang phục phù hợp với dịp/hoàn cảnh", note: "'abstimmen auf + Akk.' = điều chỉnh cho phù hợp với." },
         ],
@@ -28,7 +28,7 @@ const topic: Topic = {
         label: "Körperbild & Selbstbild",
         meaning: "hình ảnh cơ thể & nhận thức bản thân",
         children: [
-          { id: "schoenheitsideal", label: "das gesellschaftliche ___", meaning: "chuẩn mực đẹp của xã hội", answer: "Schönheitsideal", note: "hình mẫu về cái đẹp mà xã hội đề cao, thường bị chỉ trích là phi thực tế." },
+          { id: "schoenheitsideal", label: "das gesellschaftliche Schönheitsideal", meaning: "chuẩn mực đẹp của xã hội", note: "hình mẫu về cái đẹp mà xã hội đề cao, thường bị chỉ trích là phi thực tế." },
           { id: "selbstbewusstsein", label: "das Selbstbewusstsein stärken", meaning: "củng cố sự tự tin" },
           { id: "unsicherheit", label: "unter Körperunsicherheiten leiden", meaning: "chịu đựng sự thiếu tự tin về ngoại hình", synonyms: ["mit dem eigenen Körper hadern"] },
           { id: "druck", label: "der gesellschaftliche Schönheitsdruck", meaning: "áp lực về ngoại hình từ xã hội", note: "áp lực phải phù hợp với chuẩn mực đẹp, thường lan truyền qua mạng xã hội." },

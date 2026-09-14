@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "hệ thống giáo dục",
         children: [
           { id: "grundschule", label: "die Grundschule", meaning: "trường tiểu học" },
-          { id: "gymnasium", label: "das ___", meaning: "trường trung học (hướng đại học)", answer: "Gymnasium" },
+          { id: "gymnasium", label: "das Gymnasium", meaning: "trường trung học (hướng đại học)" },
           { id: "ausbildung", label: "die duale Berufsausbildung", meaning: "học nghề song hành (lý thuyết và thực hành)", note: "kết hợp học tại trường nghề và thực tập tại doanh nghiệp." },
           { id: "studium", label: "das Studium", meaning: "việc học đại học", note: "ein Studium absolvieren/aufnehmen = hoàn thành/bắt đầu việc học đại học." },
         ],
@@ -37,7 +37,7 @@ const topic: Topic = {
         label: "Probleme",
         meaning: "vấn đề",
         children: [
-          { id: "chancenungleichheit", label: "die ___", meaning: "bất bình đẳng cơ hội", answer: "Chancenungleichheit", note: "Chance (cơ hội) + Ungleichheit (sự bất bình đẳng)." },
+          { id: "chancenungleichheit", label: "die Chancenungleichheit", meaning: "bất bình đẳng cơ hội", note: "Chance (cơ hội) + Ungleichheit (sự bất bình đẳng)." },
           { id: "lehrermangel", label: "der akute Lehrermangel", meaning: "tình trạng thiếu giáo viên trầm trọng" },
           { id: "leistungsdruck", label: "der Leistungsdruck", meaning: "áp lực thành tích", synonyms: ["der Notendruck"], note: "unter Leistungsdruck stehen/leiden." },
         ],
@@ -49,7 +49,7 @@ const topic: Topic = {
         children: [
           { id: "weiterbildung", label: "die berufliche Weiterbildung", meaning: "đào tạo chuyên môn nâng cao" },
           { id: "onlinekurse", label: "digitale Lernangebote", meaning: "các khóa học/nội dung học trực tuyến", synonyms: ["die Onlinekurse"] },
-          { id: "fremdsprachen", label: "___ erlernen", meaning: "trau dồi ngoại ngữ", answer: "Fremdsprachen" },
+          { id: "fremdsprachen", label: "Fremdsprachen erlernen", meaning: "trau dồi ngoại ngữ" },
         ],
       },
       {

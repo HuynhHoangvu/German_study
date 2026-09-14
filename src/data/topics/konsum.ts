@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "thói quen mua sắm",
         children: [
           { id: "onlineshopping", label: "der Online-Konsum", meaning: "tiêu dùng trực tuyến", synonyms: ["das Online-Shopping"] },
-          { id: "werbung", label: "die ___", meaning: "quảng cáo", answer: "Werbung", synonyms: ["die Reklame"], note: "gezielte Werbung = quảng cáo nhắm mục tiêu." },
+          { id: "werbung", label: "die Werbung", meaning: "quảng cáo", synonyms: ["die Reklame"], note: "gezielte Werbung = quảng cáo nhắm mục tiêu." },
           { id: "impulskauf", label: "der Impulskauf", meaning: "mua sắm bốc đồng", note: "Impuls (bốc đồng) + Kauf (việc mua): eine spontane Kaufentscheidung ohne vorheriges Abwägen." },
         ],
       },
@@ -28,7 +28,7 @@ const topic: Topic = {
         meaning: "tài chính",
         children: [
           { id: "sparen", label: "Rücklagen bilden", meaning: "tích lũy khoản dự phòng", synonyms: ["das Sparen"] },
-          { id: "schulden", label: "die ___", meaning: "nợ nần", answer: "Schulden", note: "in die Schulden geraten = lâm vào cảnh nợ nần; verschuldet sein = bị mắc nợ." },
+          { id: "schulden", label: "die Schulden", meaning: "nợ nần", note: "in die Schulden geraten = lâm vào cảnh nợ nần; verschuldet sein = bị mắc nợ." },
           { id: "kredit", label: "der Kredit", meaning: "khoản vay", synonyms: ["das Darlehen"] },
           { id: "budget", label: "ein Budget veranschlagen", meaning: "dự trù ngân sách", synonyms: ["das Budget planen"] },
         ],
@@ -39,7 +39,7 @@ const topic: Topic = {
         meaning: "xã hội tiêu dùng",
         children: [
           { id: "ueberkonsum", label: "der Überkonsum", meaning: "tiêu dùng quá mức" },
-          { id: "nachhaltiger", label: "___ konsumieren", meaning: "tiêu dùng bền vững", answer: "nachhaltig" },
+          { id: "nachhaltiger", label: "nachhaltig konsumieren", meaning: "tiêu dùng bền vững" },
           { id: "wegwerfgesellschaft", label: "die Wegwerfgesellschaft", meaning: "xã hội tiêu xài rồi vứt bỏ" },
         ],
       },

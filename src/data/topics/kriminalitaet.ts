@@ -19,7 +19,7 @@ const topic: Topic = {
         children: [
           { id: "diebstahl", label: "der Diebstahl", meaning: "sự trộm cắp", synonyms: ["der Klau (ugs.)", "der Raub"] },
           { id: "einbruch", label: "der Einbruch", meaning: "sự đột nhập", synonyms: ["der Einbruchsdiebstahl"] },
-          { id: "betrug", label: "der ___", meaning: "sự lừa đảo", answer: "Betrug", note: "Er wurde wegen Betrugs angeklagt." },
+          { id: "betrug", label: "der Betrug", meaning: "sự lừa đảo", note: "Er wurde wegen Betrugs angeklagt." },
           { id: "gewalt", label: "die Gewaltverbrechen", meaning: "tội phạm bạo lực" },
           { id: "cyberkrim", label: "die Cyberkriminalität", meaning: "tội phạm mạng" },
         ],
@@ -30,7 +30,7 @@ const topic: Topic = {
         meaning: "nguyên nhân",
         children: [
           { id: "armut", label: "die Armut", meaning: "nghèo đói", synonyms: ["die Not"] },
-          { id: "arbeitslosigkeit", label: "die ___", meaning: "thất nghiệp", answer: "Arbeitslosigkeit" },
+          { id: "arbeitslosigkeit", label: "die Arbeitslosigkeit", meaning: "thất nghiệp" },
           { id: "drogen", label: "die Drogensucht", meaning: "nghiện ma túy" },
           { id: "erziehung", label: "unzureichende Erziehung", meaning: "giáo dục không đầy đủ", synonyms: ["mangelnde Erziehung"] },
           { id: "ungleichheit", label: "die soziale Ungleichheit", meaning: "bất bình đẳng xã hội", note: "oft in Verbindung mit 'soziale Verwahrlosung' (sự sao nhãng xã hội)." },
@@ -52,7 +52,7 @@ const topic: Topic = {
         meaning: "phòng chống",
         children: [
           { id: "polizei", label: "die Polizeipräsenz erhöhen", meaning: "tăng cường cảnh sát" },
-          { id: "praevention", label: "die ___", meaning: "phòng ngừa", answer: "Prävention" },
+          { id: "praevention", label: "die Prävention", meaning: "phòng ngừa" },
           { id: "strafen", label: "strengere Strafen", meaning: "hình phạt nghiêm khắc hơn", synonyms: ["härtere Sanktionen"] },
           { id: "resozial", label: "die Resozialisierung", meaning: "tái hòa nhập xã hội" },
         ],

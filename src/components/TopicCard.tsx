@@ -6,13 +6,13 @@ import { Topic } from "@/types/topic";
 import { getTopicProgress } from "@/lib/progress";
 import { getTopicIcon } from "@/lib/icons";
 
-export default function TopicCard({ topic, totalBlanks }: { topic: Topic; totalBlanks: number }) {
+export default function TopicCard({ topic, totalNodes }: { topic: Topic; totalNodes: number }) {
   const [progress, setProgress] = useState(0);
   const Icon = getTopicIcon(topic.slug);
 
   useEffect(() => {
-    setProgress(getTopicProgress(topic.slug, totalBlanks));
-  }, [topic.slug, totalBlanks]);
+    setProgress(getTopicProgress(topic.slug, totalNodes));
+  }, [topic.slug, totalNodes]);
 
   return (
     <Link

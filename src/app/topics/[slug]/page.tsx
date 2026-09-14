@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getTopic, topics, countBlanks, countNodes } from "@/data/topics";
+import { getTopic, topics, countNodes } from "@/data/topics";
 import MindMap from "@/components/MindMap";
 import VisitTracker from "@/components/VisitTracker";
 import { getTopicIcon } from "@/lib/icons";
@@ -18,7 +18,6 @@ export default async function TopicPage({
   const topic = getTopic(slug);
   if (!topic) notFound();
 
-  const blanks = countBlanks(topic.root);
   const nodeCount = countNodes(topic.root);
   const Icon = getTopicIcon(topic.slug);
 
@@ -53,13 +52,12 @@ export default async function TopicPage({
         </div>
         <div className="text-xs text-neutral-400 text-right">
           <div>{nodeCount} nút từ vựng</div>
-          <div>{blanks} bài điền từ</div>
         </div>
       </div>
 
       <p className="mt-4 text-xs text-neutral-400">
-        💡 Chạm/nhấp vào một nhánh để xem nghĩa, từ đồng nghĩa, ghi chú ở khung bên dưới — hoặc
-        điền từ còn thiếu nếu có ô trống.
+        💡 Chạm/nhấp vào một nhánh để xem nghĩa, định nghĩa tiếng Đức, ghi chú và câu ví dụ —
+        bấm 🔊 để nghe phát âm.
       </p>
 
       <div className="mt-4">

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Deutsch Mindmap | Ôn tập tiếng Đức B2",
   description:
-    "Hệ thống mindmap học tiếng Đức theo chủ đề: từ vựng, đồng nghĩa, ghi chú và bài tập điền từ cho trình độ B2.",
+    "Hệ thống mindmap học tiếng Đức theo chủ đề: từ vựng, đồng nghĩa, ghi chú, định nghĩa tiếng Đức và câu ví dụ cho trình độ B2.",
 };
 
 export default function RootLayout({

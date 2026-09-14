@@ -6,7 +6,7 @@ export type Example = {
 
 export type VocabNode = {
   id: string;
-  /** German label. Use "___" inside the label to mark a fill-in-the-blank spot. */
+  /** German label. */
   label: string;
   /** Vietnamese meaning */
   meaning?: string;
@@ -18,8 +18,6 @@ export type VocabNode = {
   note?: string;
   /** Example sentences shown as "Beispiel 1, Beispiel 2, …" */
   examples?: Example[];
-  /** If set, this node is a fill-in-the-blank exercise; answer is checked against user input */
-  answer?: string;
   children?: VocabNode[];
 };
 

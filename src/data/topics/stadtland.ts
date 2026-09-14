@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "thành thị: ưu điểm",
         children: [
           { id: "arbeitsmoeglichkeiten", label: "ein breites Spektrum an Arbeitsmöglichkeiten", meaning: "phổ rộng các cơ hội việc làm", synonyms: ["gute Jobchancen"] },
-          { id: "unterhaltung", label: "ein vielfältiges ___sangebot", meaning: "danh mục giải trí đa dạng phong phú", answer: "Unterhaltung", note: "'Unterhaltungsangebot' = danh mục các hình thức giải trí sẵn có." },
+          { id: "unterhaltung", label: "ein vielfältiges Unterhaltungsangebot", meaning: "danh mục giải trí đa dạng phong phú", note: "'Unterhaltungsangebot' = danh mục các hình thức giải trí sẵn có." },
           { id: "infrastruktur", label: "eine gut ausgebaute Infrastruktur", meaning: "cơ sở hạ tầng được xây dựng tốt", note: "'ausgebaut' (đã được mở rộng/hoàn thiện) mang sắc thái cụ thể hơn 'gut'." },
         ],
       },
@@ -28,7 +28,7 @@ const topic: Topic = {
         meaning: "thành thị: nhược điểm",
         children: [
           { id: "lebenshaltungskosten", label: "exorbitant hohe Lebenshaltungskosten", meaning: "chi phí sinh hoạt cao đến mức phi lý", note: "Leben (cuộc sống) + Haltung (duy trì) + Kosten (chi phí); 'exorbitant' = quá mức, phi lý." },
-          { id: "luft-laerm", label: "Lärmbelästigung und ___", meaning: "ô nhiễm tiếng ồn và ô nhiễm không khí", answer: "Luftverschmutzung", note: "'Lärmbelästigung' (sự quấy nhiễu bởi tiếng ồn) trang trọng hơn 'Lärm'." },
+          { id: "luft-laerm", label: "Lärmbelästigung und Luftverschmutzung", meaning: "ô nhiễm tiếng ồn và ô nhiễm không khí", note: "'Lärmbelästigung' (sự quấy nhiễu bởi tiếng ồn) trang trọng hơn 'Lärm'." },
           { id: "stress2", label: "ein von Hektik geprägter Alltag", meaning: "cuộc sống thường ngày bị chi phối bởi sự vội vã, hối hả", synonyms: ["stressiger Alltag"] },
         ],
       },
@@ -38,7 +38,7 @@ const topic: Topic = {
         meaning: "nông thôn: ưu điểm",
         children: [
           { id: "ruhig", label: "beschaulich und idyllisch", meaning: "yên bình và thanh bình", synonyms: ["ruhig", "friedlich"], note: "'beschaulich' (thanh bình, tĩnh lặng) mang sắc thái văn chương hơn 'ruhig'." },
-          { id: "frischeluft", label: "unverfälschte ___", meaning: "không khí trong lành, chưa bị ô nhiễm", answer: "Luft", note: "'unverfälscht' = nguyên chất, không bị pha tạp." },
+          { id: "frischeluft", label: "unverfälschte Luft", meaning: "không khí trong lành, chưa bị ô nhiễm", note: "'unverfälscht' = nguyên chất, không bị pha tạp." },
           { id: "gemeinschaft", label: "ein enger Gemeinschaftssinn", meaning: "ý thức cộng đồng gắn kết", synonyms: ["ein starker Zusammenhalt"] },
         ],
       },
@@ -48,7 +48,7 @@ const topic: Topic = {
         meaning: "nông thôn: nhược điểm",
         children: [
           { id: "wenigerjobs", label: "ein eingeschränktes Arbeitsplatzangebot", meaning: "nguồn việc làm bị hạn chế", synonyms: ["weniger Jobangebote"] },
-          { id: "anbindung", label: "eine mangelhafte ___ an den ÖPNV", meaning: "kết nối giao thông công cộng thiếu sót/kém", answer: "Anbindung", note: "an + binden (kết nối): mức độ dễ tiếp cận phương tiện công cộng; 'mangelhaft' trang trọng hơn 'schlecht'." },
+          { id: "anbindung", label: "eine mangelhafte Anbindung an den ÖPNV", meaning: "kết nối giao thông công cộng thiếu sót/kém", note: "an + binden (kết nối): mức độ dễ tiếp cận phương tiện công cộng; 'mangelhaft' trang trọng hơn 'schlecht'." },
           { id: "langeweile", label: "mangelnde Abwechslung", meaning: "thiếu sự đổi mới, đơn điệu", synonyms: ["die Langeweile", "eintönig"] },
         ],
       },

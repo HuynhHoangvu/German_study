@@ -6,12 +6,6 @@ import { ChevronRight, ChevronDown } from "lucide-react";
 import { FlowNodeData } from "@/lib/layout";
 import { getBranchIcon } from "@/lib/icons";
 
-function splitBlank(label: string): [string, string] {
-  const idx = label.indexOf("___");
-  if (idx === -1) return [label, ""];
-  return [label.slice(0, idx), label.slice(idx + 3)];
-}
-
 /**
  * In the radial layout an edge can arrive from any direction, so every node
  * offers a handle on all four sides; the layout picks the matching one.
@@ -48,35 +42,14 @@ function RadialHandles({ color }: { color: string }) {
 }
 
 export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNodeData>) {
-  const { vocab, depth, color, branchColor, branchIndex, solved, hasChildren, collapsed, childCount, onToggleCollapse, radial, circle } = data;
+  const { vocab, depth, color, branchColor, branchIndex, hasChildren, collapsed, childCount, onToggleCollapse, radial, circle } = data;
   const isRoot = depth === 0;
   const isBranch = depth === 1;
   const isLeaf = !vocab.children || vocab.children.length === 0;
-  const isBlank = Boolean(vocab.answer);
   const nodeColor = isRoot ? color : branchColor;
   const branchIcon = getBranchIcon(branchIndex);
 
-  const [before, after] = isBlank ? splitBlank(vocab.label) : [vocab.label, ""];
-
-  const text = (
-    <>
-      {isBlank ? (
-        <>
-          {before}
-          <span
-            className={`inline-block mx-0.5 px-1.5 rounded font-semibold ${
-              solved ? "bg-green-100 text-green-700" : "bg-amber-100 text-amber-700"
-            }`}
-          >
-            {solved ? vocab.answer : "____"}
-          </span>
-          {after}
-        </>
-      ) : (
-        vocab.label
-      )}
-    </>
-  );
+  const text = vocab.label;
 
   // Radial root: the big circle in the middle of the poster-style mindmap.
   if (circle) {

@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "thói quen xấu",
         children: [
           { id: "junkfood", label: "sich übermäßig von Fast Food ernähren", meaning: "ăn quá nhiều đồ ăn nhanh", synonyms: ["einseitige Ernährung"] },
-          { id: "bewegungsmangel", label: "der ___", meaning: "thiếu vận động", answer: "Bewegungsmangel", note: "Bewegung (vận động) + Mangel (sự thiếu hụt); Genitivobjekt: Mangel an Bewegung." },
+          { id: "bewegungsmangel", label: "der Bewegungsmangel", meaning: "thiếu vận động", note: "Bewegung (vận động) + Mangel (sự thiếu hụt); Genitivobjekt: Mangel an Bewegung." },
           { id: "rauchen", label: "der Nikotinkonsum", meaning: "việc hút thuốc/tiêu thụ nicotin", synonyms: ["das Rauchen"] },
           { id: "stress", label: "die chronische Erschöpfung", meaning: "kiệt sức mãn tính", synonyms: ["der Dauerstress"] },
           { id: "schlafmangel", label: "der Schlafmangel", meaning: "thiếu ngủ", synonyms: ["die Schlafdefizite"] },
@@ -40,7 +40,7 @@ const topic: Topic = {
         meaning: "vấn đề sức khỏe",
         children: [
           { id: "uebergewicht", label: "das Übergewicht", meaning: "béo phì", synonyms: ["die Fettleibigkeit"] },
-          { id: "diabetes", label: "der ___", meaning: "tiểu đường", answer: "Diabetes", synonyms: ["die Zuckerkrankheit"] },
+          { id: "diabetes", label: "der Diabetes", meaning: "tiểu đường", synonyms: ["die Zuckerkrankheit"] },
           { id: "herzkrankheit", label: "die Herzkrankheit", meaning: "bệnh tim mạch", synonyms: ["die Herzerkrankung"] },
           { id: "schlafstoerung", label: "die Schlafstörung", meaning: "rối loạn giấc ngủ" },
           { id: "bluthochdruck", label: "der Bluthochdruck", meaning: "cao huyết áp", note: "auch: der erhöhte Blutdruck." },
@@ -53,7 +53,7 @@ const topic: Topic = {
         children: [
           { id: "sport", label: "sich körperlich betätigen", meaning: "vận động thể chất thường xuyên", synonyms: ["regelmäßig Sport treiben"] },
           { id: "ernaehrung", label: "eine ausgewogene Ernährung praktizieren", meaning: "duy trì chế độ ăn cân bằng" },
-          { id: "vorsorge", label: "die ___", meaning: "khám sức khỏe định kỳ", answer: "Vorsorgeuntersuchung", note: "auch: die Früherkennungsuntersuchung." },
+          { id: "vorsorge", label: "die Vorsorgeuntersuchung", meaning: "khám sức khỏe định kỳ", note: "auch: die Früherkennungsuntersuchung." },
         ],
       },
       {

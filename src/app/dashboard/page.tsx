@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BookOpen, Headphones, PenLine, Mic } from "lucide-react";
-import { topics, countBlanks } from "@/data/topics";
+import { topics, countNodes } from "@/data/topics";
 import { getTopicIcon } from "@/lib/icons";
 import RandomTopicButton from "@/components/RandomTopicButton";
 import SuggestionCard from "@/components/SuggestionCard";
@@ -30,9 +30,9 @@ export default function DashboardPage() {
   const [allProgress, setAllProgress] = useState<TopicProgressInfo[]>([]);
 
   useEffect(() => {
-    setStats(getOverallStats(topics, countBlanks));
-    setSuggestions(getSuggestions(topics, countBlanks, 3));
-    setAllProgress(getAllTopicsProgress(topics, countBlanks));
+    setStats(getOverallStats(topics, countNodes));
+    setSuggestions(getSuggestions(topics, countNodes, 3));
+    setAllProgress(getAllTopicsProgress(topics, countNodes));
   }, []);
 
   return (

@@ -19,7 +19,7 @@ const topic: Topic = {
         children: [
           { id: "hund", label: "der Hund", meaning: "con chó", note: "gilt als 'der beste Freund des Menschen'." },
           { id: "katze", label: "die Katze", meaning: "con mèo", synonyms: ["der Stubentiger"], note: "'der Stubentiger' = cách gọi thân mật, hài hước cho mèo nhà." },
-          { id: "kleintier", label: "das ___", meaning: "thú nhỏ (chuột lang, thỏ...)", answer: "Kleintier", synonyms: ["das Nagetier"] },
+          { id: "kleintier", label: "das Kleintier", meaning: "thú nhỏ (chuột lang, thỏ...)", synonyms: ["das Nagetier"] },
           { id: "exotisch", label: "exotische Haustiere halten", meaning: "nuôi thú cưng ngoại lai", note: "z.B. Reptilien, Spinnen; rechtlich oft eingeschränkt." },
         ],
       },
@@ -29,7 +29,7 @@ const topic: Topic = {
         meaning: "trách nhiệm và chăm sóc",
         children: [
           { id: "artgerecht", label: "ein Tier artgerecht halten", meaning: "nuôi động vật đúng theo tập tính của loài", note: "'artgerecht' = phù hợp với đặc tính tự nhiên của loài vật." },
-          { id: "tierarzt2", label: "regelmäßig zum ___ gehen", meaning: "đi khám thú y định kỳ", answer: "Tierarzt" },
+          { id: "tierarzt2", label: "regelmäßig zum Tierarzt gehen", meaning: "đi khám thú y định kỳ" },
           { id: "impfung", label: "die Impfung", meaning: "việc tiêm phòng", synonyms: ["die Schutzimpfung"] },
           { id: "verantwortungsvoll2", label: "eine verantwortungsvolle Tierhaltung", meaning: "việc nuôi thú cưng có trách nhiệm", note: "bao gồm cả 'artgerechte Ernährung' und 'ausreichend Bewegung'." },
         ],
@@ -40,7 +40,7 @@ const topic: Topic = {
         meaning: "thú cưng và xã hội",
         children: [
           { id: "tierschutz", label: "der Tierschutz", meaning: "việc bảo vệ động vật", synonyms: ["der Tierschutzverein"], note: "einem 'Tierheim' Tiere abnehmen = nhận nuôi từ trại cứu hộ." },
-          { id: "tierheim", label: "ein Tier aus dem ___ adoptieren", meaning: "nhận nuôi thú từ trại cứu hộ", answer: "Tierheim" },
+          { id: "tierheim", label: "ein Tier aus dem Tierheim adoptieren", meaning: "nhận nuôi thú từ trại cứu hộ" },
           { id: "vermenschlichung", label: "die Vermenschlichung von Haustieren", meaning: "sự nhân cách hóa thú cưng", note: "xu hướng đối xử với thú cưng như con người, ví dụ mặc quần áo, tổ chức sinh nhật." },
           { id: "allergie2", label: "eine Tierhaarallergie", meaning: "dị ứng lông thú", note: "phổ biến ở trẻ em, cần cân nhắc trước khi nuôi thú." },
         ],

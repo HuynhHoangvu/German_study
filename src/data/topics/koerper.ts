@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "cơ quan nội tạng",
         children: [
           { id: "herz", label: "das Herz", meaning: "tim", synonyms: ["das Herzorgan"], note: "medizinisch: kardial (Adjektiv), z. B. kardiale Beschwerden." },
-          { id: "lunge", label: "die ___", meaning: "phổi", answer: "Lunge", note: "medizinisch: die Atmungsorgane, pulmonal (Adjektiv)." },
+          { id: "lunge", label: "die Lunge", meaning: "phổi", note: "medizinisch: die Atmungsorgane, pulmonal (Adjektiv)." },
           { id: "magen", label: "der Magen", meaning: "dạ dày", note: "medizinisch: gastral (Adjektiv), z. B. gastrale Beschwerden." },
           { id: "niere", label: "die Niere", meaning: "thận", note: "medizinisch: renal (Adjektiv), z. B. eine renale Erkrankung." },
           { id: "leber", label: "die Leber", meaning: "gan", note: "medizinisch: hepatisch (Adjektiv), z. B. eine hepatische Funktionsstörung." },
@@ -30,7 +30,7 @@ const topic: Topic = {
         meaning: "xương & khớp",
         children: [
           { id: "knochen", label: "der Knochen", meaning: "xương", synonyms: ["das Skelettteil"] },
-          { id: "wirbelsaeule", label: "die ___", meaning: "cột sống", answer: "Wirbelsäule", note: "Wirbel (đốt sống) + Säule (cột)." },
+          { id: "wirbelsaeule", label: "die Wirbelsäule", meaning: "cột sống", note: "Wirbel (đốt sống) + Säule (cột)." },
           { id: "gelenk", label: "das Gelenk", meaning: "khớp", note: "medizinisch: artikulär (Adjektiv)." },
           { id: "muskel", label: "der Muskel", meaning: "cơ bắp", synonyms: ["die Muskulatur"] },
         ],
@@ -41,7 +41,7 @@ const topic: Topic = {
         meaning: "bộ phận cơ thể bên ngoài",
         children: [
           { id: "kopf", label: "der Kopf", meaning: "đầu", synonyms: ["der Schädel"] },
-          { id: "brustkorb", label: "der ___", meaning: "lồng ngực", answer: "Brustkorb", note: "Brust (ngực) + Korb (cái giỏ/lồng); medizinisch: der Thorax." },
+          { id: "brustkorb", label: "der Brustkorb", meaning: "lồng ngực", note: "Brust (ngực) + Korb (cái giỏ/lồng); medizinisch: der Thorax." },
           { id: "gliedmassen", label: "die Gliedmaßen", meaning: "tứ chi", synonyms: ["die Extremitäten"] },
         ],
       },

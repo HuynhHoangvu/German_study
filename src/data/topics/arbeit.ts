@@ -18,7 +18,7 @@ const topic: Topic = {
         meaning: "hồ sơ xin việc",
         children: [
           { id: "lebenslauf", label: "der tabellarische Lebenslauf", meaning: "sơ yếu lý lịch dạng bảng", synonyms: ["der CV"], note: "in Bewerbungen üblich: übersichtlich in Tabellenform, nicht als Fließtext." },
-          { id: "anschreiben", label: "das ___", meaning: "thư xin việc (trình bày động cơ)", answer: "Anschreiben", synonyms: ["das Motivationsschreiben"] },
+          { id: "anschreiben", label: "das Anschreiben", meaning: "thư xin việc (trình bày động cơ)", synonyms: ["das Motivationsschreiben"] },
           { id: "vorstellungsgespraech", label: "das Vorstellungsgespräch", meaning: "buổi phỏng vấn", synonyms: ["das Bewerbungsgespräch", "das Auswahlgespräch"] },
           { id: "qualifikation", label: "die fachliche Qualifikation", meaning: "trình độ chuyên môn", note: "fachlich = thuộc về chuyên môn, thường đi kèm 'Qualifikation', 'Kompetenz'." },
         ],
@@ -30,7 +30,7 @@ const topic: Topic = {
         children: [
           { id: "vollzeit", label: "eine Vollzeitstelle bekleiden", meaning: "đảm nhận một vị trí toàn thời gian", note: "'eine Stelle bekleiden' = trang trọng hơn 'haben'." },
           { id: "teilzeit", label: "die Teilzeitbeschäftigung", meaning: "việc làm bán thời gian" },
-          { id: "homeoffice", label: "im ___ arbeiten", meaning: "làm việc tại nhà", answer: "Homeoffice" },
+          { id: "homeoffice", label: "im Homeoffice arbeiten", meaning: "làm việc tại nhà" },
           { id: "selbststaendig", label: "freiberuflich tätig sein", meaning: "hành nghề tự do", synonyms: ["selbstständig arbeiten"] },
         ],
       },
@@ -50,7 +50,7 @@ const topic: Topic = {
         meaning: "cân bằng cuộc sống - công việc",
         children: [
           { id: "flexible", label: "flexible Arbeitszeitmodelle", meaning: "các mô hình giờ làm việc linh hoạt" },
-          { id: "urlaub", label: "ausreichend ___", meaning: "đủ ngày nghỉ", answer: "Urlaub" },
+          { id: "urlaub", label: "ausreichend Urlaub", meaning: "đủ ngày nghỉ" },
           { id: "erholung", label: "die Erholung", meaning: "sự nghỉ ngơi hồi phục", note: "sich erholen von + Dat. = hồi phục sau việc gì." },
         ],
       },

@@ -19,7 +19,7 @@ const topic: Topic = {
         children: [
           { id: "auto", label: "der Individualverkehr", meaning: "giao thông cá nhân (ô tô riêng)", synonyms: ["der Wagen", "der PKW"] },
           { id: "zug", label: "der Fernverkehrszug", meaning: "tàu hỏa (đường dài)", synonyms: ["der Regionalzug"] },
-          { id: "fahrrad", label: "das ___", meaning: "xe đạp", answer: "Fahrrad" },
+          { id: "fahrrad", label: "das Fahrrad", meaning: "xe đạp" },
           { id: "bus", label: "der Linienbus", meaning: "xe buýt công cộng theo tuyến" },
           { id: "oepnv", label: "der ÖPNV", meaning: "phương tiện công cộng", note: "Abkürzung für 'öffentlicher Personennahverkehr'; oft in Kollokationen wie 'den ÖPNV ausbauen/nutzen'." },
         ],
@@ -31,7 +31,7 @@ const topic: Topic = {
         children: [
           { id: "stau", label: "der Stau", meaning: "kẹt xe", synonyms: ["der Verkehrsstau"] },
           { id: "unfall", label: "der Verkehrsunfall", meaning: "tai nạn giao thông" },
-          { id: "laerm", label: "der ___", meaning: "tiếng ồn", answer: "Lärm" },
+          { id: "laerm", label: "der Lärm", meaning: "tiếng ồn" },
           { id: "abgase", label: "die Abgase", meaning: "khí thải", synonyms: ["die Emissionen"] },
           { id: "parkplatzmangel", label: "der Parkplatzmangel", meaning: "thiếu chỗ đỗ xe", note: "Parkplatz (chỗ đỗ xe) + Mangel (sự thiếu hụt)." },
         ],
@@ -53,7 +53,7 @@ const topic: Topic = {
         children: [
           { id: "ausbau", label: "den ÖPNV konsequent ausbauen", meaning: "mở rộng giao thông công cộng một cách triệt để" },
           { id: "radwege", label: "das Radwegenetz erweitern", meaning: "mở rộng mạng lưới làn xe đạp" },
-          { id: "elektro", label: "die ___", meaning: "xe điện", answer: "Elektroautos" },
+          { id: "elektro", label: "die Elektroautos", meaning: "xe điện" },
           { id: "carsharing", label: "das Carsharing fördern", meaning: "khuyến khích mô hình chia sẻ xe" },
           { id: "tempolimit", label: "ein Tempolimit einführen", meaning: "áp dụng giới hạn tốc độ" },
         ],
