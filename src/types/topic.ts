@@ -23,8 +23,8 @@ export type VocabNode = {
   children?: VocabNode[];
 };
 
-/** Vocabulary topics vs. grammar / exam-language sections. */
-export type TopicCategory = "thema" | "grammatik";
+/** Vocabulary topics, grammar sections, and the per-preposition mindmaps. */
+export type TopicCategory = "thema" | "grammatik" | "praeposition";
 
 export type Topic = {
   slug: string;

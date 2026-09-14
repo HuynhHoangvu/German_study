@@ -1,4 +1,4 @@
-import { themaTopics, grammatikTopics, countBlanks } from "@/data/topics";
+import { themaTopics, grammatikTopics, praepositionTopics, countBlanks } from "@/data/topics";
 import TopicCard from "@/components/TopicCard";
 
 export default function Home() {
@@ -26,6 +26,20 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {themaTopics.map((topic) => (
+            <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-lg font-bold mb-1">Sơ đồ giới từ (Präpositionen)</h2>
+        <p className="text-sm text-neutral-500 mb-4">
+          Mỗi giới từ một sơ đồ riêng: giới từ + đúng cách (Akkusativ / Dativ / cả hai) ở trung
+          tâm, xung quanh là động từ và danh từ trình độ B2, kèm định nghĩa tiếng Đức và Beispiel
+          1 / Beispiel 2.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {praepositionTopics.map((topic) => (
             <TopicCard key={topic.slug} topic={topic} totalBlanks={countBlanks(topic.root)} />
           ))}
         </div>

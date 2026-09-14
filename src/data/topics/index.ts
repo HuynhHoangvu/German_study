@@ -32,6 +32,21 @@ import adjektivePraepositionen from "./adjektive-praepositionen";
 import konnektoren from "./konnektoren";
 import grammatikStrukturen from "./grammatik-strukturen";
 import redemittel from "./redemittel";
+import praepAuf from "./praep-auf";
+import praepAn from "./praep-an";
+import praepIn from "./praep-in";
+import praepUeber from "./praep-ueber";
+import praepVor from "./praep-vor";
+import praepUnter from "./praep-unter";
+import praepFuer from "./praep-fuer";
+import praepUm from "./praep-um";
+import praepGegen from "./praep-gegen";
+import praepMit from "./praep-mit";
+import praepVon from "./praep-von";
+import praepZu from "./praep-zu";
+import praepNach from "./praep-nach";
+import praepBei from "./praep-bei";
+import praepAus from "./praep-aus";
 
 export const topics: Topic[] = [
   gesundheit,
@@ -66,11 +81,27 @@ export const topics: Topic[] = [
   konnektoren,
   grammatikStrukturen,
   redemittel,
+  praepAuf,
+  praepAn,
+  praepIn,
+  praepUeber,
+  praepVor,
+  praepUnter,
+  praepFuer,
+  praepUm,
+  praepGegen,
+  praepMit,
+  praepVon,
+  praepZu,
+  praepNach,
+  praepBei,
+  praepAus,
 ];
 
-/** Topics grouped for the home page: vocabulary themes vs. grammar sections. */
+/** Topics grouped for the home page: vocabulary themes, grammar, preposition mindmaps. */
 export const themaTopics: Topic[] = topics.filter((t) => (t.category ?? "thema") === "thema");
 export const grammatikTopics: Topic[] = topics.filter((t) => t.category === "grammatik");
+export const praepositionTopics: Topic[] = topics.filter((t) => t.category === "praeposition");
 
 export function getTopic(slug: string): Topic | undefined {
   return topics.find((t) => t.slug === slug);

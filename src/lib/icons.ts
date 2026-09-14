@@ -42,6 +42,7 @@ import {
   SpellCheck,
   MessagesSquare,
   Sparkle,
+  Waypoints,
   type LucideIcon,
 } from "lucide-react";
 
@@ -80,7 +81,11 @@ export const topicIcons: Record<string, LucideIcon> = {
   redemittel: MessagesSquare,
 };
 
+/** Every per-preposition mindmap shares the same radial-mindmap icon. */
+const praepositionIcon: LucideIcon = Waypoints;
+
 export function getTopicIcon(slug: string): LucideIcon {
+  if (slug.startsWith("praep-")) return praepositionIcon;
   return topicIcons[slug] ?? Leaf;
 }
 
