@@ -8,6 +8,7 @@ const topic: Topic = {
   color: "#92400e",
   level: "B2",
   category: "praeposition",
+  layout: "radial",
   root: {
     id: "root",
     label: "um + Akkusativ",

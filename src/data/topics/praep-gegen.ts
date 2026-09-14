@@ -8,6 +8,7 @@ const topic: Topic = {
   color: "#9f1239",
   level: "B2",
   category: "praeposition",
+  layout: "radial",
   root: {
     id: "root",
     label: "gegen + Akkusativ",

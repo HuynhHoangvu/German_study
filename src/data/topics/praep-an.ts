@@ -8,6 +8,7 @@ const topic: Topic = {
   color: "#5b21b6",
   level: "B2",
   category: "praeposition",
+  layout: "radial",
   root: {
     id: "root",
     label: "an + Akk. / + Dat.",

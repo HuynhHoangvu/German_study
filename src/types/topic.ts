@@ -35,5 +35,11 @@ export type Topic = {
   level: "B1" | "B2" | "B1-B2";
   /** Defaults to "thema" when omitted. */
   category?: TopicCategory;
+  /**
+   * How the mindmap is drawn. "tree" (default) is the horizontal left-to-right
+   * layout; "radial" puts the root in a circle at the centre with its branches
+   * fanning out around it in all directions.
+   */
+  layout?: "tree" | "radial";
   root: VocabNode;
 };

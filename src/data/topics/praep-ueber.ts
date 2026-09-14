@@ -8,6 +8,7 @@ const topic: Topic = {
   color: "#a21caf",
   level: "B2",
   category: "praeposition",
+  layout: "radial",
   root: {
     id: "root",
     label: "über + Akkusativ",

@@ -13,7 +13,13 @@ import ReactFlow, {
 import { BookMarked, TrendingUp, Maximize2, Minimize2 } from "lucide-react";
 import "reactflow/dist/style.css";
 import { Topic, VocabNode } from "@/types/topic";
-import { buildFlow, FlowNodeData, getDefaultCollapsed, getAllCollapsibleIds } from "@/lib/layout";
+import {
+  buildFlow,
+  buildRadialFlow,
+  FlowNodeData,
+  getDefaultCollapsed,
+  getAllCollapsibleIds,
+} from "@/lib/layout";
 import VocabNodeComponent from "@/components/VocabNode";
 import NodeDetailPanel from "@/components/NodeDetailPanel";
 import { getSolvedBlanks } from "@/lib/progress";
@@ -66,6 +72,16 @@ export default function MindMap({ topic }: { topic: Topic }) {
     setCollapsedIds(getDefaultCollapsed(topic.root));
   }, [topic]);
 
+  // React Flow's initial `fitView` runs before the nodes have been measured,
+  // which leaves the wide radial maps overflowing the frame — refit once the
+  // first render has settled.
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      reactFlowInstance.current?.fitView({ padding: 0.12, duration: 300 });
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [topic]);
+
   const handleSolved = useCallback((id: string) => {
     setSolvedIds((prev) => new Set(prev).add(id));
   }, []);
@@ -104,7 +120,10 @@ export default function MindMap({ topic }: { topic: Topic }) {
   }, [allExpanded, allCollapsibleIds]);
 
   const { nodes: baseNodes, edges } = useMemo(
-    () => buildFlow(topic.root, topic.color, "LR", collapsedIds),
+    () =>
+      topic.layout === "radial"
+        ? buildRadialFlow(topic.root, topic.color, collapsedIds)
+        : buildFlow(topic.root, topic.color, "LR", collapsedIds),
     [topic, collapsedIds]
   );
 

@@ -12,8 +12,43 @@ function splitBlank(label: string): [string, string] {
   return [label.slice(0, idx), label.slice(idx + 3)];
 }
 
+/**
+ * In the radial layout an edge can arrive from any direction, so every node
+ * offers a handle on all four sides; the layout picks the matching one.
+ */
+function RadialHandles({ color }: { color: string }) {
+  const sides = [
+    ["top", Position.Top],
+    ["right", Position.Right],
+    ["bottom", Position.Bottom],
+    ["left", Position.Left],
+  ] as const;
+  return (
+    <>
+      {sides.map(([name, position]) => (
+        <Handle
+          key={`t-${name}`}
+          id={`t-${name}`}
+          type="target"
+          position={position}
+          style={{ background: color, opacity: 0 }}
+        />
+      ))}
+      {sides.map(([name, position]) => (
+        <Handle
+          key={`s-${name}`}
+          id={`s-${name}`}
+          type="source"
+          position={position}
+          style={{ background: color, opacity: 0 }}
+        />
+      ))}
+    </>
+  );
+}
+
 export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNodeData>) {
-  const { vocab, depth, color, branchColor, branchIndex, solved, hasChildren, collapsed, childCount, onToggleCollapse } = data;
+  const { vocab, depth, color, branchColor, branchIndex, solved, hasChildren, collapsed, childCount, onToggleCollapse, radial, circle } = data;
   const isRoot = depth === 0;
   const isBranch = depth === 1;
   const isLeaf = !vocab.children || vocab.children.length === 0;
@@ -43,6 +78,28 @@ export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNod
     </>
   );
 
+  // Radial root: the big circle in the middle of the poster-style mindmap.
+  if (circle) {
+    return (
+      <div
+        className={`relative flex h-full w-full items-center justify-center rounded-full text-center px-6 cursor-pointer select-none transition-all ${
+          selected ? "ring-4 ring-offset-2 ring-offset-[var(--background)] scale-[1.03]" : "shadow-lg hover:shadow-xl"
+        }`}
+        style={{
+          background: nodeColor,
+          color: "#fff",
+          border: "3px solid rgba(0,0,0,0.85)",
+          ...(selected ? ({ ["--tw-ring-color" as string]: nodeColor }) : {}),
+        }}
+      >
+        <RadialHandles color={nodeColor} />
+        <span className="font-bold text-[20px] sm:text-[24px] leading-tight whitespace-pre-line">
+          {vocab.label.replace(" + ", "\n+\n")}
+        </span>
+      </div>
+    );
+  }
+
   if (isLeaf) {
     return (
       <div
@@ -50,8 +107,14 @@ export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNod
           selected ? "bg-[var(--brand-soft)] scale-[1.04]" : "hover:bg-black/[0.03] dark:hover:bg-white/[0.06]"
         }`}
       >
-        <Handle type="target" position={Position.Left} style={{ background: nodeColor, opacity: 0 }} />
-        <Handle type="source" position={Position.Right} style={{ background: nodeColor, opacity: 0 }} />
+        {radial ? (
+          <RadialHandles color={nodeColor} />
+        ) : (
+          <>
+            <Handle type="target" position={Position.Left} style={{ background: nodeColor, opacity: 0 }} />
+            <Handle type="source" position={Position.Right} style={{ background: nodeColor, opacity: 0 }} />
+          </>
+        )}
         <span
           className="inline-block h-2.5 w-2.5 rounded-full border-[2.5px] shrink-0"
           style={{ borderColor: nodeColor, background: "var(--surface)" }}
@@ -74,8 +137,14 @@ export default function VocabNodeComponent({ data, selected }: NodeProps<FlowNod
         ...(selected ? ({ ["--tw-ring-color" as string]: nodeColor }) : {}),
       }}
     >
-      <Handle type="target" position={Position.Left} style={{ background: nodeColor, opacity: 0 }} />
-      <Handle type="source" position={Position.Right} style={{ background: nodeColor, opacity: 0 }} />
+      {radial ? (
+        <RadialHandles color={nodeColor} />
+      ) : (
+        <>
+          <Handle type="target" position={Position.Left} style={{ background: nodeColor, opacity: 0 }} />
+          <Handle type="source" position={Position.Right} style={{ background: nodeColor, opacity: 0 }} />
+        </>
+      )}
 
       {isBranch &&
         createElement(branchIcon, { size: 16, strokeWidth: 2.25, className: "shrink-0 opacity-90" })}

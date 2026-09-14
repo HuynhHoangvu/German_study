@@ -8,6 +8,7 @@ const topic: Topic = {
   color: "#c2410c",
   level: "B2",
   category: "praeposition",
+  layout: "radial",
   root: {
     id: "root",
     label: "für + Akkusativ",

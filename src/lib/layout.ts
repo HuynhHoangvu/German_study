@@ -1,5 +1,5 @@
 import dagre from "dagre";
-import { Edge, Node } from "reactflow";
+import { Edge, MarkerType, Node } from "reactflow";
 import { VocabNode } from "@/types/topic";
 
 const ROOT_SIZE = { width: 160, height: 60 };
@@ -34,6 +34,10 @@ export type FlowNodeData = {
   childCount: number;
   collapsed: boolean;
   onToggleCollapse?: () => void;
+  /** True when the node is drawn in the radial (circular) layout. */
+  radial?: boolean;
+  /** The radial root is drawn as a big circle in the centre. */
+  circle?: boolean;
 };
 
 /**
@@ -65,6 +69,159 @@ export function getAllCollapsibleIds(root: VocabNode): Set<string> {
   }
   walk(root);
   return ids;
+}
+
+const RADIAL_ROOT_SIZE = { width: 240, height: 240 };
+
+/** Minimum arc length (px) reserved for each leaf on the outer ring. */
+const RADIAL_MIN_ARC = 215;
+
+function radialSizeForDepth(depth: number) {
+  if (depth === 0) return RADIAL_ROOT_SIZE;
+  if (depth === 1) return BRANCH_SIZE;
+  return LEAF_SIZE;
+}
+
+type RadialSide = "top" | "right" | "bottom" | "left";
+
+const OPPOSITE_SIDE: Record<RadialSide, RadialSide> = {
+  top: "bottom",
+  bottom: "top",
+  left: "right",
+  right: "left",
+};
+
+/** Which side of a node faces the given direction. */
+function sideForDirection(dx: number, dy: number): RadialSide {
+  if (Math.abs(dx) >= Math.abs(dy)) return dx >= 0 ? "right" : "left";
+  return dy >= 0 ? "bottom" : "top";
+}
+
+type RadialTreeNode = {
+  vocab: VocabNode;
+  depth: number;
+  branchColor: string;
+  branchIndex: number;
+  parentId?: string;
+  collapsed: boolean;
+  hasChildren: boolean;
+  children: RadialTreeNode[];
+  /** Number of visible leaves below this node — drives its angular share. */
+  leafCount: number;
+};
+
+/**
+ * Radial mind-map layout, matching the classic "preposition in a circle,
+ * verbs radiating outwards" poster style: the root sits in the centre as a
+ * circle, and every branch gets an angular sector sized by how many leaves
+ * it contains, so the outer ring is evenly spaced.
+ */
+export function buildRadialFlow(
+  root: VocabNode,
+  color: string,
+  collapsedIds: Set<string> = new Set()
+): { nodes: Node<FlowNodeData>[]; edges: Edge[] } {
+  function build(
+    vocab: VocabNode,
+    depth: number,
+    branchColor: string,
+    branchIndex: number,
+    parentId?: string
+  ): RadialTreeNode {
+    const hasChildren = (vocab.children?.length ?? 0) > 0;
+    const collapsed = hasChildren && collapsedIds.has(vocab.id);
+    const children =
+      hasChildren && !collapsed
+        ? vocab.children!.map((child, i) =>
+            build(
+              child,
+              depth + 1,
+              depth === 0 ? BRANCH_PALETTE[i % BRANCH_PALETTE.length] : branchColor,
+              depth === 0 ? i : branchIndex,
+              vocab.id
+            )
+          )
+        : [];
+    const leafCount = children.length === 0 ? 1 : children.reduce((sum, c) => sum + c.leafCount, 0);
+    return { vocab, depth, branchColor, branchIndex, parentId, collapsed, hasChildren, children, leafCount };
+  }
+
+  const tree = build(root, 0, color, 0);
+
+  const leafRadius = Math.max(520, (tree.leafCount * RADIAL_MIN_ARC) / (2 * Math.PI));
+  const radiusForDepth = (depth: number) => {
+    if (depth === 0) return 0;
+    if (depth === 1) return leafRadius * 0.46;
+    return leafRadius + (depth - 2) * 260;
+  };
+
+  const nodes: Node<FlowNodeData>[] = [];
+  const edges: Edge[] = [];
+  /** Centre point of each laid-out node, used to aim the connecting arrows. */
+  const centers = new Map<string, { x: number; y: number }>();
+
+  function place(node: RadialTreeNode, startAngle: number, endAngle: number) {
+    const angle = (startAngle + endAngle) / 2;
+    const radius = radiusForDepth(node.depth);
+    const size = radialSizeForDepth(node.depth);
+    const cx = Math.cos(angle) * radius;
+    const cy = Math.sin(angle) * radius;
+    centers.set(node.vocab.id, { x: cx, y: cy });
+
+    nodes.push({
+      id: node.vocab.id,
+      position: { x: cx - size.width / 2, y: cy - size.height / 2 },
+      data: {
+        vocab: node.vocab,
+        depth: node.depth,
+        color,
+        branchColor: node.branchColor,
+        branchIndex: node.branchIndex,
+        hasChildren: node.hasChildren,
+        childCount: node.vocab.children?.length ?? 0,
+        collapsed: node.collapsed,
+        radial: true,
+        circle: node.depth === 0,
+      },
+      type: "vocab",
+      width: size.width,
+      height: size.height,
+      // The centre node must stay a perfect circle, so its size is fixed
+      // on the wrapper instead of being derived from the label length.
+      ...(node.depth === 0 ? { style: { width: size.width, height: size.height } } : {}),
+    });
+
+    if (node.parentId) {
+      const parent = centers.get(node.parentId)!;
+      const dx = cx - parent.x;
+      const dy = cy - parent.y;
+      const sourceSide = sideForDirection(dx, dy);
+      edges.push({
+        id: `${node.parentId}-${node.vocab.id}`,
+        source: node.parentId,
+        target: node.vocab.id,
+        sourceHandle: `s-${sourceSide}`,
+        targetHandle: `t-${OPPOSITE_SIDE[sourceSide]}`,
+        type: "straight",
+        markerEnd: { type: MarkerType.ArrowClosed, color: node.branchColor, width: 18, height: 18 },
+        style: { stroke: node.branchColor, strokeWidth: 2, opacity: 0.8 },
+      });
+    }
+
+    // Split this node's angular sector among its children, proportionally.
+    let cursor = startAngle;
+    for (const child of node.children) {
+      const share = ((endAngle - startAngle) * child.leafCount) / node.leafCount;
+      place(child, cursor, cursor + share);
+      cursor += share;
+    }
+  }
+
+  // Start at the top of the circle so the first branch sits at 12 o'clock.
+  const start = -Math.PI / 2;
+  place(tree, start, start + 2 * Math.PI);
+
+  return { nodes, edges };
 }
 
 /**

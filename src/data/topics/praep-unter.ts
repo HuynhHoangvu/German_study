@@ -8,6 +8,7 @@ const topic: Topic = {
   color: "#831843",
   level: "B2",
   category: "praeposition",
+  layout: "radial",
   root: {
     id: "root",
     label: "unter + Dativ",
